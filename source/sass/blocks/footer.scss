@@ -1,0 +1,353 @@
+.footer {
+  position: relative;
+  background-color: $white;
+  color: $dark-05;
+  font-family: $font-family--description;
+  min-height: 317px;
+
+  &::before {
+    @media (max-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      top: 95px;
+      background-color: $grey-line;
+      opacity: 0.2;
+    }
+
+    @media (max-width: $mobile-width) {
+      position: static;
+    }
+  }
+
+  &::after {
+    @media (max-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $grey-line;
+      opacity: 0.2;
+      bottom: 74px;
+    }
+
+    @media (max-width: $mobile-width) {
+      position: static;
+    }
+  }
+}
+
+.footer__center {
+  max-width: 1455px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width) {
+    padding: 15px 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 50px 15px;
+    flex-direction: column;
+    background-color: $white;
+  }
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.footer h3 {
+  font-family: $font-family--title;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $dark;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width) {
+    margin: 30px 0;
+  }
+}
+
+.footer__tablet {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0 0 0 14px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 20px 0 31px;
+    padding: 0;
+  }
+}
+
+.footer__desktop {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.footer__nav {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width) {
+    padding: 46px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.footer__logo-socials {
+  position: relative;
+  padding: 16px 20px 16px 0;
+  margin: 0 49px 0 0;
+  flex-grow: 1;
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0 50px;
+  }
+
+  &::before {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      content: "";
+      width: calc(100% + 30px);
+      height: 1px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: 0 0 0 -15px;
+      background-color: $grey-line;
+      opacity: 0.2;
+    }
+  }
+}
+
+.footer__logo-socials a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer__link-logo {
+  display: block;
+  margin: 0 0 50px 0;
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.footer__socials {
+  display: flex;
+
+  @media (max-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.footer__socials a:not(:last-child) {
+  margin: 0 15px 0 0;
+}
+
+.footer__menu {
+  position: relative;
+  min-width: 497px;
+  margin: 0 20px 0 0;
+
+  @media (max-width: $tablet-width) {
+    min-width: 355px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  &::after {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      content: "";
+      width: calc(100% + 30px);
+      height: 1px;
+      bottom: 2px;
+      right: 0;
+      left: 0;
+      margin: 0 0 0 -15px;
+      background-color: $grey-line;
+      opacity: 0.2;
+    }
+  }
+}
+
+.footer__menu-button {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.footer__list-menu {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 12px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 112px;
+
+  @media (max-width: $tablet-width) {
+    height: 100%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 0 25px 0;
+  }
+}
+
+.footer__list-menu li {
+  padding: 0 20px 0 0;
+}
+
+.footer__contacts {
+  position: relative;
+  margin: 0 0 0 auto;
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+    padding: 0 5px 0 0;
+  }
+
+  &::after {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      content: "";
+      width: calc(100% + 30px);
+      height: 1px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: 0 0 0 -15px;
+      background-color: $grey-line;
+      opacity: 0.2;
+    }
+  }
+}
+
+.footer__list-contacts {
+  font-size: 15px;
+  line-height: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 14px 0 0 0;
+  flex-direction: column;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 0 25px 0;
+  }
+}
+
+.footer__rights {
+  font-weight: normal;
+  align-items: center;
+  letter-spacing: 0.04em;
+  font-size: 13px;
+  line-height: 24px;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 45px 0 0 0;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 45px;
+    background-color: $grey-line;
+    opacity: 0.2;
+
+    @media (max-width: $tablet-width) {
+      content: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+    flex-direction: column;
+    padding: 29px 0 0;
+  }
+}
+
+.footer__rights-desktop,
+.footer__service {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.footer__rights-desktop {
+  margin: 0 73px 0 0;
+}
+
+.footer__rights-service {
+  margin: 0 143px 0 0;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.footer__rights-confidentiality {
+  margin: 0 auto 0 0;
+  padding: 0 20px 0 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 8px;
+    padding: 0;
+  }
+}

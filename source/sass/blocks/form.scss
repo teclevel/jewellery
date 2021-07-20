@@ -1,0 +1,243 @@
+.form {
+  font-family: $font-family--description;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: $blue;
+  color: $white;
+  min-height: 666px;
+  padding: 59px calc(50% - 605px) 50px;
+  background-image: url("../img/backgrounds/airplane-form.png"), url("../img/backgrounds/triangles-form.svg"), url("../img/backgrounds/polygons-header.svg");
+  background-repeat: no-repeat;
+  background-size: 503px, 19%, 668px;
+  background-position: calc(50% - 353px) 42%, calc(-5% - -1627px) calc(50% - -34px), calc(50% - 448px) calc(50% - 75px);
+
+  @media (max-width: $tablet-width) {
+    background-image: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 600px;
+    padding: 11px 15px 41px;
+  }
+}
+
+.form__center {
+  max-width: 1566px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: $tablet-width) {
+    background-image: none;
+    padding: 0;
+  }
+}
+
+.form__wrapper {
+  margin: 0 0 0 auto;
+  max-width: 570px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+    max-width: 591px;
+  }
+}
+
+.form h2 {
+  font-family: $font-family--title;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 29px 0 12px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+    margin: 21px 0 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.form__description {
+  margin: 0 0 53px 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 20px 0;
+  }
+}
+
+.form__data {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.form__data * {
+  margin: 0 0 40px 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 30px 0;
+  }
+}
+
+.form__data input[name="user-name"] {
+  align-self: baseline;
+  margin: 0 31px 0 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 30px 0;
+  }
+}
+
+.form__data input[name="user-name"],
+.form__data input[name="user-tel"] {
+  width: 269px;
+
+  @media (max-width: $tablet-width) {
+    width: 280px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.form textarea {
+  height: 154px;
+  resize: none;
+
+  @media (max-width: $tablet-width) {
+    height: 165px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 104px;
+  }
+}
+
+.form input,
+.form textarea {
+  background-color: $white-opacity01;
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 17px;
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.form__submit {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.form input[type="checkbox"] {
+  width: 1px;
+  top: 18px;
+  right: 254px;
+
+  @media (max-width: $tablet-width) {
+    top: 18px;
+    right: 264px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 89px;
+    right: calc(50% + 24vw);
+  }
+}
+
+.form input[type="checkbox"] + label {
+  position: relative;
+  padding: 0 0 0 30px;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border: 1px solid $white;
+  }
+}
+
+.form input[type="checkbox"]:checked + label {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 5px;
+    left: 4px;
+    background-image: url("../img/icons/check.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.form input[type="checkbox"]:hover + label,
+.form input[type="checkbox"]:focus + label {
+  &::before {
+    border-color: $black;
+  }
+}
+
+.form__submit button {
+  font-family: $font-family--title;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: inherit;
+  border: 1px solid $white;
+  border-radius: 5px;
+  min-width: 270px;
+  padding: 15px;
+  margin: 0 38px 0 0;
+  order: -1;
+
+  @media (max-width: $tablet-width) {
+    min-width: 280px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 30px 0;
+    min-width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
