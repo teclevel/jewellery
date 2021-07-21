@@ -2,6 +2,9 @@
 
 $brown: rgba(168, 123, 98, 1);
 $border: rgba(246, 245, 244, 1);
+$grey: #9b9997;
+$black: #1d1613;
+$white: #ffffff;
 
 // Font
 
@@ -13,8 +16,8 @@ $font-family--description: "Poppins", "Arial", sans-serif;
 
 $tablet-width: 1023px;
 $mobile-width: 767px;
-// $desktop: 1300px;
 
-//Center desktop
+//resolution
 
-$center: 1170px;
+$dppx: 2dppx;
+$dpi: 192dpi;

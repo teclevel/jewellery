@@ -1,0 +1,48 @@
+.lead {
+  font-family: $font-family--title;
+  color: $white;
+  text-align: center;
+  position: relative;
+  background-color: $brown;
+  background-image: url("../img/backgrounds/index.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -8px;
+  min-height: 463px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(86, 64, 52, 0.7);
+  }
+
+  @media (min-resolution: $dpi), (min-resolution: $dppx) {
+    background-image: url("../img/backgrounds/index@2x.jpg");
+  }
+}
+
+.lead h1 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+  z-index: 10;
+}
+
+.lead p {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 38px;
+  line-height: 49px;
+  margin: 0;
+  z-index: 10;
+}
