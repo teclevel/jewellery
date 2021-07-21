@@ -1,152 +1,45 @@
 .header {
-  position: absolute;
-  max-width: 1431px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
 
-  margin: 0 auto;
-  padding: 33px 10px 0;
-  display: flex;
-  justify-content: space-between;
-  background-color: transparent;
 
-  @media (max-width: $tablet-width) {
-    padding: 20px 25px;
-  }
+  // @media (max-width: $tablet-width) {
+  //   padding: 20px 25px;
+  // }
 
-  @media (max-width: $mobile-width) {
-    padding: 17px;
-  }
+  // @media (max-width: $mobile-width) {
+  //   padding: 17px;
+  // }
 }
 
-.header__logo-mobile {
-  display: none;
-
-  @media (max-width: $mobile-width) {
-    display: block;
-  }
-}
-
-.header__logo-desktop {
-  color: $white;
-
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
-}
-
-.header__contacts {
-  display: flex;
-}
-
-.header__contacts-list {
-  margin: 0 45px;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: max-content max-content;
-  column-gap: 78px;
-  row-gap: 10px;
-
-  @media (max-width: $tablet-width) {
-    margin: 0;
-    column-gap: 34px;
-  }
-
-  @media (max-width: $mobile-width) {
-    column-gap: 20px;
-  }
-}
-
-.header__contacts-list li {
-  align-self: center;
-  padding: 5px;
-
-  @media (max-width: $tablet-width) {
-    padding: 0;
-  }
-}
-
-.header__contacts-list a {
-  position: relative;
+.header a {
   text-decoration: none;
-  font-family: $font-family--description;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
-  color: $white;
-  display: flex;
+  color: inherit;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+}
+
+.header__wrapper {
+  border-bottom: 1px solid $border;
+}
+
+.header__user-menu {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 5px 0;
-
-  &:hover,
-  &:focus {
-    opacity: 0.5;
-  }
-
-  &:active {
-    opacity: 1;
-  }
 }
 
-.header__email,
-.header__tel {
-  @media (max-width: $tablet-width) {
-    display: none;
-  }
+.header__logo {
+  margin: 0 auto;
 }
 
-.header__logo-letter {
-  margin: 0 20px 0 0;
-
-  @media (max-width: $tablet-width) {
-    width: 25px;
-    height: 19px;
-    margin: 0;
-  }
+.header__search {
+  order: -1;
 }
 
-.header__logo-phone-call {
-  margin: 0 14px 0 0;
-
-  @media (max-width: $tablet-width) {
-    width: 24px;
-    height: 24px;
-    margin: 0;
-  }
-}
-
-.header__button-order {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background-color: transparent;
-  color: $white;
-  min-height: 45px;
-  border: 1px solid $white;
-  border-radius: 5px;
-  align-self: center;
-  padding: 0 29px 0 24px;
-  margin: 0 0 auto 0;
-
-  &:focus {
-    outline-color: $grey-button;
-  }
-
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  &:active {
-    transform: scale(1);
-  }
-
-  @media (max-width: $tablet-width) {
-    display: none;
-  }
+.header__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
