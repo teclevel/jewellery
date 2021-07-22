@@ -1,14 +1,18 @@
 .header {
+  position: relative;
   font-family: $font-family--description;
   font-weight: 500;
   color: $black;
-  // @media (max-width: $tablet-width) {
-  //   padding: 20px 25px;
-  // }
 
-  // @media (max-width: $mobile-width) {
-  //   padding: 17px;
-  // }
+  @media (max-width: $tablet-width) {
+    background-color: $brown;
+    color: $white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content, 1fr;
+    row-gap: 12px;
+    padding: 30px 45px 105px;
+  }
 }
 
 .header a {
@@ -20,27 +24,111 @@
   list-style: none;
 }
 
+.header__menu-button {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    border: none;
+    background: none;
+    grid-area: 1/1/2/2;
+    padding: 0;
+    margin: 0 auto 0 0;
+    height: 25px;
+    align-self: center;
+  }
+}
+
 .header__wrapper {
   border-bottom: 1px solid $border;
+
+  @media (max-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .header__user-menu {
   font-size: 14px;
   line-height: 21px;
-  color: $grey;
   padding: 30px 0 12px;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
+
+  @media (max-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 35px;
+    padding: 0;
+  }
 }
 
 .header__logo {
   margin: 0 auto;
   padding: 0 20px 0;
+
+  @media (max-width: $tablet-width) {
+    grid-area: 1/2/2/3;
+  }
+}
+
+.header__logo svg {
+  color: $brown;
+
+  @media (max-width: $tablet-width) {
+    color: $white;
+  }
+}
+
+.header__form-search {
+  position: relative;
+  display: flex;
+  order: -1;
+  height: 40px;
+
+  @media (max-width: $tablet-width) {
+    grid-area: 2/1/3/4;
+  }
+}
+
+.header__form-button {
+  background: none;
+  border: none;
+  padding: 6px 0 0;
+
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+  }
+}
+
+.header__form-button svg {
+  @media (max-width: $tablet-width) {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .header__search {
-  padding: 13px 0 0;
-  order: -1;
+  border: none;
+  padding: 0 0 0 15px;
+
+  &::placeholder {
+    color: $grey;
+
+    @media (max-width: $tablet-width) {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 0 0 50px;
+    height: 40px;
+    width: 100%;
+    background-color: $white-015;
+    border-radius: 21px;
+  }
 }
 
 .header__search svg {
@@ -53,10 +141,58 @@
   margin: 0 0 0 auto;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: $tablet-width) {
+    grid-area: 1/3/2/4;
+    padding: 0;
+    align-self: center;
+  }
+}
+
+.header__cart-desktop {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__cart-tablet {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    fill: $brown;
+  }
 }
 
 .header__user-menu-list li:not(:last-child) {
   margin: 0 33px 0 0;
+}
+
+.header__user-menu-list li:first-child {
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    bottom: 75px;
+    left: 45px;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.header__nav {
+  @media (max-width: $tablet-width) {
+    font-family: $font-family--description;
+    font-weight: 500;
+  }
+}
+
+.header__nav ul {
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
 }
 
 .header__nav-list {
@@ -69,8 +205,39 @@
   justify-content: center;
   align-items: center;
   padding-right: 8px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 40px;
+  }
+}
+
+.header__nav-list a {
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .header__nav-list li:not(:last-child) {
   margin: 0 35px 0 0;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 21px;
+  }
+}
+
+.header__list-tablet {
+  display: none;
+}
+
+.header__list-tablet li {
+  @media (max-width: $tablet-width) {
+    margin: 0 0 19px;
+  }
+}
+
+.header__list-tablet a {
+  font-size: 18px;
+  line-height: 23px;
+  color: $white-075;
 }

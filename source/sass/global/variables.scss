@@ -1,10 +1,12 @@
 // Colors
 
-$brown: rgba(168, 123, 98, 1);
-$border: rgba(246, 245, 244, 1);
+$brown: #a87b62;
+$border: #f6f5f4;
 $grey: #9b9997;
 $black: #1d1613;
 $white: #ffffff;
+$white-015: rgba(255, 255, 255, 0.15);
+$white-075: rgba(255, 255, 255, 0.75);
 
 // Font
 
@@ -21,3 +23,18 @@ $mobile-width: 767px;
 
 $dppx: 2dppx;
 $dpi: 192dpi;
+
+/*
+
+@media (max-width: $tablet-width) {
+
+}
+
+*/
+/*
+
+@media (max-width: $mobile-width) {
+
+}
+
+*/

@@ -15,35 +15,51 @@
 
 <body class="page-body">
 
-  <header class="header">
+  <header class="header header--js">
 
     <div class="header__wrapper">
       <div class="header__user-menu center">
+        <button class="header__menu-button" type="button" aria-label="open/close menu">
+          <svg width="25" height="18">
+            <use href="./img/sprite_auto.svg#menu"></use>
+          </svg>
+        </button>
         <a class="header__logo">
           <svg width="66" height="66">
             <use href="./img/sprite_auto.svg#logo"></use>
           </svg>
         </a>
-        <a class="header__search" href="#">
-          <svg width="14" height="14">
-            <use href="./img/sprite_auto.svg#lens"></use>
-          </svg>
-          Type here to search
-        </a>
+        <form class="header__form-search" action="" method="get">
+          <button class="header__form-button" type="submit" aria-label="search">
+            <svg width="14" height="14">
+              <use href="./img/sprite_auto.svg#lens"></use>
+            </svg>
+        </button>
+          <input class="header__search" name="search" placeholder="Type here to search" type="search">
+        </form>
         <ul class="header__user-menu-list">
           <li><a href="#">Login</a></li>
-          <li>Cart 0</li>
+          <li><a href="#"><span class="header__cart-desktop">Cart 0</span>
+            <svg class="header__cart-tablet" width="20" height="18">
+              <use href="./img/sprite_auto.svg#cart"></use>
+            </svg>
+          </a></li>
         </ul>
       </div>
     </div>
 
     <nav class="header__nav header__wrapper">
       <ul class="header__nav-list center">
-        <li><a>What's new</a></li>
-        <li><a>Chokers</a></li>
-        <li><a>Necklaces</a></li>
-        <li><a>Rings</a></li>
-        <li><a>Earrings</a></li>
+        <li><a href="#">What's new</a></li>
+        <li><a href="#">Chokers</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
+      </ul>
+      <ul class="header__list-tablet">
+        <li><a href="#">About CH</a></li>
+        <li><a href="#">Stores & Hours</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
     </nav>
 
