@@ -26,6 +26,10 @@
   @media (min-resolution: $dpi), (min-resolution: $dppx) {
     background-image: url("../img/backgrounds/index@2x.jpg");
   }
+
+  @media (max-width: $tablet-width) {
+    background-position: 50%;
+  }
 }
 
 .lead h1 {

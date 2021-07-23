@@ -1,198 +1,232 @@
-
-/* маска ввода номера телефона */
-
-(function () {
-  /* eslint-disable no-undef */
-  const inputTel = document.querySelectorAll('[type="tel"]');
-  inputTel.forEach((element) => {
-    // eslint-disable-next-line no-unused-vars
-    const patternMask = IMask(element, {
-      mask: '{+7(}000)0000000',
-    });
-
-  });
-})();
-
-/* Обрезка текста*/
+/* Меню на мобильной версии */
 
 (function () {
-  const textAbout = document.querySelector('.about__text-crop');
-  const content = textAbout.textContent;
-  const buttonCropText = document.querySelector('.about__button');
 
-  function cropText() {
-    const cropElements = document.querySelectorAll('.about__text-crop');
-    const size = 224;
-    const endCharacter = '..';
+  const pageHeader = document.querySelector('.header');
+  const headerToggle = document.querySelector('.header__menu-button');
 
-    cropElements.forEach((el) => {
-      let text = el.innerHTML;
-      if (el.innerHTML.length > size) {
-        text = text.substring(0, size);
-        el.innerHTML = text + endCharacter;
-      }
-    });
+
+  if (pageHeader) {
+    pageHeader.classList.add('header--js');
   }
 
-  cropText();
+  headerToggle.addEventListener('click', () => {
 
-  buttonCropText.addEventListener('click', () => {
-    if (buttonCropText.classList.contains('text-cropped')) {
-      buttonCropText.classList.remove('text-cropped');
-      textAbout.textContent = content;
+    const isOpened = pageHeader.classList.contains('header--js-open');
+    const isClosed = pageHeader.classList.contains('header--js');
+
+    if (isOpened && !isClosed) {
+      pageHeader.classList.add('header--js');
+      pageHeader.classList.remove('header--js-open');
     } else {
-      cropText();
-      buttonCropText.classList.add('text-cropped');
+      pageHeader.classList.remove('header--js');
+      pageHeader.classList.add('header--js-open');
     }
   });
 })();
 
 
-/*аккордеон*/
+// linkItemMenu.forEach((item) => {
+//   item.addEventListener('click', () => {
+//     pageBody.style.overflowY = 'scroll';
+//     pageHeader.classList.remove('header--open-menu');
+//   });
+// });
 
-(function () {
-  const accordion = document.querySelector('.accordion');
-  const togglerClass = 'accordion__toggler';
-  const itemClass = 'accordion__item';
-  const itemOpenedClass = 'accordion__item--opened';
+// /* маска ввода номера телефона */
 
-  function closeAccordionItems() {
-    accordion
-      .querySelectorAll(`.${itemClass}`)
-      .forEach((element) => {
-        if (element) {
-          element.classList.remove(itemOpenedClass);
-        }
-      });
-  }
+// (function () {
+//   /* eslint-disable no-undef */
+//   const inputTel = document.querySelectorAll('[type="tel"]');
+//   inputTel.forEach((element) => {
+//     // eslint-disable-next-line no-unused-vars
+//     const patternMask = IMask(element, {
+//       mask: '{+7(}000)0000000',
+//     });
 
-  closeAccordionItems();
+//   });
+// })();
 
-  accordion.addEventListener('click', (event) => {
-    const toggler = event.target.closest(`.${togglerClass}`);
+// /* Обрезка текста*/
 
-    if (!toggler) { return; }
+// (function () {
+//   const textAbout = document.querySelector('.about__text-crop');
+//   const content = textAbout.textContent;
+//   const buttonCropText = document.querySelector('.about__button');
 
-    const item = toggler.closest(`.${itemClass}`);
-    const isOpened = item.classList.contains(itemOpenedClass);
+//   function cropText() {
+//     const cropElements = document.querySelectorAll('.about__text-crop');
+//     const size = 224;
+//     const endCharacter = '..';
 
-    closeAccordionItems();
+//     cropElements.forEach((el) => {
+//       let text = el.innerHTML;
+//       if (el.innerHTML.length > size) {
+//         text = text.substring(0, size);
+//         el.innerHTML = text + endCharacter;
+//       }
+//     });
+//   }
 
-    isOpened
-      ? item.classList.remove(itemOpenedClass)
-      : item.classList.add(itemOpenedClass);
-  });
-})();
+//   cropText();
 
-
-/* Отправка формы */
-
-(function () {
-  const form = document.querySelectorAll('form');
-
-  form.forEach((element) => {
-    element.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const checkBox = element.querySelector('[type="checkbox"]');
-
-      if (checkBox.checked) {
-        element.submit();
-      }
-    });
-  });
-})();
-
-
-/* Попап */
-
-(function () {
-  const overlay = document.createElement('div');
-  overlay.classList.add('overlay');
-  overlay.style.position = 'fixed';
-  overlay.style.top = '0';
-  overlay.style.left = '0';
-  overlay.style.width = '100%';
-  overlay.style.height = '100%';
-  overlay.style.zIndex = '0';
-  overlay.style.backgroundColor = 'black';
-  overlay.style.opacity = '.5';
-
-  function showOverlay() {
-    document.body.append(overlay);
-  }
-
-  function closeOverlay() {
-    overlay.remove();
-  }
-
-  const popup = document.querySelector('.modal');
-  const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
-
-  const buttonClose = popup.querySelector('.modal__button-close');
-  const buttonOpenPopup = document.querySelector('.header__button-order');
-
-  const html = document.querySelector('html');
-  const marginSize = window.innerWidth - html.clientWidth;
-
-  buttonOpenPopup.addEventListener('click', onModalOpen);
-  buttonClose.addEventListener('click', onModalClose);
-  buttonClose.addEventListener('keydown', onModalButtonClose);
+//   buttonCropText.addEventListener('click', () => {
+//     if (buttonCropText.classList.contains('text-cropped')) {
+//       buttonCropText.classList.remove('text-cropped');
+//       textAbout.textContent = content;
+//     } else {
+//       cropText();
+//       buttonCropText.classList.add('text-cropped');
+//     }
+//   });
+// })();
 
 
-  function onModalOpen(evt) {
-    evt.preventDefault();
+// /*аккордеон*/
 
-    if (popup) {
-      popup.classList.remove('visually-hidden');
-    }
+// (function () {
+//   const accordion = document.querySelector('.accordion');
+//   const togglerClass = 'accordion__toggler';
+//   const itemClass = 'accordion__item';
+//   const itemOpenedClass = 'accordion__item--opened';
 
-    document.querySelector('body').style.overflow = 'hidden';
-    showOverlay();
+//   function closeAccordionItems() {
+//     accordion
+//       .querySelectorAll(`.${itemClass}`)
+//       .forEach((element) => {
+//         if (element) {
+//           element.classList.remove(itemOpenedClass);
+//         }
+//       });
+//   }
 
-    if (overlay) {
-      overlay.addEventListener('click', onModalClose);
-    }
+//   closeAccordionItems();
 
-    document.addEventListener('keydown', onModalKeydown);
+//   accordion.addEventListener('click', (event) => {
+//     const toggler = event.target.closest(`.${togglerClass}`);
 
-    if (marginSize) {
-      html.style.marginRight = `${marginSize}px`;
-    }
-    elementsPopup[0].focus();
-  }
+//     if (!toggler) { return; }
 
-  function onModalButtonClose(evt) {
-    if (evt.code === 'Enter' || evt.code === 'Space') {
-      onModalClose();
-    }
-  }
+//     const item = toggler.closest(`.${itemClass}`);
+//     const isOpened = item.classList.contains(itemOpenedClass);
 
-  function onModalClose() {
-    if (popup) {
-      popup.classList.add('visually-hidden');
-    }
+//     closeAccordionItems();
 
-    document.querySelector('body').style.overflow = '';
-    closeOverlay();
-    document.removeEventListener('keydown', onModalKeydown);
-    html.style.marginRight = '';
-  }
+//     isOpened
+//       ? item.classList.remove(itemOpenedClass)
+//       : item.classList.add(itemOpenedClass);
+//   });
+// })();
 
-  function onModalKeydown(evt) {
-    const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
 
-    if (evt.shiftKey && (focusedItemIndex === 0 || focusedItemIndex === -1)) {
-      elementsPopup[elementsPopup.length - 1].focus();
-      evt.preventDefault();
-    }
+// /* Отправка формы */
 
-    if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
-      elementsPopup[0].focus();
-      evt.preventDefault();
-    }
+// (function () {
+//   const form = document.querySelectorAll('form');
 
-    if (evt.code === 'Escape' || evt.code === 'Esc') {
-      onModalClose();
-    }
-  }
-})();
+//   form.forEach((element) => {
+//     element.addEventListener('submit', (e) => {
+//       e.preventDefault();
+//       const checkBox = element.querySelector('[type="checkbox"]');
+
+//       if (checkBox.checked) {
+//         element.submit();
+//       }
+//     });
+//   });
+// })();
+
+
+// /* Попап */
+
+// (function () {
+//   const overlay = document.createElement('div');
+//   overlay.classList.add('overlay');
+//   overlay.style.position = 'fixed';
+//   overlay.style.top = '0';
+//   overlay.style.left = '0';
+//   overlay.style.width = '100%';
+//   overlay.style.height = '100%';
+//   overlay.style.zIndex = '0';
+//   overlay.style.backgroundColor = 'black';
+//   overlay.style.opacity = '.5';
+
+//   function showOverlay() {
+//     document.body.append(overlay);
+//   }
+
+//   function closeOverlay() {
+//     overlay.remove();
+//   }
+
+//   const popup = document.querySelector('.modal');
+//   const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
+
+//   const buttonClose = popup.querySelector('.modal__button-close');
+//   const buttonOpenPopup = document.querySelector('.header__button-order');
+
+//   const html = document.querySelector('html');
+//   const marginSize = window.innerWidth - html.clientWidth;
+
+//   buttonOpenPopup.addEventListener('click', onModalOpen);
+//   buttonClose.addEventListener('click', onModalClose);
+//   buttonClose.addEventListener('keydown', onModalButtonClose);
+
+
+//   function onModalOpen(evt) {
+//     evt.preventDefault();
+
+//     if (popup) {
+//       popup.classList.remove('visually-hidden');
+//     }
+
+//     document.querySelector('body').style.overflow = 'hidden';
+//     showOverlay();
+
+//     if (overlay) {
+//       overlay.addEventListener('click', onModalClose);
+//     }
+
+//     document.addEventListener('keydown', onModalKeydown);
+
+//     if (marginSize) {
+//       html.style.marginRight = `${marginSize}px`;
+//     }
+//     elementsPopup[0].focus();
+//   }
+
+//   function onModalButtonClose(evt) {
+//     if (evt.code === 'Enter' || evt.code === 'Space') {
+//       onModalClose();
+//     }
+//   }
+
+//   function onModalClose() {
+//     if (popup) {
+//       popup.classList.add('visually-hidden');
+//     }
+
+//     document.querySelector('body').style.overflow = '';
+//     closeOverlay();
+//     document.removeEventListener('keydown', onModalKeydown);
+//     html.style.marginRight = '';
+//   }
+
+//   function onModalKeydown(evt) {
+//     const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
+
+//     if (evt.shiftKey && (focusedItemIndex === 0 || focusedItemIndex === -1)) {
+//       elementsPopup[elementsPopup.length - 1].focus();
+//       evt.preventDefault();
+//     }
+
+//     if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
+//       elementsPopup[0].focus();
+//       evt.preventDefault();
+//     }
+
+//     if (evt.code === 'Escape' || evt.code === 'Esc') {
+//       onModalClose();
+//     }
+//   }
+// })();
