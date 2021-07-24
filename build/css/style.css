@@ -586,15 +586,18 @@ img {
     .footer__socials-list svg {
       margin: 0; } }
 
-.footer__facebook {
-  width: 12px;
-  height: 21px; }
+@media (max-width: 767px) {
+  .footer__facebook {
+    width: 12px;
+    height: 21px; } }
 
-.footer__instagram,
-.footer__pinterest {
-  width: 20px;
-  height: 21px; }
+@media (max-width: 767px) {
+  .footer__instagram,
+  .footer__pinterest {
+    width: 20px;
+    height: 21px; } }
 
-.footer__twitter {
-  width: 20px;
-  height: 18px; }
+@media (max-width: 767px) {
+  .footer__twitter {
+    width: 20px;
+    height: 18px; } }

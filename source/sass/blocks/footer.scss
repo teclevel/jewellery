@@ -212,17 +212,23 @@
 }
 
 .footer__facebook {
-  width: 12px;
-  height: 21px;
+  @media (max-width: $mobile-width) {
+    width: 12px;
+    height: 21px;
+  }
 }
 
 .footer__instagram,
 .footer__pinterest {
-  width: 20px;
-  height: 21px;
+  @media (max-width: $mobile-width) {
+    width: 20px;
+    height: 21px;
+  }
 }
 
 .footer__twitter {
-  width: 20px;
-  height: 18px;
+  @media (max-width: $mobile-width) {
+    width: 20px;
+    height: 18px;
+  }
 }
