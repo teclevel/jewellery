@@ -132,7 +132,9 @@ img {
 
 .header a {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  display: inline-block;
+  vertical-align: baseline; }
 
 .header ul {
   list-style: none; }
@@ -204,6 +206,7 @@ img {
 .header__form-search {
   position: relative;
   display: flex;
+  align-items: center;
   order: -1;
   height: 40px;
   padding: 7px 0; }
