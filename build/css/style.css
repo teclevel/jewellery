@@ -412,6 +412,75 @@ img {
   margin: 0;
   z-index: 10; }
 
+.slider {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px; }
+
+.slider__wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+
+.slider h2 {
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center; }
+
+.slider p {
+  text-align: center; }
+
+.slider a {
+  text-decoration: none;
+  color: inherit; }
+
+.slider__container-title a {
+  color: inherit;
+  border-bottom: 1px solid #a87b62; }
+
+.slider__prev,
+.slider__next {
+  border: none;
+  background: none;
+  position: absolute;
+  padding: 0; }
+
+.slider__prev {
+  top: 0;
+  left: 20px; }
+
+.slider__next {
+  top: 0;
+  right: 20px; }
+
+.slider__next svg {
+  transform: rotate(180deg); }
+
+.slider__list,
+.slider__list-pages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; }
+
+.slider__list {
+  transition: all ease 1s; }
+
+.slider__list li {
+  margin: 0 30px 0 0; }
+
+.slider__list figure {
+  margin: 0;
+  width: 270px; }
+
+.slider__list img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 284px; }
+
 .footer {
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
