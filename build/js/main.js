@@ -25,6 +25,57 @@
   });
 })();
 
+/* Слайдер */
+
+
+(function () {
+
+  const slider = document.querySelector('.slider__list');
+  const slides = slider.querySelectorAll('figure');
+  const gap = 30;
+  let count = 0;
+  let widthSliderWindow; //A
+  let widthImage;  //C
+  // let widthSliderLine; //B
+  // let quantityImages;
+
+  function init() {
+    widthSliderWindow = slider.offsetWidth;
+    widthImage = (widthSliderWindow - gap * 3) / 4;
+    // slider.style.width = `${width * slides.length}px`;
+
+    slides.forEach((item) => {
+      item.style.width = `${widthImage}px`;
+      item.style.height = 'auto';
+    });
+
+    rollSlider();
+  }
+
+  init();
+
+  window.addEventListener('resize', init);
+
+  document.querySelector('.slider__next').addEventListener('click', () => {
+    count++;
+    if (count >= slides.length - 3) {
+      count = 0;
+    }
+
+    rollSlider();
+  });
+
+  document.querySelector('.slider__prev').addEventListener('click', () => {
+    count--;
+    rollSlider();
+  });
+
+  function rollSlider() {
+    slider.style.transform = `translate(-${count * (widthImage + gap)}px)`;
+  }
+
+})();
+
 
 // linkItemMenu.forEach((item) => {
 //   item.addEventListener('click', () => {
