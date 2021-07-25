@@ -534,12 +534,6 @@ img {
   width: 50%;
   grid-area: 1 / 2 / 3 / 3; }
 
-.blog__item3 img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover; }
-
 .blog figure {
   margin: 0; }
 
