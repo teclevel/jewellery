@@ -1,0 +1,50 @@
+.questions {
+  padding: 27px 0 20px;
+}
+
+.questions h2 {
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 28px 0 48px;
+}
+
+.questions h3 {
+  font-family: $font-family--description;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 18px 0 0;
+}
+
+.questions p {
+  font-family: $font-family--description;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.004em;
+  margin: 8px 0 10px;
+  padding: 0 10px 6px 8px;
+  max-width: 545px;
+}
+
+.questions__list {
+  list-style: none;
+  padding: 0 120px;
+}
+
+.questions__list li {
+  position: relative;
+  border: 1px solid $brown;
+  padding: 25px 42px;
+}
+
+.questions button {
+  position: absolute;
+  width: 15px;
+  height: 8px;
+  top: 30px;
+  right: 30px;
+  border: none;
+  background: none;
+  background-image: url("..//img/icons/arrow-top.svg");
+}

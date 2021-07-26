@@ -2,7 +2,6 @@
   position: relative;
   font-family: $font-family--description;
   font-weight: 500;
-  color: $black;
 
   @media (max-width: $tablet-width) {
     background-color: $brown;
@@ -22,7 +21,6 @@
   &--js {
     @media (max-width: $tablet-width) {
       background-color: $white;
-      color: $black;
       padding: 30px 45px 24px;
     }
 

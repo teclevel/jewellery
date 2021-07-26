@@ -280,15 +280,17 @@
     </section>
     <section class="blog">
       <h2>Blog</h2>
-      <p><a href="#">ReadAll</a></p>
+      <p><a href="#">Read All</a></p>
       <ul class="blog__list center">
         <li class="blog__item blog__item1">
           <figure>
-            <picture>
-              <!-- 1x: 285 ; 2x: 570 -->
-              <source type="image/webp" srcset="./img/index-content/jess-harper-sunday.webp 1x, ./img/index-content/jess-harper-sunday@2x.webp 2x">
-              <img loading="lazy" src="./img/index-content/jess-harper-sunday.jpg" srcset="./img/index-content/jess-harper-sunday@2x.jpg" width="285" height="300" alt="jess harper sunday">
-            </picture>
+            <div class="blog__picture">
+              <picture>
+                <!-- 1x: 285 ; 2x: 570 -->
+                <source type="image/webp" srcset="./img/index-content/jess-harper-sunday.webp 1x, ./img/index-content/jess-harper-sunday@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/jess-harper-sunday.jpg" srcset="./img/index-content/jess-harper-sunday@2x.jpg" width="285" height="300" alt="jess harper sunday">
+              </picture>
+            </div>
             <figcaption>
               <time datetime="2019-09-30">september 30, 2019</time>
               <p>How to care for your jewellery</p>
@@ -298,11 +300,13 @@
         </li>
         <li class="blog__item blog__item2">
           <figure>
-            <picture>
-              <!-- 1x: 285 ; 2x: 570 -->
-              <source type="image/webp" srcset="./img/index-content/alex-holyoake.webp 1x, ./img/index-content/alex-holyoake@2x.webp 2x">
-              <img loading="lazy" src="./img/index-content/alex-holyoake.jpg" srcset="./img/index-content/alex-holyoake@2x.jpg" width="285" height="300" alt="alex-holyoake">
-            </picture>
+            <div class="blog__picture">
+              <picture>
+                <!-- 1x: 285 ; 2x: 570 -->
+                <source type="image/webp" srcset="./img/index-content/alex-holyoake.webp 1x, ./img/index-content/alex-holyoake@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/alex-holyoake.jpg" srcset="./img/index-content/alex-holyoake@2x.jpg" width="285" height="300" alt="alex-holyoake">
+              </picture>
+            </div>
             <figcaption>
               <time datetime="2019-09-23">September 23, 2019</time>
               <p>Power of crystals</p>
@@ -330,10 +334,10 @@
     </section>
     <section class="questions">
       <h2>Frequently asked questions</h2>
-      <ul class="question__list">
+      <ul class="questions__list center">
         <li>
           <h3>What materials are the jewellery made of?</h3>
-          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           <button type="button" aria-label="expend/collapse menu"></button>
         </li>
         <li>
@@ -354,89 +358,92 @@
           <button type="button" aria-label="expend/collapse menu"></button>
         </li>
       </ul>
-      <section class="folow-us">
-        <ul class="slider__list">
-          <li>
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 230 ; 2x: 460 -->
-                  <source type="image/webp" srcset="./img/index-content/7.webp 1x, ./img/index-content/7@2x.webp 2x">
-                  <img loading="lazy" src="./img/index-content/7.jpg" srcset="./img/index-content/7@2x.jpg" width="230" height="230" alt="square earrings on the edge of the laptop">
-                </picture>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 399 ; 2x: 798 -->
-                  <source type="image/webp" srcset="./img/index-content/2.webp 1x, ./img/index-content/2@2x.webp 2x">
-                  <img loading="lazy" src="./img/2.jpg" srcset="./img/index-content/2@2x.jpg" width="399" height="412" alt="woman shows earrings on herself">
-                </picture>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 230 ; 2x: 460 -->
-                  <source type="image/webp" srcset="./img/index-content/3.webp 1x, ./img/index-content/3@2x.webp 2x">
-                  <img loading="lazy" src="./img/index-content/3.jpg" srcset="./img/index-content/3@2x.jpg" width="230" height="230" alt="jewelry on hands">
-                </picture>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 230 ; 2x: 460 -->
-                  <source type="image/webp" srcset="./img/index-content/purple-gemstone-necklace.webp 1x, ./img/index-content/purple-gemstone-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/index-content/purple-gemstone-necklace.jpg" srcset="./img/index-content/purple-gemstone-necklace@2x.jpg" width="270" height="272" alt="Necklace with amethyst">
-                </picture>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp" srcset="./img/index-content/purple-gemstone-necklace.webp 1x, ./img/index-content/purple-gemstone-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/index-content/purple-gemstone-necklace.jpg" srcset="./img/index-content/purple-gemstone-necklace@2x.jpg" width="270" height="272" alt="Necklace with amethyst">
-                </picture>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 230 ; 2x: 540 -->
-                  <source type="image/webp" srcset="./img/index-content/purple-gemstone-necklace.webp 1x, ./img/index-content/purple-gemstone-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/index-content/purple-gemstone-necklace.jpg" srcset="./img/index-content/purple-gemstone-necklace@2x.jpg" width="270" height="272" alt="">
-                </picture>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp" srcset="./img/index-content/purple-gemstone-necklace.webp 1x, ./img/index-content/purple-gemstone-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/index-content/purple-gemstone-necklace.jpg" srcset="./img/index-content/purple-gemstone-necklace@2x.jpg" width="270" height="272" alt="Necklace with amethyst">
-                </picture>
-              </figure>
-            </a>
-          </li>
-        </ul>
-      </section>
-
     </section>
+
+    <section class="follow-us">
+      <h2>@Chjewellery</h2>
+      <p>follow-us</p>
+      <ul class="follow-us__list">
+        <li>
+          <a href="#">
+            <figure>
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="./img/index-content/7.webp 1x, ./img/index-content/7@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/7.jpg" srcset="./img/index-content/7@2x.jpg" width="230" height="230" alt="square earrings on the edge of the laptop">
+              </picture>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <picture>
+                <!-- 1x: 399 ; 2x: 798 -->
+                <source type="image/webp" srcset="./img/index-content/2.webp 1x, ./img/index-content/2@2x.webp 2x">
+                <img loading="lazy" src="./img/2.jpg" srcset="./img/index-content/2@2x.jpg" width="399" height="412" alt="woman shows earrings on herself">
+              </picture>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="./img/index-content/3.webp 1x, ./img/index-content/3@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/3.jpg" srcset="./img/index-content/3@2x.jpg" width="230" height="230" alt="jewelry on hands">
+              </picture>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="./img/index-content/purple-gemstone-necklace.webp 1x, ./img/index-content/purple-gemstone-necklace@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/purple-gemstone-necklace.jpg" srcset="./img/index-content/purple-gemstone-necklace@2x.jpg" width="270" height="272" alt="Necklace with amethyst">
+              </picture>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <picture>
+                <!-- 1x: 270 ; 2x: 540 -->
+                <source type="image/webp" srcset="./img/index-content/purple-gemstone-necklace.webp 1x, ./img/index-content/purple-gemstone-necklace@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/purple-gemstone-necklace.jpg" srcset="./img/index-content/purple-gemstone-necklace@2x.jpg" width="270" height="272" alt="Necklace with amethyst">
+              </picture>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <picture>
+                <!-- 1x: 230 ; 2x: 540 -->
+                <source type="image/webp" srcset="./img/index-content/purple-gemstone-necklace.webp 1x, ./img/index-content/purple-gemstone-necklace@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/purple-gemstone-necklace.jpg" srcset="./img/index-content/purple-gemstone-necklace@2x.jpg" width="270" height="272" alt="">
+              </picture>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <picture>
+                <!-- 1x: 270 ; 2x: 540 -->
+                <source type="image/webp" srcset="./img/index-content/purple-gemstone-necklace.webp 1x, ./img/index-content/purple-gemstone-necklace@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/purple-gemstone-necklace.jpg" srcset="./img/index-content/purple-gemstone-necklace@2x.jpg" width="270" height="272" alt="Necklace with amethyst">
+              </picture>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </section>
+
 
     <!-- <section class="lead">
       <div class="lead__center">
