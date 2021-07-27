@@ -98,39 +98,7 @@
 //   });
 // })();
 
-// /* Обрезка текста*/
 
-// (function () {
-//   const textAbout = document.querySelector('.about__text-crop');
-//   const content = textAbout.textContent;
-//   const buttonCropText = document.querySelector('.about__button');
-
-//   function cropText() {
-//     const cropElements = document.querySelectorAll('.about__text-crop');
-//     const size = 224;
-//     const endCharacter = '..';
-
-//     cropElements.forEach((el) => {
-//       let text = el.innerHTML;
-//       if (el.innerHTML.length > size) {
-//         text = text.substring(0, size);
-//         el.innerHTML = text + endCharacter;
-//       }
-//     });
-//   }
-
-//   cropText();
-
-//   buttonCropText.addEventListener('click', () => {
-//     if (buttonCropText.classList.contains('text-cropped')) {
-//       buttonCropText.classList.remove('text-cropped');
-//       textAbout.textContent = content;
-//     } else {
-//       cropText();
-//       buttonCropText.classList.add('text-cropped');
-//     }
-//   });
-// })();
 
 
 // /*аккордеон*/
@@ -188,96 +156,96 @@
 // })();
 
 
-// /* Попап */
+/* Modal */
 
-// (function () {
-//   const overlay = document.createElement('div');
-//   overlay.classList.add('overlay');
-//   overlay.style.position = 'fixed';
-//   overlay.style.top = '0';
-//   overlay.style.left = '0';
-//   overlay.style.width = '100%';
-//   overlay.style.height = '100%';
-//   overlay.style.zIndex = '0';
-//   overlay.style.backgroundColor = 'black';
-//   overlay.style.opacity = '.5';
+(function () {
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  overlay.style.position = 'fixed';
+  overlay.style.top = '0';
+  overlay.style.left = '0';
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  overlay.style.zIndex = '0';
+  overlay.style.backgroundColor = 'black';
+  overlay.style.opacity = '.5';
 
-//   function showOverlay() {
-//     document.body.append(overlay);
-//   }
+  function showOverlay() {
+    document.body.append(overlay);
+  }
 
-//   function closeOverlay() {
-//     overlay.remove();
-//   }
+  function closeOverlay() {
+    overlay.remove();
+  }
 
-//   const popup = document.querySelector('.modal');
-//   const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
+  const popup = document.querySelector('.modal');
+  const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
 
-//   const buttonClose = popup.querySelector('.modal__button-close');
-//   const buttonOpenPopup = document.querySelector('.header__button-order');
+  const buttonClose = popup.querySelector('.modal__button-close');
+  const buttonOpenPopup = document.querySelector('.header__button-order');
 
-//   const html = document.querySelector('html');
-//   const marginSize = window.innerWidth - html.clientWidth;
+  const html = document.querySelector('html');
+  const marginSize = window.innerWidth - html.clientWidth;
 
-//   buttonOpenPopup.addEventListener('click', onModalOpen);
-//   buttonClose.addEventListener('click', onModalClose);
-//   buttonClose.addEventListener('keydown', onModalButtonClose);
+  buttonOpenPopup.addEventListener('click', onModalOpen);
+  buttonClose.addEventListener('click', onModalClose);
+  buttonClose.addEventListener('keydown', onModalButtonClose);
 
 
-//   function onModalOpen(evt) {
-//     evt.preventDefault();
+  function onModalOpen(evt) {
+    evt.preventDefault();
 
-//     if (popup) {
-//       popup.classList.remove('visually-hidden');
-//     }
+    if (popup) {
+      popup.classList.remove('visually-hidden');
+    }
 
-//     document.querySelector('body').style.overflow = 'hidden';
-//     showOverlay();
+    document.querySelector('body').style.overflow = 'hidden';
+    showOverlay();
 
-//     if (overlay) {
-//       overlay.addEventListener('click', onModalClose);
-//     }
+    if (overlay) {
+      overlay.addEventListener('click', onModalClose);
+    }
 
-//     document.addEventListener('keydown', onModalKeydown);
+    document.addEventListener('keydown', onModalKeydown);
 
-//     if (marginSize) {
-//       html.style.marginRight = `${marginSize}px`;
-//     }
-//     elementsPopup[0].focus();
-//   }
+    if (marginSize) {
+      html.style.marginRight = `${marginSize}px`;
+    }
+    elementsPopup[0].focus();
+  }
 
-//   function onModalButtonClose(evt) {
-//     if (evt.code === 'Enter' || evt.code === 'Space') {
-//       onModalClose();
-//     }
-//   }
+  function onModalButtonClose(evt) {
+    if (evt.code === 'Enter' || evt.code === 'Space') {
+      onModalClose();
+    }
+  }
 
-//   function onModalClose() {
-//     if (popup) {
-//       popup.classList.add('visually-hidden');
-//     }
+  function onModalClose() {
+    if (popup) {
+      popup.classList.add('visually-hidden');
+    }
 
-//     document.querySelector('body').style.overflow = '';
-//     closeOverlay();
-//     document.removeEventListener('keydown', onModalKeydown);
-//     html.style.marginRight = '';
-//   }
+    document.querySelector('body').style.overflow = '';
+    closeOverlay();
+    document.removeEventListener('keydown', onModalKeydown);
+    html.style.marginRight = '';
+  }
 
-//   function onModalKeydown(evt) {
-//     const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
+  function onModalKeydown(evt) {
+    const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
 
-//     if (evt.shiftKey && (focusedItemIndex === 0 || focusedItemIndex === -1)) {
-//       elementsPopup[elementsPopup.length - 1].focus();
-//       evt.preventDefault();
-//     }
+    if (evt.shiftKey && (focusedItemIndex === 0 || focusedItemIndex === -1)) {
+      elementsPopup[elementsPopup.length - 1].focus();
+      evt.preventDefault();
+    }
 
-//     if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
-//       elementsPopup[0].focus();
-//       evt.preventDefault();
-//     }
+    if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
+      elementsPopup[0].focus();
+      evt.preventDefault();
+    }
 
-//     if (evt.code === 'Escape' || evt.code === 'Esc') {
-//       onModalClose();
-//     }
-//   }
-// })();
+    if (evt.code === 'Escape' || evt.code === 'Esc') {
+      onModalClose();
+    }
+  }
+})();

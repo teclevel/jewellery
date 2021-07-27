@@ -95,6 +95,11 @@
   }
 }
 
+.header__user-menu.header__modal-login {
+  grid-template-columns: none;
+
+}
+
 .header--js .header__user-menu {
   @media (max-width: $tablet-width) {
     display: grid;

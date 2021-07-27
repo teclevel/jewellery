@@ -1,0 +1,148 @@
+.modal {
+background-color: $brown;
+
+  &--js {
+    height: 605px;
+    max-height: 100%;
+    width: 490px;
+    max-width: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+  }
+}
+
+.modal__wrapper {
+  font-family: $font-family--description;
+  font-size: 16px;
+  line-height: 22px;
+  // color: $white;
+  padding: 29px 39px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  overflow-y: auto;
+}
+
+.modal__header {
+  width: 100%;
+  height: 100px;
+  background-image: url("../img/backgrounds/login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal h2 {
+text-align: center;
+}
+
+.modal form {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input {
+  display: flex;
+  border-bottom: 1px solid red;
+}
+
+.modal input {
+  flex-grow: 1;
+  padding: 0 0 0 10px;
+  background: none;
+  border: none;
+}
+
+.modal__note {
+  background: none;
+  border: none;
+  text-align: end;
+}
+
+.modal__log-in{
+  background-color: goldenrod;
+  border: none;
+  padding: 15px 0;
+}
+
+.modal__block-sign-up{
+display:flex;
+align-self: center;
+}
+.modal__sign-up {
+  background: none;
+  border: none;
+}
+// .modal__form * {
+//   margin: 0 0 30px 0;
+// }
+
+// .modal input,
+// .modal textarea {
+//   background-color: $white-opacity01;
+//   width: 100%;
+//   border: none;
+//   padding: 16px 25px;
+
+//   &::placeholder {
+//     color: inherit;
+//   }
+// }
+
+
+
+
+
+
+// .modal button[type="submit"] {
+//   font-family: $font-family--title;
+//   font-weight: bold;
+//   font-size: 14px;
+//   line-height: 16px;
+//   text-align: center;
+//   letter-spacing: 0.05em;
+//   text-transform: uppercase;
+//   background-color: inherit;
+//   border: 1px solid $white;
+//   border-radius: 5px;
+//   width: 100%;
+//   padding: 14px;
+
+//   &:hover {
+//     opacity: 0.6;
+//   }
+
+//   &:active {
+//     opacity: 1;
+//   }
+// }
+
+.modal__button-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  background-image: url("../img/icons/close.svg");
+  background-repeat: no-repeat;
+  border: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
