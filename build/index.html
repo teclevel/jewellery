@@ -337,24 +337,28 @@
       <ul class="questions__list center">
         <li>
           <h3>What materials are the jewellery made of?</h3>
-          <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+            semiprecious stones and crystals.</p>
           <button type="button" aria-label="expend/collapse menu"></button>
         </li>
         <li>
           <h3>Which countries do you deliver to?</h3>
-          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
+            semiprecious stones and crystals.</p>
           <button type="button" aria-label="expend/collapse menu"></button>
         </li>
         <li>
           <h3>What are the payment methods?</h3>
-          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
+            semiprecious stones and crystals.</p>
           <button type="button" aria-label="expend/collapse menu"></button>
         </li>
         <li>
           <h3>
             Can i return the jewellery if it didn't fit me?
           </h3>
-          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
+            semiprecious stones and crystals.</p>
           <button type="button" aria-label="expend/collapse menu"></button>
         </li>
       </ul>
@@ -517,17 +521,22 @@
     <div class="modal-js__header"></div>
     <div class="modal__wrapper center">
       <h2>Log In</h2>
-      <form action="#">
+    <form action="#">
+      <div class="modal__input">
         <label for="email-modal">Your E-mail</label>
         <input id="email-modal" type="email" name="email">
+      </div>
+      <div class="modal__input">
         <label for="password-modal">Password</label>
-        <input id="password-modal" type="password" maxlength="25" size="40" name="password">
-        <button type="button">Forgot your password?</button>
-        <button type="submit">Log in</button>
-        <p>Don't have an account?
-          <button type="button">Sign up</button>
-        </p>
-      </form>
+        <input id="password-modal" type="password">
+      </div>
+      <button class="modal__note" type="button">Forgot your password?</button>
+      <button class="modal__log-in" type="submit">Log in</button>
+      <div class="modal__block-sign-up">
+        <label for="sign-up-modal">Don't have an account?</label>
+        <input class="modal__sign-up" id="sign-up-modal" type="button" value="Sign up">
+      </div>
+    </form>
       <button class="modal__button-close" type="button" aria-label="close modal"></button>
     </div>
   </section>
