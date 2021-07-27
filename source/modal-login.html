@@ -22,25 +22,27 @@
       </a>
     </div>
   </header>
-  <main class="main">
+  <main class="main main--modal-login">
     <section class="modal">
-      <h2>Log In</h2>
-      <form action="#">
-        <div class="modal__input">
-          <label for="email-modal">Your E-mail</label>
-          <input id="email-modal" type="email" name="email">
-        </div>
-        <div class="modal__input">
-          <label for="password-modal">Password</label>
-          <input id="password-modal" type="password">
-        </div>
-        <button class="modal__note" type="button">Forgot your password?</button>
-        <button class="modal__log-in" type="submit">Log in</button>
-        <div class="modal__block-sign-up">
-          <label for="sign-up-modal">Don't have an account?</label>
-          <input class="modal__sign-up" id="sign-up-modal" type="button" value="Sign up">
-        </div>
-      </form>
+      <div class="modal__wrapper center">
+        <h2>Log In</h2>
+        <form action="#">
+          <div class="modal__input">
+            <label for="email-modal">Your E-mail</label>
+            <input id="email-modal" type="email" name="email" required>
+          </div>
+          <div class="modal__input modal__input--password">
+            <label for="password-modal">Password</label>
+            <input id="password-modal" type="password" required>
+          </div>
+          <button class="modal__note" type="button">Forgot your password?</button>
+          <button class="modal__log-in" type="submit">Log in</button>
+          <div class="modal__block-sign-up">
+            <label for="sign-up-modal">Don't have an account?</label>
+            <input class="modal__sign-up" id="sign-up-modal" type="button" value="Sign up">
+          </div>
+        </form>
+      </div>
     </section>
   </main>
   <footer class="footer">
@@ -111,12 +113,6 @@
     </div>
 
   </footer>
-
-
-
-
-  <!-- <script src="./js/vendor.js"></script> -->
-  <script src="./js/main.js"></script>
 </body>
 
 </html>

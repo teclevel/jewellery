@@ -1,10 +1,12 @@
 .modal {
-background-color: $brown;
+  background: $grey-background;
+  box-shadow: 0 5px 32px $shadow;
+  height: 100%;
 
   &--js {
-    height: 605px;
+    height: 586px;
     max-height: 100%;
-    width: 490px;
+    width: 430px;
     max-width: 100%;
     position: fixed;
     z-index: 100;
@@ -13,39 +15,33 @@ background-color: $brown;
     top: 0;
     bottom: 0;
     margin: auto;
-
+    overflow-y: auto;
   }
 }
 
 .modal__wrapper {
-  font-family: $font-family--description;
-  font-size: 16px;
-  line-height: 22px;
-  // color: $white;
-  padding: 29px 39px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: auto;
-  overflow-y: auto;
+  padding: 22px 45px;
 }
 
 .modal__header {
   width: 100%;
-  height: 100px;
+  height: 138px;
   background-image: url("../img/backgrounds/login.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .modal h2 {
-text-align: center;
+  text-align: center;
 }
 
 .modal form {
-  width: 500px;
+  font-family: $font-family--description;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -53,86 +49,61 @@ text-align: center;
 
 .modal__input {
   display: flex;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid $black;
+  padding: 5px 0 8px;
+  margin: 0 0 30px;
+
+  &--password {
+    margin: 0;
+  }
 }
 
 .modal input {
   flex-grow: 1;
-  padding: 0 0 0 10px;
+  padding: 0 10px;
+  margin: 0 0 0 10px;
   background: none;
   border: none;
 }
 
 .modal__note {
+  font-size: 12px;
+  line-height: 18px;
+  color: $grey;
   background: none;
   border: none;
-  text-align: end;
+  align-self: flex-end;
+  margin: 0 0 40px;
+  padding: 5px 10px;
 }
 
-.modal__log-in{
-  background-color: goldenrod;
+.modal__log-in {
+  font-size: 16px;
+  line-height: 21px;
+  color: $white;
+  background-color: $brown;
   border: none;
-  padding: 15px 0;
+  padding: 24px 0;
+  margin: 0 0 15px 0;
 }
 
-.modal__block-sign-up{
-display:flex;
-align-self: center;
+.modal__block-sign-up {
+  display: flex;
+  align-self: center;
 }
+
 .modal__sign-up {
   background: none;
   border: none;
+  color: $black;
 }
-// .modal__form * {
-//   margin: 0 0 30px 0;
-// }
-
-// .modal input,
-// .modal textarea {
-//   background-color: $white-opacity01;
-//   width: 100%;
-//   border: none;
-//   padding: 16px 25px;
-
-//   &::placeholder {
-//     color: inherit;
-//   }
-// }
-
-
-
-
-
-
-// .modal button[type="submit"] {
-//   font-family: $font-family--title;
-//   font-weight: bold;
-//   font-size: 14px;
-//   line-height: 16px;
-//   text-align: center;
-//   letter-spacing: 0.05em;
-//   text-transform: uppercase;
-//   background-color: inherit;
-//   border: 1px solid $white;
-//   border-radius: 5px;
-//   width: 100%;
-//   padding: 14px;
-
-//   &:hover {
-//     opacity: 0.6;
-//   }
-
-//   &:active {
-//     opacity: 1;
-//   }
-// }
 
 .modal__button-close {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 17px;
-  height: 17px;
+  width: 14px;
+  height: 14px;
   background-color: transparent;
   background-image: url("../img/icons/close.svg");
   background-repeat: no-repeat;

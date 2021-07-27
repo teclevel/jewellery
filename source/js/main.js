@@ -182,7 +182,7 @@
   const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
 
   const buttonClose = popup.querySelector('.modal__button-close');
-  const buttonOpenPopup = document.querySelector('.header__button-order');
+  const buttonOpenPopup = document.querySelector('.header__login-desktop');
 
   const html = document.querySelector('html');
   const marginSize = window.innerWidth - html.clientWidth;

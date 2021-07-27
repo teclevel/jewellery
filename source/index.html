@@ -569,26 +569,26 @@
 
   </footer>
 
-  <section class="modal-js">
-    <div class="modal-js__header"></div>
+  <section class="modal modal--js visually-hidden">
+    <div class="modal__header"></div>
     <div class="modal__wrapper center">
       <h2>Log In</h2>
-    <form action="#">
-      <div class="modal__input">
-        <label for="email-modal">Your E-mail</label>
-        <input id="email-modal" type="email" name="email">
-      </div>
-      <div class="modal__input">
-        <label for="password-modal">Password</label>
-        <input id="password-modal" type="password">
-      </div>
-      <button class="modal__note" type="button">Forgot your password?</button>
-      <button class="modal__log-in" type="submit">Log in</button>
-      <div class="modal__block-sign-up">
-        <label for="sign-up-modal">Don't have an account?</label>
-        <input class="modal__sign-up" id="sign-up-modal" type="button" value="Sign up">
-      </div>
-    </form>
+      <form action="#">
+        <div class="modal__input">
+          <label for="email-modal">Your E-mail</label>
+          <input id="email-modal" type="email" name="email" required>
+        </div>
+        <div class="modal__input modal__input--password">
+          <label for="password-modal">Password</label>
+          <input id="password-modal" type="password" required>
+        </div>
+        <button class="modal__note" type="button">Forgot your password?</button>
+        <button class="modal__log-in" type="submit">Log in</button>
+        <div class="modal__block-sign-up">
+          <label for="sign-up-modal">Don't have an account?</label>
+          <input class="modal__sign-up" id="sign-up-modal" type="button" value="Sign up">
+        </div>
+      </form>
       <button class="modal__button-close" type="button" aria-label="close modal"></button>
     </div>
   </section>
