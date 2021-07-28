@@ -1,5 +1,5 @@
 .questions {
-  padding: 27px 0 20px;
+  padding: 27px 0 72px;
 }
 
 .questions h2 {
@@ -23,29 +23,33 @@
   line-height: 21px;
   margin: 8px 0 10px;
   padding: 0 10px 6px 8px;
-  max-width: 545px;
+  max-width: 540px;
 }
 
 .questions__list {
   list-style: none;
+  display: flex;
+  flex-direction:column;
   padding: 0 120px;
 }
 
 .questions__list li {
   position: relative;
+  min-height: 112px;
   border: 1px solid $brown;
-  padding: 25px 42px;
+  padding: 25px 42px 23px;
 }
 
 .questions button {
   position: absolute;
   width: 20px;
   height: 15px;
-  top: 30px;
-  right: 30px;
+  top: 48px;
+  right: 45px;
   border: none;
   background: none;
   background-image: url("..//img/icons/arrow-top.svg");
   background-repeat: no-repeat;
   background-position: center center;
+  transform: rotate(180deg);
 }
