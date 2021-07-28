@@ -39,11 +39,13 @@
 
 .questions button {
   position: absolute;
-  width: 15px;
-  height: 8px;
+  width: 20px;
+  height: 15px;
   top: 30px;
   right: 30px;
   border: none;
   background: none;
   background-image: url("..//img/icons/arrow-top.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }

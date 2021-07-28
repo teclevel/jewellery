@@ -37,11 +37,14 @@
   let widthSliderWindow; //A
   let widthImage;  //C
   // let widthSliderLine; //B
-  // let quantityImages;
+  const quantityImages = 4;
+  const quantityGap = quantityImages - 1;
+
 
   function init() {
     widthSliderWindow = slider.offsetWidth;
-    widthImage = (widthSliderWindow - gap * 3) / 4;
+    console.log(widthSliderWindow);
+    widthImage = (widthSliderWindow - gap * quantityGap) / quantityImages;
     // slider.style.width = `${width * slides.length}px`;
 
     slides.forEach((item) => {
@@ -71,7 +74,8 @@
   });
 
   function rollSlider() {
-    slider.style.transform = `translate(-${count * (widthImage + gap)}px)`;
+    // slider.style.transform = `translate(-${count * (widthImage * quantityImages + quantityGap)}px)`;
+    slider.style.transform = `translate(-${count * widthSliderWindow}px)`;
   }
 
 })();
@@ -103,39 +107,39 @@
 
 // /*аккордеон*/
 
-// (function () {
-//   const accordion = document.querySelector('.accordion');
-//   const togglerClass = 'accordion__toggler';
-//   const itemClass = 'accordion__item';
-//   const itemOpenedClass = 'accordion__item--opened';
+(function () {
+  const accordion = document.querySelector('.accordion');
+  const togglerClass = 'accordion__toggler';
+  const itemClass = 'accordion__item';
+  const itemClosedClass = 'accordion__item--opened';
 
-//   function closeAccordionItems() {
-//     accordion
-//       .querySelectorAll(`.${itemClass}`)
-//       .forEach((element) => {
-//         if (element) {
-//           element.classList.remove(itemOpenedClass);
-//         }
-//       });
-//   }
+  function closeAccordionItems() {
+    accordion
+      .querySelectorAll(`.${itemClass}`)
+      .forEach((element) => {
+        if (element) {
+          element.classList.remove(itemClosedClass);
+        }
+      });
+  }
 
-//   closeAccordionItems();
+  closeAccordionItems();
 
-//   accordion.addEventListener('click', (event) => {
-//     const toggler = event.target.closest(`.${togglerClass}`);
+  accordion.addEventListener('click', (event) => {
+    const toggler = event.target.closest(`.${togglerClass}`);
 
-//     if (!toggler) { return; }
+    if (!toggler) { return; }
 
-//     const item = toggler.closest(`.${itemClass}`);
-//     const isOpened = item.classList.contains(itemOpenedClass);
+    const item = toggler.closest(`.${itemClass}`);
+    const isOpened = item.classList.contains(itemClosedClass);
 
-//     closeAccordionItems();
+    closeAccordionItems();
 
-//     isOpened
-//       ? item.classList.remove(itemOpenedClass)
-//       : item.classList.add(itemOpenedClass);
-//   });
-// })();
+    isOpened
+      ? item.classList.remove(itemClosedClass)
+      : item.classList.add(itemClosedClass);
+  });
+})();
 
 
 // /* Отправка формы */

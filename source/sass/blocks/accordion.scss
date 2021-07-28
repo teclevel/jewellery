@@ -1,0 +1,11 @@
+.accordion__item p {
+  display: none;
+}
+
+.accordion__item--opened p {
+  display: block;
+}
+
+.accordion__item--opened .accordion__toggler {
+  transform: rotate(180deg);
+}
