@@ -40,6 +40,11 @@
   text-transform: uppercase;
   margin: 0;
   z-index: 10;
+
+  @media (max-width: $tablet-width) {
+    line-height: 55px;
+    margin: 0 16px 0 0;
+  }
 }
 
 .lead p {
@@ -49,4 +54,9 @@
   line-height: 49px;
   margin: 0;
   z-index: 10;
+
+  @media (max-width: $tablet-width) {
+    line-height: 43px;
+    margin: 0 20px 0 0;
+  }
 }

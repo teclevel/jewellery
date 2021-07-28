@@ -3,18 +3,30 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
-  padding: 91px 0;
+  padding: 42px 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 42px 45px;
+  }
 }
 
 .slider__wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .slider h2 {
   text-align: center;
   margin: 28px 0 25px;
+
+  @media (max-width: $tablet-width) {
+    margin: 28px 0 21px;
+  }
 }
 
 .slider p {
@@ -42,19 +54,43 @@
   position: absolute;
   padding: 0;
   top: 67px;
+
+  @media (max-width: $tablet-width) {
+    top: 69px;
+  }
 }
 
 .slider__prev {
   left: 20px;
+
+  @media (max-width: $tablet-width) {
+    left: 0;
+  }
 }
 
 .slider__next {
   right: 20px;
+
+  @media (max-width: $tablet-width) {
+    right: 0;
+  }
 }
 
 .slider__next svg {
   transform: rotate(180deg);
   width: 35px;
+
+  @media (max-width: $tablet-width) {
+    width: 35px;
+    height: 15px;
+  }
+}
+
+.slider__prev svg {
+  @media (max-width: $tablet-width) {
+    width: 35px;
+    height: 15px;
+  }
 }
 
 .slider__list {
@@ -63,6 +99,10 @@
   display: flex;
   transition: all ease 1s;
   padding: 44px 0 53px;
+
+  @media (max-width: $tablet-width) {
+    padding: 37px 0 53px;
+  }
 }
 
 .slider__list li {
@@ -72,11 +112,20 @@
 .slider__list figure {
   margin: 0;
   width: 270px;
+
+  @media (max-width: $tablet-width) {
+    width: 324px;
+  }
 }
 
 .slider__list img {
   object-fit: cover;
   height: 284px;
+
+  @media (max-width: $tablet-width) {
+    height: 340px;
+    width: auto;
+  }
 }
 
 .slider__list figcaption {

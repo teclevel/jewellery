@@ -43,7 +43,7 @@
 
   function init() {
     widthSliderWindow = slider.offsetWidth;
-    console.log(widthSliderWindow);
+    // console.log(widthSliderWindow);
     widthImage = (widthSliderWindow - gap * quantityGap) / quantityImages;
     // slider.style.width = `${width * slides.length}px`;
 
@@ -101,8 +101,6 @@
 
 //   });
 // })();
-
-
 
 
 // /*аккордеон*/
