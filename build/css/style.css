@@ -445,6 +445,11 @@ img {
     .intro h1 {
       line-height: 55px;
       margin: 0 16px 0 0; } }
+  @media (max-width: 1023px) and (max-width: 767px) {
+    .intro h1 {
+      font-size: 38px;
+      line-height: 49px;
+      margin: 0 16px 0 0; } }
 
 .intro p {
   font-weight: 400;
@@ -456,6 +461,11 @@ img {
   @media (max-width: 1023px) {
     .intro p {
       line-height: 43px;
+      margin: 0 20px 0 0; } }
+  @media (max-width: 767px) {
+    .intro p {
+      line-height: 44px;
+      font-size: 34px;
       margin: 0 20px 0 0; } }
 
 .slider {
@@ -734,6 +744,13 @@ img {
 .blog figure {
   margin: 0; }
 
+/*
+
+@media (max-width: $mobile-width) {
+
+}
+
+*/
 .questions {
   padding: 27px 0 72px; }
   @media (max-width: 1023px) {
@@ -805,6 +822,13 @@ img {
       right: 49px;
       background-size: cover; } }
 
+/*
+
+@media (max-width: $mobile-width) {
+
+}
+
+*/
 .accordion__item p {
   display: none; }
 
@@ -930,6 +954,13 @@ img {
     width: 133px;
     height: 87px; } }
 
+/*
+
+@media (max-width: $mobile-width) {
+
+}
+
+*/
 .footer {
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
