@@ -838,7 +838,7 @@ img {
   text-align: center; }
   @media (max-width: 1023px) {
     .follow-us p {
-      margin: 15px 0; } }
+      margin: 15px 0 64px; } }
 
 .follow-us a {
   font-family: "Poppins", "Arial", sans-serif;
@@ -871,62 +871,65 @@ img {
   height: 100%; }
   @media (max-width: 1023px) {
     .follow-us__list {
-      grid-column-gap: 20px; } }
+      grid-template-columns: auto 1fr repeat(2, auto);
+      grid-column-gap: 16px;
+      grid-row-gap: 20px;
+      padding: 0;
+      margin: 0;
+      min-height: 240px; } }
 
-.follow-us__list li:nth-child(1) {
+.follow-us__item:nth-child(1) {
   grid-area: 1 / 1 / 2 / 2; }
 
-.follow-us__list li:nth-child(2) {
+.follow-us__item:nth-child(2) {
   grid-area: 1 / 2 / 3 / 3; }
 
-.follow-us__list li:nth-child(3) {
+.follow-us__item:nth-child(3) {
   grid-area: 1 / 3 / 2 / 4; }
 
-.follow-us__list li:nth-child(4) {
+.follow-us__item:nth-child(4) {
   grid-area: 1 / 4 / 2 / 5; }
 
-.follow-us__list li:nth-child(5) {
+.follow-us__item:nth-child(5) {
   grid-area: 2 / 1 / 3 / 2; }
 
-.follow-us__list li:nth-child(6) {
+.follow-us__item:nth-child(6) {
   grid-area: 2 / 3 / 3 / 4; }
 
-.follow-us__list li:nth-child(7) {
+.follow-us__item:nth-child(7) {
   grid-area: 2 / 4 / 3 / 5; }
 
 .follow-us__list figure {
   margin: 0; }
 
-.follow-us img {
+.follow-us__item img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover; }
   @media (max-width: 1023px) {
-    .follow-us img {
+    .follow-us__item img {
       width: 133px;
       height: 133px;
-      max-width: 100%;
-      max-height: 100%; } }
+      min-width: 100%;
+      min-height: 100%; } }
 
 @media (max-width: 1023px) {
-  .follow-us__list li:nth-child(2) img {
+  .follow-us__item:nth-child(2) img {
     width: 133px;
     height: 240px; } }
 
-/*
+@media (max-width: 1023px) {
+  .follow-us__item:nth-child(2) img {
+    width: 133px;
+    height: 240px; } }
 
-@media (max-width: $tablet-width) {
+@media (max-width: 1023px) {
+  .follow-us__item:nth-child(5) img,
+  .follow-us__item:nth-child(6) img,
+  .follow-us__item:nth-child(7) img {
+    width: 133px;
+    height: 87px; } }
 
-}
-
-*/
-/*
-
-@media (max-width: $mobile-width) {
-
-}
-
-*/
 .footer {
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
