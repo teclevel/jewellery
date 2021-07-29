@@ -70,16 +70,38 @@
       <h1>Perfection</h1>
       <p>made to be yours</p>
     </section>
+
+<!-- Slider main container -->
+<!-- <div class="swiper-container"> -->
+  <!-- Additional required wrapper -->
+  <!-- <div class="swiper-wrapper"> -->
+    <!-- Slides -->
+    <!-- <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div> -->
+  <!-- If we need pagination -->
+  <!-- <div class="swiper-pagination"></div> -->
+
+  <!-- If we need navigation buttons -->
+  <!-- <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div> -->
+
+  <!-- If we need scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div>
+</div> -->
+
     <section class="slider">
-      <div class="slider__wrapper center">
+      <div class="slider__wrapper center swiper-container">
         <h2>New In</h2>
         <p class="slider__container-title"><a href="#">Shop Now</a></p>
-        <button class="slider__prev" type="button" aria-label="previous slides">
+        <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
           <svg width="29" height="10">
             <use href="./img/sprite_auto.svg#arrow-left"></use>
           </svg>
         </button>
-        <button class="slider__next" type="button" aria-label="next slides">
+        <button class="slider__next swiper-button-next" type="button" aria-label="next slides">
           <svg width="29" height="10">
             <use href="./img/sprite_auto.svg#arrow-left"></use>
           </svg>
@@ -87,7 +109,7 @@
         <!-- <div class="slider__center"> -->
 
         <ul class="slider__list">
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -99,7 +121,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -111,7 +133,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -123,7 +145,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -135,7 +157,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -147,7 +169,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -159,7 +181,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -171,7 +193,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -183,7 +205,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -195,7 +217,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -207,7 +229,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -219,7 +241,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -231,7 +253,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -243,7 +265,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -255,7 +277,7 @@
               </figure>
             </a>
           </li>
-          <li>
+          <li class="swiper-slide">
             <a href="#">
               <figure>
                 <picture>
@@ -269,11 +291,14 @@
           </li>
         </ul>
         <!-- </div> -->
-        <ul class="slider__list-pages">
+        <ul class="slider__list-pages swiper-pagination">
           <li>1</li>
           <li>2</li>
           <li>3</li>
         </ul>
+
+        <div class="swiper-scrollbar"></div>
+
       </div>
     </section>
     <section class="blog">
@@ -538,8 +563,8 @@
   </section>
 
 
-  <!-- <script src="./js/vendor.js"></script> -->
-  <!-- <script src="./js/main.js"></script> -->
+  <script src="./js/swiper-bundle.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
