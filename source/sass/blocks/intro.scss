@@ -1,4 +1,4 @@
-.lead {
+.intro {
   font-family: $font-family--title;
   color: $white;
   text-align: center;
@@ -21,6 +21,10 @@
     height: 100%;
     width: 100%;
     background-color: rgba(86, 64, 52, 0.7);
+
+    @media (max-width: $tablet-width) {
+      background-color: transparent;
+    }
   }
 
   @media (min-resolution: $dpi), (min-resolution: $dppx) {
@@ -28,11 +32,24 @@
   }
 
   @media (max-width: $tablet-width) {
+    background-image: url("../img/backgrounds/intro-tablet.jpg");
     background-position: 50%;
+
+    @media (min-resolution: $dpi), (min-resolution: $dppx) {
+      background-image: url("../img/backgrounds/intro-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/backgrounds/intro-mobile.jpg");
+
+    @media (min-resolution: $dpi), (min-resolution: $dppx) {
+      background-image: url("../img/backgrounds/intro-mobile@2x.jpg");
+    }
   }
 }
 
-.lead h1 {
+.intro h1 {
   font-weight: 700;
   font-size: 45px;
   line-height: 58px;
@@ -47,7 +64,7 @@
   }
 }
 
-.lead p {
+.intro p {
   font-weight: 400;
   font-style: italic;
   font-size: 38px;

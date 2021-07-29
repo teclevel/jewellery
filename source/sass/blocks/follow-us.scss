@@ -1,5 +1,9 @@
 .follow-us {
-  padding: 0 0 80px;
+  padding: 0 0 65px;
+
+  @media (max-width: $tablet-width) {
+  padding: 0 45px 80px;
+  }
 }
 
 .follow-us h2 {
@@ -9,6 +13,10 @@
   line-height: 55px;
   letter-spacing: 0.03em;
   margin: 28px 0 25px;
+
+  @media (max-width: $tablet-width) {
+    margin: 28px 0 13px;
+  }
 }
 
 .follow-us span {
@@ -17,6 +25,10 @@
 
 .follow-us p {
   text-align: center;
+
+  @media (max-width: $tablet-width) {
+    margin: 15px 0;
+  }
 }
 
 .follow-us a {
@@ -50,6 +62,10 @@
   padding: 48px 20px 50px;
   min-height: 412px;
   height: 100%;
+
+  @media (max-width: $tablet-width) {
+    grid-column-gap: 20px;
+  }
 }
 
 .follow-us__list li {
@@ -91,4 +107,34 @@
 .follow-us img {
   width: 100%;
   object-fit: cover;
+
+  @media (max-width: $tablet-width) {
+    width: 133px;
+    height: 133px;
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
+
+
+.follow-us__list li:nth-child(2) img { /////////////////////////////3 into
+  @media (max-width: $tablet-width) {
+    width: 133px;
+    height: 240px;
+  }
+}
+
+/*
+
+@media (max-width: $tablet-width) {
+
+}
+
+*/
+/*
+
+@media (max-width: $mobile-width) {
+
+}
+
+*/
