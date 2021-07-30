@@ -53,16 +53,35 @@
     grid-column-gap: 0;
     grid-row-gap: 0;
   }
+
+  @media (max-width: $mobile-width) {
+    margin: 56px auto 0;
+  }
+}
+
+.blog__item {
+  @media (max-width: $mobile-width) {
+    max-width: 290px;
+    margin: 0 auto;
+  }
 }
 
 .blog__item:not(:last-child) {
   @media (max-width: $tablet-width) {
     margin: 0 0 50px;
   }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto 40px;
+  }
 }
 
 .blog__item figure {
   display: flex;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .blog__item figcaption {
@@ -75,6 +94,10 @@
 
   @media (max-width: $tablet-width) {
     padding: 67px 83px 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 45px 60px 53px;
   }
 }
 
@@ -110,12 +133,16 @@
   grid-area: 2 / 1 / 3 / 2;
 }
 
-.blog__item2 figcaption {
-  order: -1;
-}
-
 .blog__item3 {
   grid-area: 1 / 2 / 3 / 3;
+}
+
+.blog__item2 figcaption {
+  order: -1;
+
+  @media (max-width: $mobile-width) {
+    order: 0;
+  }
 }
 
 .blog__item3 figure {
@@ -123,15 +150,24 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   row-gap: 30px;
+  height: 100%;
 
   @media (max-width: $tablet-width) {
     display: flex;
+  }
+
+  @media (max-width: $mobile-width) {
+    row-gap: 0;
   }
 }
 
 .blog__item1 .blog__picture,
 .blog__item2 .blog__picture {
   width: 50%;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
 }
 
 .blog__item3 .blog__picture {
@@ -140,11 +176,24 @@
   @media (max-width: $tablet-width) {
     width: 50%;
   }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
 }
 
 .blog__item1 figcaption,
 .blog__item2 figcaption {
   width: 50%;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding: 45px 60px 53px;
+  }
 }
 
 .blog__item img {
@@ -156,11 +205,21 @@
     min-height: 100%;
     width: 100%;
   }
+
+  @media (max-width: $mobile-width) {
+    // width: 290px;
+    height: 256px;
+  }
 }
 
 .blog__item3 img {
   @media (max-width: $tablet-width) {
     min-width: 339px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+    height: 256px;
   }
 }
 
@@ -168,8 +227,13 @@
   grid-area: 2 / 2 / 3 / 3;
 
   @media (max-width: $tablet-width) {
-    width: 50px;
+    // width: 50px;
     padding: 83px 83px 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding: 62px 60px 70px;
   }
 }
 
