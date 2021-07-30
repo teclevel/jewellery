@@ -598,6 +598,13 @@ img {
 .slider__list-pages li:not(:last-child) {
   margin: 0 13px 0 0; }
 
+.slider__list-pages button {
+  border: none;
+  background: none;
+  color: #9b9997; }
+  .slider__list-pages button:active {
+    color: inherit; }
+
 .blog {
   font-family: "Poppins", "Arial", sans-serif;
   color: #1d1613; }

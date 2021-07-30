@@ -157,3 +157,12 @@
 .slider__list-pages li:not(:last-child) {
   margin: 0 13px 0 0;
 }
+
+.slider__list-pages button {
+  border: none;
+  background: none;
+  color: $grey;
+  &:active {
+    color: inherit;
+  }
+}

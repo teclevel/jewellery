@@ -93,22 +93,10 @@
 </div> -->
 
     <section class="slider">
-      <div class="slider__wrapper center swiper-container">
+      <div class="slider__wrapper center  mySwiper">
         <h2>New In</h2>
         <p class="slider__container-title"><a href="#">Shop Now</a></p>
-        <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
-          <svg width="29" height="10">
-            <use href="./img/sprite_auto.svg#arrow-left"></use>
-          </svg>
-        </button>
-        <button class="slider__next swiper-button-next" type="button" aria-label="next slides">
-          <svg width="29" height="10">
-            <use href="./img/sprite_auto.svg#arrow-left"></use>
-          </svg>
-        </button>
-        <!-- <div class="slider__center"> -->
-
-        <ul class="slider__list">
+        <ul class="slider__list swiper-wrapper">
           <li class="swiper-slide">
             <a href="#">
               <figure>
@@ -328,15 +316,24 @@
             </a>
           </li>
         </ul>
-        <!-- </div> -->
+        <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
+          <svg width="29" height="10">
+            <use href="./img/sprite_auto.svg#arrow-left"></use>
+          </svg>
+        </button>
+        <button class="slider__next swiper-button-next" type="button" aria-label="next slides">
+          <svg width="29" height="10">
+            <use href="./img/sprite_auto.svg#arrow-left"></use>
+          </svg>
+        </button>
         <ul class="slider__list-pages swiper-pagination">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
+          <li><button type="button">1</button></li>
+          <li><button type="button">2</button></li>
+          <li><button type="button">3</button></li>
+          <li><button type="button">4</button></li>
+          <li><button type="button">5</button></li>
+          <li><button type="button">6</button></li>
         </ul>
-
-        <div class="swiper-scrollbar"></div>
-
       </div>
     </section>
     <section class="blog">
@@ -615,7 +612,7 @@
   </section>
 
 
-  <!-- <script src="./js/swiper-bundle.js"></script> -->
+  <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 
