@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* Меню на мобильной версии */
 
 (function () {
@@ -29,6 +28,7 @@
 /* Swiper */
 
 // (function () {
+//   /* eslint-disable no-unused-vars */
 //   // eslint-disable-next-line no-undef
 //   const swiper = new Swiper('.mySwiper', {
 //     slidesPerView: 4,
@@ -208,7 +208,6 @@
 
   const buttonClose = popup.querySelector('.modal__button-close');
   const buttonOpenPopup = document.querySelector('.header__login-desktop');
-
   const html = document.querySelector('html');
   const marginSize = window.innerWidth - html.clientWidth;
 
