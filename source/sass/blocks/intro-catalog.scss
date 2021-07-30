@@ -1,0 +1,91 @@
+.intro-catalog {
+  font-family: $font-family--title;
+  color: $white;
+  text-align: center;
+  position: relative;
+  background-color: $brown;
+  background-image: url("../img/backgrounds/catalog.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -8px;
+  min-height: 463px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(86, 64, 52, 0.7);
+
+    @media (max-width: $tablet-width) {
+      background-color: transparent;
+    }
+  }
+
+  // @media (min-resolution: $dpi), (min-resolution: $dppx) {
+  //   background-image: url("../img/backgrounds/index@2x.jpg");
+  // }
+
+  // @media (max-width: $tablet-width) {
+  //   background-image: url("../img/backgrounds/intro-tablet.jpg");
+  //   background-position: 50%;
+
+  //   @media (min-resolution: $dpi), (min-resolution: $dppx) {
+  //     background-image: url("../img/backgrounds/intro-tablet@2x.jpg");
+  //   }
+  // }
+
+  // @media (max-width: $mobile-width) {
+  //   background-image: url("../img/backgrounds/intro-mobile.jpg");
+
+  //   @media (min-resolution: $dpi), (min-resolution: $dppx) {
+  //     background-image: url("../img/backgrounds/intro-mobile@2x.jpg");
+  //   }
+  // }
+}
+
+.intro-catalog h1 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+  z-index: 10;
+
+  @media (max-width: $tablet-width) {
+    line-height: 55px;
+    margin: 0 16px 0 0;
+
+    @media (max-width: $mobile-width) {
+      font-size: 38px;
+      line-height: 49px;
+      margin: 0 16px 0 0;
+    }
+  }
+}
+
+.intro-catalog p {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 38px;
+  line-height: 49px;
+  margin: 0;
+  z-index: 10;
+
+  @media (max-width: $tablet-width) {
+    line-height: 43px;
+    margin: 0 20px 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    line-height: 44px;
+    font-size: 34px;
+    margin: 0 20px 0 0;
+  }
+}

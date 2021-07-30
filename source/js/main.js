@@ -27,52 +27,24 @@
 
 /* Swiper */
 
-(function () {
+// (function () {
 
-  // const swiper = new Swiper('.swiper-container', {
-  //   // Optional parameters
-  //   direction: 'vertical',
-  //   loop: true,
-
-  //   // If we need pagination
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //   },
-
-  //   // Navigation arrows
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-
-  //   // And if we need scrollbar
-  //   scrollbar: {
-  //     el: '.swiper-scrollbar',
-  //   },
-  // });
-
-  // const swiper = document.querySelector('.swiper-container').swiper;
-
-  // Now you can use all slider methods like
-  // swiper.slideNext();
-
-  const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-  console.log(swiper);
-})();
+//   const swiper = new Swiper('.mySwiper', {
+//     slidesPerView: 4,
+//     spaceBetween: 30,
+//     slidesPerGroup: 3,
+//     loop: true,
+//     loopFillGroupWithBlank: true,
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//   });
+// })();
 
 
 /* Слайдер */
@@ -208,7 +180,7 @@
 // })();
 
 
-/* Modal */
+/* Popup */
 
 (function () {
   const overlay = document.createElement('div');
@@ -232,7 +204,7 @@
 
   const popup = document.querySelector('.modal');
   const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
-
+console.log(popup);
   const buttonClose = popup.querySelector('.modal__button-close');
   const buttonOpenPopup = document.querySelector('.header__login-desktop');
 

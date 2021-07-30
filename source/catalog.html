@@ -24,7 +24,7 @@
             <use href="./img/sprite_auto.svg#menu"></use>
           </svg>
         </button>
-        <a class="header__logo">
+        <a href="./index.html" class="header__logo">
           <svg width="66" height="66">
             <use href="./img/sprite_auto.svg#logo"></use>
           </svg>
@@ -66,36 +66,28 @@
     </nav>
   </header>
   <main class="main">
-    <section class="intro">
-      <h1>Perfection</h1>
-      <p>made to be yours</p>
+    <section class="intro-catalog">
+      <h1>All jewellery</h1>
+      <p>Discover picks of fation's finest trends in our jewellery catalog</p>
     </section>
+    <section class="filter">
+      <h2 class="visually-hidden">Product filter</h2>
+      <ul class="fiilter__list"></ul>
+      <li class="filter__item"></li>
 
-    <!-- Slider main container -->
-    <!-- <div class="swiper-container"> -->
-    <!-- Additional required wrapper -->
-    <!-- <div class="swiper-wrapper"> -->
-    <!-- Slides -->
-    <!-- <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    ...
-  </div> -->
-    <!-- If we need pagination -->
-    <!-- <div class="swiper-pagination"></div> -->
-
-    <!-- If we need navigation buttons -->
-    <!-- <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div> -->
-
-    <!-- If we need scrollbar -->
-    <!-- <div class="swiper-scrollbar"></div>
-</div> -->
+      <!-- <fieldset class="form__fieldset-checkbox">
+        <legend class="form__legend form__legend--checkbox">Ваши безбашенные достижения в путешествии</legend>
+        <ul class="form__list checkbox">
+          <li class="checkbox__item">
+            <input class="form__input checkbox__input visually-hidden" type="checkbox" id="selfie" value="selfie" name="progress" checked>
+            <label class="form__label" for="selfie">Сделал селфи с акулой</label>
+          </li> -->
+    </section>
 
     <section class="slider">
       <div class="slider__wrapper center  mySwiper">
         <h2>New In</h2>
-        <p class="slider__container-title"><a href="./catalog.html">Shop Now</a></p>
+        <p class="slider__container-title"><a href="#">Shop Now</a></p>
         <ul class="slider__list swiper-wrapper">
           <li class="swiper-slide">
             <a href="#">
@@ -336,187 +328,7 @@
         </ul>
       </div>
     </section>
-    <section class="blog">
-      <h2>Blog</h2>
-      <p><a href="#">Read All</a></p>
-      <ul class="blog__list center">
-        <li class="blog__item blog__item1">
-          <figure>
-            <div class="blog__picture">
-              <picture>
-                <!-- 1x: 285 ; 2x: 570 -->
-                <source type="image/webp"
-                  srcset="./img/index-content/jess-harper-sunday.webp 1x, ./img/index-content/jess-harper-sunday@2x.webp 2x">
-                <img loading="lazy" src="./img/index-content/jess-harper-sunday.jpg"
-                  srcset="./img/index-content/jess-harper-sunday@2x.jpg" width="285" height="300"
-                  alt="jess harper sunday">
-              </picture>
-            </div>
-            <figcaption>
-              <time datetime="2019-09-30">September 30, 2019</time>
-              <p>How to care for your jewellery</p>
-              <a href="#">Read Article</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="blog__item blog__item2">
-          <figure>
-            <div class="blog__picture">
-              <picture>
-                <!-- 1x: 285 ; 2x: 570 -->
-                <source type="image/webp"
-                  srcset="./img/index-content/alex-holyoake.webp 1x, ./img/index-content/alex-holyoake@2x.webp 2x">
-                <img loading="lazy" src="./img/index-content/alex-holyoake.jpg"
-                  srcset="./img/index-content/alex-holyoake@2x.jpg" width="285" height="300" alt="alex-holyoake">
-              </picture>
-            </div>
-            <figcaption>
-              <time datetime="2019-09-23">September 23, 2019</time>
-              <p>Power of crystals</p>
-              <a href="#">Read Article</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="blog__item blog__item3">
-          <figure>
-            <div class="blog__picture">
-              <picture>
-                <!-- 1x: 285 ; 2x: 570 -->
-                <source type="image/webp"
-                  srcset="./img/index-content/alve-odonnell.webp 1x, ./img/index-content/alve-odonnell@2x.webp 2x">
-                <img loading="lazy" src="./img/index-content/alve-odonnell.jpg"
-                  srcset="./img/index-content/alve-odonnell@2x.jpg" width="570" height="630" alt="alve odonnell">
-              </picture>
-            </div>
-            <figcaption>
-              <time datetime="2019-09-16">September 16, 2019</time>
-              <p>AW 19 trends</p>
-              <a href="#">Read Article</a>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-    </section>
-    <section class="questions">
-      <h2>Frequently asked questions</h2>
-      <ul class="questions__list accordion center">
-        <li class="accordion__item accordion__item--opened">
-          <h3>What materials are the jewellery made of?</h3>
-          <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
-            semiprecious stones and crystals.</p>
-          <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
-        </li>
-        <li class="accordion__item accordion__item--opened">
-          <h3>Which countries do you deliver to?</h3>
-          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
-            semiprecious stones and crystals.</p>
-          <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
-        </li>
-        <li class="accordion__item accordion__item--opened">
-          <h3>What are the payment methods?</h3>
-          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
-            semiprecious stones and crystals.</p>
-          <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
-        </li>
-        <li class="accordion__item accordion__item--opened">
-          <h3>Can i return the jewellery if it didn't fit me?</h3>
-          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
-            semiprecious stones and crystals.</p>
-          <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
-        </li>
-      </ul>
-    </section>
 
-    <section class="follow-us center">
-      <h2><span>@</span>Chjewellery</h2>
-      <p><a href="#">Follow us</a></p>
-      <ul class="follow-us__list">
-        <li class="follow-us__item">
-          <a href="#">
-            <figure>
-              <picture>
-                <!-- 1x: 230 ; 2x: 460 -->
-                <source type="image/webp" srcset="./img/index-content/7.webp 1x, ./img/index-content/7@2x.webp 2x">
-                <img loading="lazy" src="./img/index-content/7.jpg" srcset="./img/index-content/7@2x.jpg" width="230"
-                  height="230" alt="square earrings on the edge of the laptop">
-              </picture>
-            </figure>
-          </a>
-        </li>
-        <li class="follow-us__item">
-          <a href="#">
-            <figure>
-              <picture>
-                <!-- 1x: 399 ; 2x: 798 -->
-                <source type="image/webp" srcset="./img/index-content/2.webp 1x, ./img/index-content/2@2x.webp 2x">
-                <img loading="lazy" src="./img/2.jpg" srcset="./img/index-content/2@2x.jpg" width="399" height="412"
-                  alt="woman shows earrings on herself">
-              </picture>
-            </figure>
-          </a>
-        </li>
-        <li class="follow-us__item">
-          <a href="#">
-            <figure>
-              <picture>
-                <!-- 1x: 230 ; 2x: 460 -->
-                <source type="image/webp" srcset="./img/index-content/3.webp 1x, ./img/index-content/3@2x.webp 2x">
-                <img loading="lazy" src="./img/index-content/3.jpg" srcset="./img/index-content/3@2x.jpg" width="230"
-                  height="230" alt="jewelry on hands">
-              </picture>
-            </figure>
-          </a>
-        </li>
-        <li class="follow-us__item">
-          <a href="#">
-            <figure>
-              <picture>
-                <!-- 1x: 230 ; 2x: 460 -->
-                <source type="image/webp" srcset="./img/index-content/5.webp 1x, ./img/index-content/5@2x.webp 2x">
-                <img loading="lazy" src="./img/5.jpg" srcset="./img/index-content/5@2x.jpg" width="230" height="230"
-                  alt="gold hoop earrings">
-              </picture>
-            </figure>
-          </a>
-        </li>
-        <li class="follow-us__item">
-          <a href="#">
-            <figure>
-              <picture>
-                <!-- 1x: 230 ; 2x: 460 -->
-                <source type="image/webp" srcset="./img/index-content/1.webp 1x, ./img/index-content/1@2x.webp 2x">
-                <img loading="lazy" src="./img/index-content/1.jpg" srcset="./img/index-content/1@2x.jpg" width="230"
-                  height="150" alt="gold-rimmed jewelry">
-              </picture>
-            </figure>
-          </a>
-        </li>
-        <li class="follow-us__item">
-          <a href="#">
-            <figure>
-              <picture>
-                <!-- 1x: 230 ; 2x: 460 -->
-                <source type="image/webp" srcset="./img/index-content/4.webp 1x, ./img/index-content/4@2x.webp 2x">
-                <img loading="lazy" src="./img/index-content/4.jpg" srcset="./img/index-content/4@2x.jpg" width="230"
-                  height="150" alt="ring, chain, earrings on the card">
-              </picture>
-            </figure>
-          </a>
-        </li>
-        <li class="follow-us__item">
-          <a href="#">
-            <figure>
-              <picture>
-                <!-- 1x: 230 ; 2x: 460 -->
-                <source type="image/webp" srcset="./img/index-content/6.webp 1x, ./img/index-content/6@2x.webp 2x">
-                <img loading="lazy" src="./img/index-content/6.jpg" srcset="./img/index-content/6@2x.jpg" width="230"
-                  height="150" alt="woman shows rings">
-              </picture>
-            </figure>
-          </a>
-        </li>
-      </ul>
-    </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper center">
@@ -611,8 +423,6 @@
     </div>
   </section>
 
-
-  <!-- <script src="./js/swiper-bundle.min.js"></script> -->
   <script src="./js/main.js"></script>
 </body>
 
