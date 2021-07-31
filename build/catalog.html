@@ -24,7 +24,7 @@
             <use href="./img/sprite_auto.svg#menu"></use>
           </svg>
         </button>
-        <a href="./index.html" class="header__logo">
+        <a href="./index.html" class="header__logo header__logo-catalog">
           <svg width="66" height="66">
             <use href="./img/sprite_auto.svg#logo"></use>
           </svg>
@@ -66,15 +66,15 @@
     </nav>
   </header>
   <main class="main catalog">
-    <section class="catalog__intro">
+    <section class="intro catalog__intro">
       <h1>All jewellery</h1>
       <p>Discover picks of fation's finest trends in our jewellery catalog</p>
     </section>
     <div class="catalog__center center">
       <section class="catalog__filter filter">
         <h2 class="visually-hidden">Product filter</h2>
-        <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get" target="_blank">
-          <fieldset class="filter__fieldset">
+        <form class="filter__form accordion" action="https://echo.htmlacademy.ru/" method="get" target="_blank">
+          <fieldset class="accordion__item accordion__item--opened">
             <legend>Product</legend>
             <ul class="filter__list filter__list-product">
               <li class="filter__item">
@@ -94,8 +94,9 @@
                 <label for="earrings">Earrings</label>
               </li>
             </ul>
+            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
           </fieldset>
-          <fieldset class="filter__fieldset">
+          <fieldset class="accordion__item accordion__item--opened">
             <legend>Material</legend>
             <ul class="filter__list filter__list-material">
               <li class="filter__item">
@@ -107,8 +108,9 @@
                 <label for="silver">Silver</label>
               </li>
             </ul>
+            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
           </fieldset>
-          <fieldset class="filter__fieldset">
+          <fieldset class="accordion__item accordion__item--opened">
             <legend>Collection</legend>
             <ul class="filter__list filter__list-collection">
               <li class="filter__item">
@@ -120,10 +122,11 @@
                 <label for="dreams">Dreams</label>
               </li>
             </ul>
+            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
           </fieldset>
-          <fieldset class="filter__fieldset">
+          <fieldset class="accordion__item accordion__item--opened">
             <legend>Price</legend>
-            <div class="filter__range range">
+            <div class="filter__list range">
               <div class="range__controls">
                 <div class="range__scale">
                   <div class="range__bar"></div>
@@ -141,6 +144,7 @@
                 </label>
               </div>
             </div>
+            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
           </fieldset>
           <button class="filter__button filter__button--apply" type="submit">Apply</button>
           <button class="filter__button filter__button--clear" type="reset">Clear All</button>

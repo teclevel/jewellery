@@ -20,7 +20,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    background-color: rgba(86, 64, 52, 0.7);
+    background-color: $background-intro;
 
     @media (max-width: $tablet-width) {
       background-color: transparent;
@@ -50,8 +50,8 @@
 }
 
 .intro h1 {
-  font-weight: 700;
   font-size: 45px;
+  font-weight: 700;
   line-height: 58px;
   letter-spacing: 0.03em;
   text-transform: uppercase;

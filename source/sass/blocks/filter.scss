@@ -1,38 +1,58 @@
 .filter__form {
-  padding: 50px 0 20px;
+  padding: 80px 0 20px;
   font-family: $font-family--description;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
 }
 
-.filter__fieldset {
+.filter__form fieldset {
   position: relative;
-  padding: 50px 0 0;
+  padding: 50px 0 15px;
   margin: 0;
   border: 1px solid $brown;
+  min-height: 67px;
 }
 
-.filter__fieldset:not(:last-of-type) {
+.filter__form fieldset:not(:last-of-type) {
   border-bottom: 0;
 }
 
-.filter__fieldset legend {
+.filter__form legend {
   font-size: 16px;
   line-height: 21px;
   position: absolute;
-  top: 10px;
-  left: 20px;
+  top: 22px;
+  left: 25px;
+}
+
+.filter__form button {
+  top: 25px;
+  right: 21px;
+
+  @media (max-width: $tablet-width) {
+    ///////////////////////////////////////
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 21px;
+    right: 22px;
+  }
 }
 
 .filter__list {
   margin: 0;
-  padding: 0;
+  padding: 18px 0 0;
   list-style: none;
+}
+
+.filter__form .range {
+  padding: 12px 0 0;
 }
 
 .filter__item {
   padding: 0 0 0 34px;
+  margin: 0 0 12px;
 }
 
 .filter__item input:checked + label {
@@ -50,9 +70,9 @@
 
 .filter__item label {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
   position: relative;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 26px;
   cursor: pointer;
 
   &::before {
@@ -73,12 +93,12 @@
   background: none;
   text-align: center;
   width: 100%;
-  padding: 16px 6px;
+  padding: 25px 6px;
   font-size: 16px;
 
   &--apply {
     background-color: $brown;
-    margin: 35px 0;
+    margin: 35px 0 24px;
   }
 
   &--clear {

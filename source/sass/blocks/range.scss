@@ -1,55 +1,50 @@
 .range {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .range__controls {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  // width: 260px;
-  // height: 80px;
-  background-color: var(--background-grey);
-  // border-radius: 3px;
+  width: 200px;
+  margin: auto;
+  height: 18px;
 }
 
 .range__scale {
   width: 205px;
-  height: 2px;
+  height: 1px;
   background-color: $grey-background;
 }
 
 .range__bar {
-  width: 64%;
-  height: 2px;
+  width: 50%;
+  height: 1px;
+  margin: 0 auto;
   background-color: $brown;
 }
 
 .range__toggle {
+  position: absolute;
   width: 15px;
   height: 15px;
   background-color: $brown;
   border-radius: 50%;
 
   &--min {
-    position: absolute;
-    left: 7%;
+    left: 22%;
   }
 
   &--max {
-    position: absolute;
-    left: 61%;
+    left: 75%;
   }
 }
 
 .range__price-controls {
-  // width: 260px;
   display: flex;
   justify-content: space-between;
-  text-transform: uppercase;
-  line-height: 22px;
-  // color: var(--dark-text);
+  padding: 0 31px 0 61px;
 }
 
 .range__price-controls label {
@@ -57,14 +52,10 @@
 }
 
 .range__price-controls input[type="number"] {
-  width: 66px;
-  height: 38px;
-  // background-color: var(--background-grey);
-  border: none;
+  width: 41px;
+  height: 26px;
   text-align: center;
-  margin-top: 14px;
-  margin-left: 8px;
-  padding: 0;
-  padding-left: 14px;
-  border-radius: 3px;
+  color: inherit;
+  border-radius: 2px;
+  border: none;
 }

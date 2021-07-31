@@ -94,22 +94,22 @@
 }
 
 .questions button {
-  position: absolute;
-  width: 20px;
-  height: 15px;
+  // position: absolute;
+  // width: 20px;
+  // height: 15px;
   top: 48px;
   right: 45px;
-  border: none;
-  background: none;
-  background-image: url("..//img/icons/arrow-top.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  transform: rotate(180deg);
+  // border: none;
+  // background: none;
+  // background-image: url("..//img/icons/arrow-top.svg");
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // transform: rotate(180deg);
 
   @media (max-width: $tablet-width) {
-    width: 23px;
-    right: 49px;
-    background-size: cover;
+    // width: 23px;
+    // right: 49px;
+    // background-size: cover;
   }
 
   @media (max-width: $mobile-width) {
