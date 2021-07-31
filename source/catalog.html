@@ -38,7 +38,7 @@
           <input class="header__search" name="search" placeholder="Type here to search" type="search">
         </form>
         <ul class="header__user-menu-list">
-          <li class="header__login-desktop"><a href="./modal-login.html">Login</a></li>
+          <li class="header__login header__login-desktop"><a href="./modal-login.html">Login</a></li>
           <li>
             <a href="#"><span class="header__cart-desktop">Cart 0</span>
               <svg class="header__cart-tablet" width="20" height="18">
@@ -61,273 +61,333 @@
         <li><a href="#">About CH</a></li>
         <li><a href="#">Stores & Hours</a></li>
         <li><a href="#">Contact Us</a></li>
-        <li class="header__login-tablet"><a href="#">Login</a></li>
+        <li class="header__login header__login-tablet"><a href="./modal-login.html">Login</a></li>
       </ul>
     </nav>
   </header>
-  <main class="main">
-    <section class="intro-catalog">
+  <main class="main catalog">
+    <section class="catalog__intro">
       <h1>All jewellery</h1>
       <p>Discover picks of fation's finest trends in our jewellery catalog</p>
     </section>
-    <section class="filter">
-      <h2 class="visually-hidden">Product filter</h2>
-      <ul class="fiilter__list"></ul>
-      <li class="filter__item"></li>
+    <div class="catalog__center center">
+      <section class="catalog__filter filter">
+        <h2 class="visually-hidden">Product filter</h2>
+        <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get" target="_blank">
+          <fieldset class="filter__fieldset">
+            <legend>Product</legend>
+            <ul class="filter__list filter__list-product">
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" id="necklaces" value="necklaces" name="necklaces" checked>
+                <label for="necklaces">Necklaces</label>
+              </li>
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" id="chokers" value="chokers" name="chokers" checked>
+                <label for="chokers">Chokers</label>
+              </li>
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" id="rings" value="rings" name="rings">
+                <label for="rings">Rings</label>
+              </li>
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" id="earrings" value="earrings" name="earrings" checked>
+                <label for="earrings">Earrings</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend>Material</legend>
+            <ul class="filter__list filter__list-material">
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" id="gold" value="gold" name="gold" checked>
+                <label for="gold">Gold</label>
+              </li>
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" id="silver" value="silver" name="silver">
+                <label for="silver">Silver</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend>Collection</legend>
+            <ul class="filter__list filter__list-collection">
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" id="pink-flamingo" value="pink-flamingo" name="pink-flamingo">
+                <label for="pink-flamingo">Pink flamingo</label>
+              </li>
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" id="dreams" value="dreams" name="dreams" checked>
+                <label for="dreams">Dreams</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend>Price</legend>
+            <div class="filter__range range">
+              <div class="range__controls">
+                <div class="range__scale">
+                  <div class="range__bar"></div>
+                </div>
+                <div class="range__toggle range__toggle--min"></div>
+                <div class="range__toggle range__toggle--max"></div>
+              </div>
+              <div class="range__price-controls">
+                <label class="range__min-price">
+                  $
+                  <input type="number" name="min-price" value="55">
+                </label>
+                <label class="range__max-price">
+                  $ <input type="number" name="max-price" value="155">
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <button class="filter__button filter__button--apply" type="submit">Apply</button>
+          <button class="filter__button filter__button--clear" type="reset">Clear All</button>
+        </form>
+      </section>
 
-      <!-- <fieldset class="form__fieldset-checkbox">
-        <legend class="form__legend form__legend--checkbox">Ваши безбашенные достижения в путешествии</legend>
-        <ul class="form__list checkbox">
-          <li class="checkbox__item">
-            <input class="form__input checkbox__input visually-hidden" type="checkbox" id="selfie" value="selfie" name="progress" checked>
-            <label class="form__label" for="selfie">Сделал селфи с акулой</label>
-          </li> -->
-    </section>
-
-    <section class="slider">
-      <div class="slider__wrapper center  mySwiper">
-        <h2>New In</h2>
-        <p class="slider__container-title"><a href="#">Shop Now</a></p>
-        <ul class="slider__list swiper-wrapper">
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/purple-gemstone-necklace.webp 1x, ./img/catalog/purple-gemstone-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/purple-gemstone-necklace.jpg"
-                    srcset="./img/catalog/purple-gemstone-necklace@2x.jpg" width="270" height="272"
-                    alt="Necklace with amethyst">
-                </picture>
-                <figcaption><span>Necklace with amethyst</span><span>$145</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/layered-choker-necklace.webp 1x, ./img/catalog/layered-choker-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/layered-choker-necklace.jpg"
-                    srcset="./img/catalog/layered-choker-necklace@2x.jpg" width="270" height="272" alt="Layered сhoker">
-                </picture>
-                <figcaption><span>Layered сhoker</span><span>$115</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/dainty-gold-necklace.webp 1x, ./img/catalog/dainty-gold-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/dainty-gold-necklace.jpg"
-                    srcset="./img/catalog/dainty-gold-necklace@2x.jpg" width="270" height="272" alt="Gold chain">
-                </picture>
-                <figcaption><span>Gold chain</span><span>$215</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/galaxy-earrings.webp 1x, ./img/catalog/galaxy-earrings@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/galaxy-earrings.jpg"
-                    srcset="./img/catalog/galaxy-earrings@2x.jpg" width="270" height="272" alt="Galaxy earrings">
-                </picture>
-                <figcaption><span>Galaxy earrings</span><span>$95</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/double-pearl-earrings.webp 1x, ./img/catalog/double-pearl-earrings@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/double-pearl-earrings.jpg"
-                    srcset="./img/catalog/double-pearl-earrings@2x.jpg" width="270" height="272"
-                    alt="Double pearl earrings">
-                </picture>
-                <figcaption><span>Double pearl earrings </span><span>$115</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/black-choker-gold-bead.webp 1x, ./img/catalog/black-choker-gold-bead@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/black-choker-gold-bead.jpg"
-                    srcset="./img/catalog/black-choker-gold-bead@2x.jpg" width="270" height="272"
-                    alt="Choker with gold bead">
-                </picture>
-                <figcaption><span>Choker with gold bead</span><span>$55</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/gold-layered-necklace.webp 1x, ./img/catalog/gold-layered-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/gold-layered-necklace.jpg"
-                    srcset="./img/catalog/gold-layered-necklace@2x.jpg" width="270" height="272"
-                    alt="Gold layered necklace">
-                </picture>
-                <figcaption><span>Gold layered necklace</span><span>$155</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/blue-gemstone-pendant.webp 1x, ./img/catalog/blue-gemstone-pendant@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/blue-gemstone-pendant.jpg"
-                    srcset="./img/catalog/blue-gemstone-pendant@2x.jpg" width="270" height="272"
-                    alt="Necklace with amethyst">
-                </picture>
-                <figcaption><span>Blue gemstone pendant</span><span>$105</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/boho-earrings.webp 1x, ./img/catalog/boho-earrings@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/boho-earrings.jpg" srcset="./img/catalog/boho-earrings@2x.jpg"
-                    width="270" height="272" alt="Boho earrings">
-                </picture>
-                <figcaption><span>Boho earrings</span><span>$75</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/bird-necklace.webp 1x, ./img/catalog/bird-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/bird-necklace.jpg" srcset="./img/catalog/bird-necklace@2x.jpg"
-                    width="270" height="272" alt="Gold bird necklace">
-                </picture>
-                <figcaption><span>Gold bird necklace</span><span>$135</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/black-leather-choker-necklace.webp 1x, ./img/catalog/black-leather-choker-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/black-leather-choker-necklace.jpg"
-                    srcset="./img/catalog/black-leather-choker-necklace@2x.jpg" width="270" height="272"
-                    alt="Black leather choker">
-                </picture>
-                <figcaption><span>Black leather choker</span><span>$85</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/elephant-earrings.webp 1x, ./img/catalog/elephant-earrings@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/elephant-earrings.jpg"
-                    srcset="./img/catalog/elephant-earrings@2x.jpg" width="270" height="272" alt="Elephant earrings">
-                </picture>
-                <figcaption><span>Elephant earrings</span><span>$145</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/threader-necklace-closeup.webp 1x, ./img/catalog/threader-necklace-closeup@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/threader-necklace-closeup.jpg"
-                    srcset="./img/catalog/threader-necklace-closeup@2x.jpg" width="270" height="272"
-                    alt="Threader necklace">
-                </picture>
-                <figcaption><span>Threader necklace</span><span>$115</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/origami-crane-necklace.webp 1x, ./img/catalog/origami-crane-necklace@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/origami-crane-necklace.jpg"
-                    srcset="./img/catalog/origami-crane-necklace@2x.jpg" width="270" height="272"
-                    alt="Origami crane necklace">
-                </picture>
-                <figcaption><span>Origami crane necklace</span><span>$105</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <figure>
-                <picture>
-                  <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp"
-                    srcset="./img/catalog/marble-earrings.webp 1x, ./img/catalog/marble-earrings@2x.webp 2x">
-                  <img loading="lazy" src="./img/catalog/marble-earrings.jpg"
-                    srcset="./img/catalog/marble-earrings@2x.jpg" width="270" height="272" alt="Marble earrings">
-                </picture>
-                <figcaption><span>Marble earrings</span><span>$95</span></figcaption>
-              </figure>
-            </a>
-          </li>
-        </ul>
-        <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
-          <svg width="29" height="10">
-            <use href="./img/sprite_auto.svg#arrow-left"></use>
-          </svg>
-        </button>
-        <button class="slider__next swiper-button-next" type="button" aria-label="next slides">
-          <svg width="29" height="10">
-            <use href="./img/sprite_auto.svg#arrow-left"></use>
-          </svg>
-        </button>
-        <ul class="slider__list-pages swiper-pagination">
-          <li><button type="button">1</button></li>
-          <li><button type="button">2</button></li>
-          <li><button type="button">3</button></li>
-          <li><button type="button">4</button></li>
-          <li><button type="button">5</button></li>
-          <li><button type="button">6</button></li>
-        </ul>
-      </div>
-    </section>
+      <section class="catalog__slider slider ">
+        <div class="slider__wrapper center  mySwiper2">
+          <ul class="slider__list swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/purple-gemstone-necklace.webp 1x, ./img/catalog/purple-gemstone-necklace@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/purple-gemstone-necklace.jpg"
+                      srcset="./img/catalog/purple-gemstone-necklace@2x.jpg" width="270" height="272"
+                      alt="Necklace with amethyst">
+                  </picture>
+                  <figcaption><span>Necklace with amethyst</span><span>$145</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/layered-choker-necklace.webp 1x, ./img/catalog/layered-choker-necklace@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/layered-choker-necklace.jpg"
+                      srcset="./img/catalog/layered-choker-necklace@2x.jpg" width="270" height="272" alt="Layered сhoker">
+                  </picture>
+                  <figcaption><span>Layered сhoker</span><span>$115</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/dainty-gold-necklace.webp 1x, ./img/catalog/dainty-gold-necklace@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/dainty-gold-necklace.jpg"
+                      srcset="./img/catalog/dainty-gold-necklace@2x.jpg" width="270" height="272" alt="Gold chain">
+                  </picture>
+                  <figcaption><span>Gold chain</span><span>$215</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/galaxy-earrings.webp 1x, ./img/catalog/galaxy-earrings@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/galaxy-earrings.jpg"
+                      srcset="./img/catalog/galaxy-earrings@2x.jpg" width="270" height="272" alt="Galaxy earrings">
+                  </picture>
+                  <figcaption><span>Galaxy earrings</span><span>$95</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/double-pearl-earrings.webp 1x, ./img/catalog/double-pearl-earrings@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/double-pearl-earrings.jpg"
+                      srcset="./img/catalog/double-pearl-earrings@2x.jpg" width="270" height="272"
+                      alt="Double pearl earrings">
+                  </picture>
+                  <figcaption><span>Double pearl earrings </span><span>$115</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/black-choker-gold-bead.webp 1x, ./img/catalog/black-choker-gold-bead@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/black-choker-gold-bead.jpg"
+                      srcset="./img/catalog/black-choker-gold-bead@2x.jpg" width="270" height="272"
+                      alt="Choker with gold bead">
+                  </picture>
+                  <figcaption><span>Choker with gold bead</span><span>$55</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/gold-layered-necklace.webp 1x, ./img/catalog/gold-layered-necklace@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/gold-layered-necklace.jpg"
+                      srcset="./img/catalog/gold-layered-necklace@2x.jpg" width="270" height="272"
+                      alt="Gold layered necklace">
+                  </picture>
+                  <figcaption><span>Gold layered necklace</span><span>$155</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/blue-gemstone-pendant.webp 1x, ./img/catalog/blue-gemstone-pendant@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/blue-gemstone-pendant.jpg"
+                      srcset="./img/catalog/blue-gemstone-pendant@2x.jpg" width="270" height="272"
+                      alt="Necklace with amethyst">
+                  </picture>
+                  <figcaption><span>Blue gemstone pendant</span><span>$105</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/boho-earrings.webp 1x, ./img/catalog/boho-earrings@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/boho-earrings.jpg" srcset="./img/catalog/boho-earrings@2x.jpg"
+                      width="270" height="272" alt="Boho earrings">
+                  </picture>
+                  <figcaption><span>Boho earrings</span><span>$75</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/bird-necklace.webp 1x, ./img/catalog/bird-necklace@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/bird-necklace.jpg" srcset="./img/catalog/bird-necklace@2x.jpg"
+                      width="270" height="272" alt="Gold bird necklace">
+                  </picture>
+                  <figcaption><span>Gold bird necklace</span><span>$135</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/black-leather-choker-necklace.webp 1x, ./img/catalog/black-leather-choker-necklace@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/black-leather-choker-necklace.jpg"
+                      srcset="./img/catalog/black-leather-choker-necklace@2x.jpg" width="270" height="272"
+                      alt="Black leather choker">
+                  </picture>
+                  <figcaption><span>Black leather choker</span><span>$85</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/elephant-earrings.webp 1x, ./img/catalog/elephant-earrings@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/elephant-earrings.jpg"
+                      srcset="./img/catalog/elephant-earrings@2x.jpg" width="270" height="272" alt="Elephant earrings">
+                  </picture>
+                  <figcaption><span>Elephant earrings</span><span>$145</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/threader-necklace-closeup.webp 1x, ./img/catalog/threader-necklace-closeup@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/threader-necklace-closeup.jpg"
+                      srcset="./img/catalog/threader-necklace-closeup@2x.jpg" width="270" height="272"
+                      alt="Threader necklace">
+                  </picture>
+                  <figcaption><span>Threader necklace</span><span>$115</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/origami-crane-necklace.webp 1x, ./img/catalog/origami-crane-necklace@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/origami-crane-necklace.jpg"
+                      srcset="./img/catalog/origami-crane-necklace@2x.jpg" width="270" height="272"
+                      alt="Origami crane necklace">
+                  </picture>
+                  <figcaption><span>Origami crane necklace</span><span>$105</span></figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#">
+                <figure>
+                  <picture>
+                    <!-- 1x: 270 ; 2x: 540 -->
+                    <source type="image/webp"
+                      srcset="./img/catalog/marble-earrings.webp 1x, ./img/catalog/marble-earrings@2x.webp 2x">
+                    <img loading="lazy" src="./img/catalog/marble-earrings.jpg"
+                      srcset="./img/catalog/marble-earrings@2x.jpg" width="270" height="272" alt="Marble earrings">
+                  </picture>
+                  <figcaption><span>Marble earrings</span><span>$95</span></figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+          <div class="slider__pagination">
+            <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
+              Previous
+            </button>
+            <ul class="slider__list-pages swiper-pagination">
+              <li><button type="button">1</button></li>
+              <li><button type="button">2</button></li>
+              <li><button type="button">3</button></li>
+              <li><button type="button">4</button></li>
+              <li><button type="button">5</button></li>
+              <li><button type="button">6</button></li>
+            </ul>
+            <button class="slider__next swiper-button-next" type="button" aria-label="next slides">
+              Next
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
 
   </main>
   <footer class="footer">
@@ -423,6 +483,7 @@
     </div>
   </section>
 
+  <script src="./js/vendor.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

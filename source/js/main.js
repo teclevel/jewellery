@@ -27,25 +27,28 @@
 
 /* Swiper */
 
-// (function () {
-//   /* eslint-disable no-unused-vars */
-//   // eslint-disable-next-line no-undef
-//   const swiper = new Swiper('.mySwiper', {
-//     slidesPerView: 4,
-//     spaceBetween: 30,
-//     slidesPerGroup: 3,
-//     loop: true,
-//     loopFillGroupWithBlank: true,
-//     pagination: {
-//       el: '.swiper-pagination',
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//   });
-// })();
+(function () {
+  /* eslint-disable no-unused-vars */
+  // eslint-disable-next-line no-undef
+  const swiper = new Swiper('.mySwiper', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${  className  }">${  index + 1  }</span>`;
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+})();
 
 
 /* Слайдер */
