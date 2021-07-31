@@ -191,7 +191,7 @@
   overlay.style.left = '0';
   overlay.style.width = '100%';
   overlay.style.height = '100%';
-  overlay.style.zIndex = '0';
+  overlay.style.zIndex = '20';
   overlay.style.backgroundColor = 'black';
   overlay.style.opacity = '.5';
 
@@ -207,18 +207,21 @@
   const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
 
   const buttonClose = popup.querySelector('.modal__button-close');
-  const buttonOpenPopup = document.querySelector('.header__login-desktop');
+  const buttonsOpenPopup = document.querySelectorAll('.header__login');
   const html = document.querySelector('html');
   const marginSize = window.innerWidth - html.clientWidth;
 
-  buttonOpenPopup.addEventListener('click', onModalOpen);
+  buttonsOpenPopup.forEach((element) => {
+    element.addEventListener('click', onModalOpen);
+  });
+
+
   buttonClose.addEventListener('click', onModalClose);
   buttonClose.addEventListener('keydown', onModalButtonClose);
 
 
   function onModalOpen(evt) {
     evt.preventDefault();
-
     if (popup) {
       popup.classList.remove('visually-hidden');
     }
