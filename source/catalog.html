@@ -71,7 +71,7 @@
       <p>Discover picks of fation's finest trends in our jewellery catalog</p>
     </section>
     <div class="catalog__center center">
-      <section class="catalog__filter filter">
+      <section class="catalog__filter filter filter--open">
         <h2 class="visually-hidden">Product filter</h2>
         <form class="filter__form accordion" action="https://echo.htmlacademy.ru/" method="get" target="_blank">
           <fieldset class="accordion__item accordion__item--opened">
@@ -149,11 +149,17 @@
           <button class="filter__button filter__button--apply" type="submit">Apply</button>
           <button class="filter__button filter__button--clear" type="reset">Clear All</button>
         </form>
+        <button class="filter__button filter__button--tablet" type="button">Filter</button>
+        <button>
+          <svg width="25" height="18">
+            <use href="./img/sprite_auto.svg#menu"></use>
+          </svg>
+        </button>
       </section>
 
       <section class="catalog__slider slider ">
         <div class="slider__wrapper center  mySwiper2">
-          <ul class="slider__list swiper-wrapper">
+          <ul class="slider__list swiper-wrapper"><!-- catalog__slider-list  -->
             <li class="swiper-slide">
               <a href="#">
                 <figure>

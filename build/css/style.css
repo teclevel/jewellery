@@ -37,7 +37,6 @@ html {
   box-sizing: border-box; }
 
 img {
-  max-width: 100%;
   display: block; }
 
 .visually-hidden {
@@ -418,7 +417,6 @@ img {
   background-image: url("../img/backgrounds/index.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: -8px;
   min-height: 463px;
   display: flex;
   align-items: center;
@@ -430,6 +428,7 @@ img {
     content: "";
     height: 100%;
     width: 100%;
+    top: 0;
     background-color: rgba(86, 64, 52, 0.7); }
     @media (max-width: 1023px) {
       .intro::before {
@@ -497,6 +496,9 @@ img {
     left: 0;
     right: 0;
     background-color: #f6f5f4; }
+  @media (max-width: 767px) {
+    .catalog::after {
+      position: static; } }
 
 .header__logo-catalog svg:hover, .header__logo-catalog svg:focus {
   color: #1d1613; }
@@ -509,21 +511,47 @@ img {
   grid-template-columns: 250px auto;
   -moz-column-gap: 50px;
        column-gap: 50px; }
+  @media (max-width: 1023px) {
+    .catalog__center {
+      grid-template-columns: 1fr;
+      row-gap: 50px;
+      padding: 50px 45px 0; } }
+  @media (max-width: 767px) {
+    .catalog__center {
+      padding: 40px 15px 0;
+      row-gap: 40px; } }
 
 .catalog .slider__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 42px;
   padding: 0;
   margin: 0 0 72px; }
+  @media (max-width: 1023px) {
+    .catalog .slider__list {
+      row-gap: 30px;
+      margin: 0 0 63px; } }
+  @media (max-width: 767px) {
+    .catalog .slider__list {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 0 44px; } }
 
 .catalog .swiper-slide {
   margin: 0; }
 
 .catalog .slider {
   padding: 78px 0 74px; }
+  @media (max-width: 1023px) {
+    .catalog .slider {
+      padding: 0 0 74px; } }
+  @media (max-width: 767px) {
+    .catalog .slider {
+      max-width: 377px;
+      margin: auto;
+      padding: 0 0 64px; } }
 
 .catalog .slider__prev,
 .catalog .slider__next {
@@ -531,12 +559,19 @@ img {
   color: inherit; }
 
 .catalog__intro {
-  background-image: url("../img/backgrounds/catalog.jpg");
   min-height: 261px;
-  padding: 16px 0 20px; }
+  background-image: url("../img/backgrounds/catalog.jpg");
+  padding: 16px 20px 20px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .catalog__intro {
       background-image: url("../img/backgrounds/catalog@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .catalog__intro {
+      background-image: url("../img/backgrounds/catalog-tablet.jpg");
+      background-position: 50%; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 192dpi), (max-width: 1023px) and (min-resolution: 2dppx) {
+    .catalog__intro {
+      background-image: url("../img/backgrounds/catalog-tablet.jpg@2x.jpg"); } }
 
 .catalog__intro h1 {
   font-size: 34px;
@@ -544,14 +579,14 @@ img {
   letter-spacing: 0; }
   @media (max-width: 1023px) {
     .catalog__intro h1 {
-      line-height: 55px;
-      margin: 0 16px 0 0; } }
+      line-height: 39px;
+      margin: 11px 0 0 0; } }
   @media (max-width: 1023px) and (max-width: 767px) {
     .catalog__intro h1 {
-      font-size: 38px;
+      font-size: 34px;
       color: #ffffff;
-      line-height: 49px;
-      margin: 0 16px 0 0; } }
+      line-height: 44px;
+      margin: 0; } }
 
 .catalog__intro p {
   font-size: 22px;
@@ -560,15 +595,25 @@ img {
   @media (max-width: 1023px) {
     .catalog__intro p {
       line-height: 43px;
-      margin: 0 20px 0 0; } }
+      margin: 0; } }
   @media (max-width: 767px) {
     .catalog__intro p {
-      line-height: 44px;
-      font-size: 34px;
-      margin: 0 20px 0 0; } }
+      font-size: 22px;
+      line-height: 26px;
+      margin: 0; } }
 
 .catalog__slider.slider img {
-  height: 270px; }
+  height: 270px;
+  min-width: 100%;
+  max-width: 100%; }
+  @media (max-width: 1023px) {
+    .catalog__slider.slider img {
+      height: 208px;
+      width: 206px; } }
+  @media (max-width: 767px) {
+    .catalog__slider.slider img {
+      height: 136px;
+      width: 130px; } }
 
 .slider {
   font-family: "Poppins", "Arial", sans-serif;
@@ -626,12 +671,18 @@ img {
   @media (max-width: 1023px) {
     .slider__prev {
       left: 0; } }
+  @media (max-width: 767px) {
+    .slider__prev {
+      display: none; } }
 
 .slider__next {
   right: 20px; }
   @media (max-width: 1023px) {
     .slider__next {
       right: 0; } }
+  @media (max-width: 767px) {
+    .slider__next {
+      display: none; } }
 
 .slider__next svg {
   transform: rotate(180deg);
@@ -660,11 +711,13 @@ img {
   margin: 0 30px 0 0; }
 
 .slider__list figure {
-  margin: 0;
-  width: 270px; }
+  margin: 0; }
   @media (max-width: 1023px) {
     .slider__list figure {
-      width: 324px; } }
+      min-height: 280px; } }
+  @media (max-width: 767px) {
+    .slider__list figure {
+      min-height: 214px; } }
 
 .slider__list img {
   -o-object-fit: cover;
@@ -679,8 +732,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 20px 10px 0; }
+  text-align: center;
+  padding: 20px 5px 0; }
+  @media (max-width: 767px) {
+    .slider__list figcaption {
+      padding: 13px 5px 0; } }
 
 .slider__list span:last-child {
   font-weight: 700;
@@ -710,6 +766,9 @@ img {
 .slider__pagination {
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 767px) {
+    .slider__pagination {
+      justify-content: center; } }
 
 .blog {
   font-family: "Poppins", "Arial", sans-serif;
@@ -1548,6 +1607,16 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 18px; }
+  @media (max-width: 1023px) {
+    .filter__form {
+      display: none; } }
+
+@media (max-width: 1023px) {
+  .filter--open .filter__form {
+    position: fixed;
+    display: block;
+    background-color: #ffffff;
+    z-index: 100; } }
 
 .filter__form fieldset {
   position: relative;
@@ -1622,3 +1691,13 @@ img {
     margin: 35px 0 24px; }
   .filter__button--clear {
     border: 1px solid #a87b62; }
+  .filter__button--tablet {
+    display: none; }
+  @media (max-width: 1023px) {
+    .filter__button--tablet {
+      font-family: "Poppins", "Arial", sans-serif;
+      line-height: 21px;
+      color: #ffffff;
+      background-color: #a87b62;
+      display: block;
+      padding: 24px 6px; } }

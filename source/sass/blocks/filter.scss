@@ -4,6 +4,20 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.filter--open .filter__form {
+  @media (max-width: $tablet-width) {
+    position: fixed;
+    display: block;
+    background-color: $white;
+    z-index: 100;
+
+  }
 }
 
 .filter__form fieldset {
@@ -103,5 +117,20 @@
 
   &--clear {
     border: 1px solid $brown;
+  }
+
+  &--tablet {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--tablet {
+      font-family: $font-family--description;
+      line-height: 21px;
+      color: $white;
+      background-color: $brown;
+      display: block;
+      padding: 24px 6px;
+    }
   }
 }
