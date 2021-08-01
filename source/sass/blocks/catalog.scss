@@ -13,7 +13,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    &::after{
+    &::after {
       position: static;
     }
   }

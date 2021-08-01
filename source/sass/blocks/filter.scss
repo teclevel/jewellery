@@ -1,22 +1,47 @@
 .filter__form {
-  padding: 80px 0 20px;
   font-family: $font-family--description;
-  font-weight: 500;
   font-size: 14px;
+  font-weight: 500;
   line-height: 18px;
+  padding: 80px 0 20px;
 
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
 
-.filter--open .filter__form {
-  @media (max-width: $tablet-width) {
-    position: fixed;
-    display: block;
-    background-color: $white;
-    z-index: 100;
+.filter--open {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: $white;
+  z-index: 100;
+  overflow-y: auto;
 
+  @media (max-width: $mobile-width) {
+    padding: 76px 25px 60px;
+  }
+}
+
+.filter--open .filter__form {
+  font-size: 16px;
+  line-height: 21px;
+  position: absolute;
+  width: 424px;
+  top: 27px;
+  left: 0;
+  display: block;
+  box-shadow: 0 5px 32px $shadow-filter;
+  padding: 0;
+
+  @media (max-width: $mobile-width) {
+    position: static;
+    width: 270px;
+    margin: 0 auto;
+    padding: 0 0 40px 0;
   }
 }
 
@@ -24,12 +49,27 @@
   position: relative;
   padding: 50px 0 15px;
   margin: 0;
-  border: 1px solid $brown;
   min-height: 67px;
+}
+
+.filter--open fieldset {
+  border: 1px solid $white;
+  padding: 62px 0 19px;
+  min-height: 92px;
+
+  @media (max-width: $mobile-width) {
+    padding: 52px 0 10px;
+    min-height: 72px;
+  }
 }
 
 .filter__form fieldset:not(:last-of-type) {
   border-bottom: 0;
+}
+
+.filter--open fieldset:not(:last-of-type),
+.filter--open fieldset {
+  border-bottom: 1px solid $brown;
 }
 
 .filter__form legend {
@@ -40,17 +80,34 @@
   left: 25px;
 }
 
-.filter__form button {
+.filter--open legend {
+  font-size: 18px;
+  line-height: 23px;
+  top: 33px;
+  left: 21px;
+
+  @media (max-width: $mobile-width) {
+    top: 23px;
+  }
+}
+
+.filter__form .accordion__toggler {
   top: 25px;
   right: 21px;
-
-  @media (max-width: $tablet-width) {
-    ///////////////////////////////////////
-  }
 
   @media (max-width: $mobile-width) {
     top: 21px;
     right: 22px;
+  }
+}
+
+.filter--open .accordion__toggler {
+  top: 37px;
+  right: 40px;
+
+  @media (max-width: $mobile-width) {
+    top: 27px;
+    right: 17px;
   }
 }
 
@@ -64,9 +121,18 @@
   padding: 12px 0 0;
 }
 
+.filter--open .range {
+  padding: 18px 0 0;
+}
+
 .filter__item {
   padding: 0 0 0 34px;
   margin: 0 0 12px;
+}
+
+.filter--open .filter__item {
+  padding: 0 0 0 30px;
+  margin: 0 0 16px;
 }
 
 .filter__item input:checked + label {
@@ -101,13 +167,25 @@
   }
 }
 
+.filter--open label {
+  vertical-align: middle;
+  padding: 0 0 0 30px;
+
+  &::before {
+    width: 17px;
+    height: 17px;
+    top: 0;
+    left: 0;
+  }
+}
+
 .filter__button {
   display: block;
   border: none;
   background: none;
   text-align: center;
   width: 100%;
-  padding: 25px 6px;
+  padding: 24px 6px;
   font-size: 16px;
 
   &--apply {
@@ -132,5 +210,87 @@
       display: block;
       padding: 24px 6px;
     }
+  }
+}
+
+.filter--open .filter__button--apply {
+  width: 362px;
+  margin: 39px 23px 23px 22px;
+
+  @media (max-width: $mobile-width) {
+    width: 230px;
+    margin: 27px auto 19px;
+  }
+}
+
+.filter--open .filter__button--clear {
+  width: 362px;
+  margin: 0 23px 0 22px;
+
+  @media (max-width: $mobile-width) {
+    width: 230px;
+    margin: 0 auto 0;
+  }
+}
+
+.filter__button-close {
+  display: none;
+}
+
+.filter--open .filter__button-close {
+  display: block;
+  position: absolute;
+  top: -17px;
+  right: -21px;
+  border: none;
+  background: none;
+
+  @media (max-width: $mobile-width) {
+    top: 59px;
+    right: 8px;
+  }
+}
+
+.filter--open .filter__button--tablet {
+  display: none;
+}
+
+.filter--open .range__toggle {
+  width: 18px;
+  height: 18px;
+}
+
+.filter--open .range__controls {
+  width: 304px;
+  margin: 0 0 5px 30px;
+
+  @media (max-width: $mobile-width) {
+    width: 250px;
+    margin: 0 0 5px 9px;
+  }
+}
+
+.filter--open .range__scale {
+  width: 100%;
+}
+
+.filter--open .range__bar {
+  width: 58%;
+}
+
+.filter--open .range__toggle--min {
+  left: 15%;
+}
+
+.filter--open .range__toggle--max {
+  left: 73%;
+}
+
+.filter--open .range__price-controls {
+  padding: 0 132px 0 29px;
+  margin: 0 0 12px 0;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 43px 0 5px;
   }
 }
