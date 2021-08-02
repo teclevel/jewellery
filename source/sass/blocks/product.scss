@@ -1,0 +1,7 @@
+.product .slider {
+  padding: 90px 0 125px;
+
+  @media (max-width: $tablet-width) {
+    padding: 17px 45px 73px;
+  }
+}
