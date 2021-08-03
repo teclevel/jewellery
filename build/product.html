@@ -52,10 +52,10 @@
     <nav class="header__nav header__wrapper">
       <ul class="header__nav-list center">
         <li><a href="#">What's new</a></li>
-        <li><a href="#">Chokers</a></li>
-        <li><a href="#">Necklaces</a></li>
-        <li><a href="#">Rings</a></li>
-        <li><a href="#">Earrings</a></li>
+        <li><a href="./catalog.html">Chokers</a></li>
+        <li><a href="./catalog.html">Necklaces</a></li>
+        <li><a href="./catalog.html">Rings</a></li>
+        <li><a href="./catalog.html">Earrings</a></li>
       </ul>
       <ul class="header__list-tablet">
         <li><a href="#">About CH</a></li>
@@ -136,7 +136,7 @@
             <th>18" /20"</th>
           </tr>
         </table>
-        <button type="button">Add to card</button>
+        <button class="card__add" type="button">Add to card</button>
         <ul class="card__list-conditions">
           <li>14 Day Returns</li>
           <li>2-Year Warranty</li>
@@ -429,11 +429,11 @@
       <form action="#">
         <div class="modal__input">
           <label for="email-modal">Your E-mail</label>
-          <input id="email-modal" type="email" name="email" required="">
+          <input id="email-modal" type="email" name="email" autocomplete="email" required="">
         </div>
         <div class="modal__input modal__input--password">
           <label for="password-modal">Password</label>
-          <input id="password-modal" type="password" required="">
+          <input id="password-modal" type="password" autocomplete="password" required="">
         </div>
         <button class="modal__note" type="button">Forgot your password?</button>
         <button class="modal__log-in" type="submit">Log in</button>
@@ -446,11 +446,11 @@
     </div>
   </section>
 
-  <section class="modal modal--js modal-card">
+  <section class="modal modal--js modal-card visually-hidden">
     <div>
       <h2>The item was added to your card</h2>
-      <div class="modal-card__center">
-        <div class="modal-card__wrapper">
+      <div class="modal-card__center modal-card__row">
+        <div class="modal-card__wrapper modal-card__row">
           <div class="modal-card__img">
             <a href="#">
               <picture>
@@ -467,7 +467,7 @@
         </div>
         <div class="modal-card__addition">
           <button class="modal-card__button-plus" type="button" aria-label="Add item">
-            <svg width="25" height="18">
+            <svg width="10" height="10">
               <use href="./img/sprite_auto.svg#plus"></use>
             </svg>
           </button>
@@ -478,16 +478,18 @@
     </div>
     <div>
       <div class="modal-card__center">
-        <div class="modal-card__info">
+        <div class="modal-card__info modal-card__row">
           <p>You have<span>1</span>item in the cart</p>
           <p>Cart subtotal:<span>$ 115</span></p>
         </div>
-        <div class="modal-card__buttons">
+        <div class="modal-card__buttons modal-card__row">
           <button type="button">Continue shopping</button>
           <button type="button">Checkout</button>
         </div>
       </div>
     </div>
+    <button class="modal-card__button-close modal__button-close" type="button" aria-label="close modal"></button>
+
   </section>
 
   <!-- <script src="./js/vendor.js"></script>

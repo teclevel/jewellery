@@ -73,7 +73,7 @@
     <div class="catalog__center center">
 
 
-      <section class="catalog__filter filter"> <!-- filter--open -->
+      <section class="catalog__filter filter filter--open"> <!-- filter--open -->
         <h2 class="visually-hidden">Product filter</h2>
         <form class="filter__form accordion" action="https://echo.htmlacademy.ru/" method="get" target="_blank">
           <fieldset class="accordion__item accordion__item--opened">
@@ -478,11 +478,11 @@
       <form action="#">
         <div class="modal__input">
           <label for="email-modal">Your E-mail</label>
-          <input id="email-modal" type="email" name="email" required>
+          <input id="email-modal" type="email" name="email" autocomplete="email" required>
         </div>
         <div class="modal__input modal__input--password">
           <label for="password-modal">Password</label>
-          <input id="password-modal" type="password" required>
+          <input id="password-modal" type="password" autocomplete="password" required>
         </div>
         <button class="modal__note" type="button">Forgot your password?</button>
         <button class="modal__log-in" type="submit">Log in</button>
@@ -495,8 +495,8 @@
     </div>
   </section>
 
-  <!-- <script src="./js/vendor.js"></script>
-  <script src="./js/main.js"></script> -->
+  <script src="./js/vendor.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

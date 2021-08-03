@@ -2036,5 +2036,12 @@ img {
   flex-direction: column;
   background-color: #ffffff; }
 
-.modal-card > div {
+.modal-card > div:first-child {
   border-bottom: 1px solid red; }
+
+.modal-card__center {
+  padding: 0 30px; }
+
+.modal-card__row {
+  display: flex;
+  justify-content: space-between; }
