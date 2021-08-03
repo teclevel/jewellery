@@ -4,4 +4,20 @@
   @media (max-width: $tablet-width) {
     padding: 17px 45px 73px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding: 17px 0 64px;
+  }
+}
+
+.product .slider__list {
+  @media (max-width: $mobile-width) {
+    padding: 27px 0 14px;
+  }
+}
+
+.product__slider h2 {
+  @media (max-width: $mobile-width) {
+    margin: 39px 0 21px;
+  }
 }

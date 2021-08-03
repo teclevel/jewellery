@@ -9,15 +9,17 @@
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(2, 319px);
     grid-template-rows: repeat(2, min-content);
-    padding: 50px 45px 0;
+    padding: 50px 0 0;
     column-gap: 40px;
     row-gap: 14px;
+    width: 678px;
   }
 
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, min-content);
-    padding: 50px 15px 0;
+    padding: 50px 0 0;
+    width: 290px;
   }
 }
 

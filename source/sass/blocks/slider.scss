@@ -6,7 +6,14 @@
   padding: 90px 0 92px;
 
   @media (max-width: $tablet-width) {
-    padding: 42px 45px;
+    padding: 42px 0;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 32px 0;
+    width: 290px;
   }
 }
 
@@ -111,6 +118,10 @@
   @media (max-width: $tablet-width) {
     padding: 37px 0 44px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding: 27px 0 33px;
+  }
 }
 
 .slider__list li {
@@ -131,11 +142,17 @@
 
 .slider__list img {
   object-fit: cover;
+  width: 270px;
   height: 284px;
 
   @media (max-width: $tablet-width) {
+    width: 324px;
     height: 340px;
-    width: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 130px;
+    height: 136px;
   }
 }
 
@@ -147,7 +164,7 @@
   padding: 20px 5px 0;
 
   @media (max-width: $mobile-width) {
-    padding: 13px 5px 0;
+    padding: 15px 0 0;
   }
 }
 
