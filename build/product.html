@@ -446,6 +446,50 @@
     </div>
   </section>
 
+  <section class="modal modal--js modal-card">
+    <div>
+      <h2>The item was added to your card</h2>
+      <div class="modal-card__center">
+        <div class="modal-card__wrapper">
+          <div class="modal-card__img">
+            <a href="#">
+              <picture>
+                <!-- 1x: 470 ; 2x: 940 -->  <!-- другой размер -->
+                <source type="image/webp" srcset="./img/review-product/necklace-detail.webp 1x, ./img/review-product/necklace-detail@2x.webp 2x">
+                <img loading="lazy" src="./img/review-product/necklace-detail.jpg" srcset="./img/review-product/necklace-detail@2x.jpg" width="100" height="100" alt="Necklace detail">
+              </picture>
+            </a>
+          </div>
+          <div class="modal-card__description">
+            <p>Gold Necklace</p>
+            <p>$ 115</p>
+          </div>
+        </div>
+        <div class="modal-card__addition">
+          <button class="modal-card__button-plus" type="button" aria-label="Add item">
+            <svg width="25" height="18">
+              <use href="./img/sprite_auto.svg#plus"></use>
+            </svg>
+          </button>
+          <p>1</p>
+          <button class="modal-card__button-minus" type="button" aria-label="Remove item"></button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="modal-card__center">
+        <div class="modal-card__info">
+          <p>You have<span>1</span>item in the cart</p>
+          <p>Cart subtotal:<span>$ 115</span></p>
+        </div>
+        <div class="modal-card__buttons">
+          <button type="button">Continue shopping</button>
+          <button type="button">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- <script src="./js/vendor.js"></script>
   <script src="./js/main.js"></script> -->
 </body>

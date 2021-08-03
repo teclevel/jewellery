@@ -1,0 +1,13 @@
+.modal-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+}
+
+.modal-card > div {
+  border-bottom: 1px solid red;
+}
+
+.modal-card__center {
+  
+}
