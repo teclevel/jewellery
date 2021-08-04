@@ -79,8 +79,6 @@
     const item = toggler.closest(`.${itemClass}`);
     const isOpened = item.classList.contains(itemClosedClass);
 
-    // closeAccordionItems();
-
     isOpened
       ? item.classList.remove(itemClosedClass)
       : item.classList.add(itemClosedClass);
