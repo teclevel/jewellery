@@ -66,6 +66,10 @@
   padding: 0;
   top: 67px;
 
+  &:hover {
+    color: $black;
+  }
+
   @media (max-width: $tablet-width) {
     top: 69px;
   }

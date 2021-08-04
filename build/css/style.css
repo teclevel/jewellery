@@ -674,6 +674,9 @@ img {
   position: absolute;
   padding: 0;
   top: 67px; }
+  .slider__prev:hover,
+  .slider__next:hover {
+    color: #1d1613; }
   @media (max-width: 1023px) {
     .slider__prev,
     .slider__next {
@@ -1126,16 +1129,10 @@ img {
   line-height: 21px;
   position: relative;
   color: #1d1613;
-  text-decoration: none; }
-  .follow-us a::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #a87b62;
-    bottom: -4px;
-    left: 0;
-    right: 0; }
+  text-decoration: none;
+  border-bottom: 1px solid #a87b62; }
+  .follow-us a:hover {
+    border-color: #1d1613; }
 
 .follow-us__list {
   list-style: none;
@@ -1333,7 +1330,10 @@ img {
   color: #ffffff;
   text-decoration: none;
   display: inline-block;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  padding: 1px; }
+  .footer a:hover {
+    color: #9b9997; }
 
 .footer__form {
   border-bottom: 1px solid #ffffff;
@@ -1375,6 +1375,8 @@ img {
 .footer button {
   padding: 2px 0;
   min-width: 103px; }
+  .footer button:hover {
+    color: #9b9997; }
 
 .footer__form svg {
   transform: rotate(180deg);
