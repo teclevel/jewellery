@@ -48,6 +48,10 @@
 .slider__container-title a {
   color: inherit;
   border-bottom: 1px solid $brown;
+
+  &:hover {
+    border-color: $black;
+  }
 }
 
 .slider button {

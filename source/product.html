@@ -495,11 +495,11 @@
     </div>
   </section>
 
-  <section class="modal modal--js modal-card ">
+  <section class="modal modal--js modal-card visually-hidden ">
     <div>
-      <h2>The item was added to your card</h2>
-      <div class="modal-card__center modal-card__row">
-        <div class="modal-card__wrapper modal-card__row">
+      <h2>The item was added to your cart</h2>
+      <div class="modal-card__center modal-card__direction">
+        <div class="modal-card__wrapper modal-card__direction">
           <div class="modal-card__img">
             <a href="#">
               <picture>
@@ -523,19 +523,23 @@
             </svg>
           </button>
           <p>1</p>
-          <button class="modal-card__button-minus" type="button" aria-label="Remove item"></button>
+          <button class="modal-card__button-minus" type="button" aria-label="Remove item">
+            <svg width="14" height="14">
+              <use href="./img/sprite_auto.svg#minus"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
     <div>
       <div class="modal-card__center">
-        <div class="modal-card__info modal-card__row">
-          <p>You have<span>1</span>item in the cart</p>
-          <p>Cart subtotal:<span>$ 115</span></p>
+        <div class="modal-card__info modal-card__direction">
+          <p>You have <span>1 </span>item in the cart</p>
+          <p>Cart subtotal: <span>$ 115</span></p>
         </div>
-        <div class="modal-card__buttons modal-card__row">
-          <button type="button">Continue shopping</button>
-          <button type="button">Checkout</button>
+        <div class="modal-card__buttons modal-card__direction">
+          <button class="modal-card__button modal-card__button--continue" type="button">Continue shopping</button>
+          <button class="modal-card__button modal-card__button--checkout" type="button">Checkout</button>
         </div>
       </div>
     </div>
@@ -543,8 +547,8 @@
 
   </section>
 
-  <!-- <script src="./js/vendor.js"></script>
-  <script src="./js/main.js"></script> -->
+  <script src="./js/vendor.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
