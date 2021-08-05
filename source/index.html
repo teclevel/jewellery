@@ -6,6 +6,10 @@
   <meta name="description" content="jewellery shop">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>jewellery shop</title>
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   <link rel="stylesheet" href="./css/normalize.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preload" href="./fonts/cormorant-garamond-700.woff2" as="font" type="font/woff2" crossorigin />
@@ -29,7 +33,7 @@
             <use href="./img/sprite_auto.svg#logo"></use>
           </svg>
         </a>
-        <form class="header__form-search" action="#" method="get">
+        <form class="header__form-search" action="https://echo.htmlacademy.ru/" method="get">
           <button class="header__form-button" type="submit" aria-label="search">
             <svg width="14" height="14">
               <use href="./img/sprite_auto.svg#lens"></use>
@@ -523,9 +527,9 @@
       <section class="footer__mailing">
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form class="footer__form" method="post" action="#">
+        <form class="footer__form" method="post" action="https://echo.htmlacademy.ru/">
           <label for="email">Your E-mail</label>
-          <input id="email" type="email" name="email">
+          <input id="email" type="email" name="email" required>
           <button type="submit">
             Sign Up
             <svg width="29" height="10">
@@ -591,10 +595,10 @@
     <div class="modal__header"></div>
     <div class="modal__wrapper center">
       <h2>Log In</h2>
-      <form action="#">
+      <form action="https://echo.htmlacademy.ru/">
         <div class="modal__input">
           <label for="email-modal">Your E-mail</label>
-          <input id="email-modal" type="email" name="email" autocomplete="username" required>
+          <input id="email-modal" type="email" name="email" autocomplete="username" required autofocus>
         </div>
         <div class="modal__input modal__input--password">
           <label for="password-modal">Password</label>

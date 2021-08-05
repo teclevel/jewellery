@@ -19,18 +19,15 @@
   }
 }
 
-.header__logo-catalog svg {
-  &:hover,
-  &:focus {
-    color: $black;
-  }
-}
-
 .catalog .slider__wrapper {
   padding: 0;
 }
 
 .catalog__center {
+  max-width: 1210px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: 250px auto;
   column-gap: 50px;
@@ -42,6 +39,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    max-width: 377px;
     padding: 40px 15px 0;
     row-gap: 40px;
   }
@@ -75,6 +73,7 @@
   padding: 78px 0 74px;
 
   @media (max-width: $tablet-width) {
+    width: 100%;
     padding: 0 0 74px;
   }
 

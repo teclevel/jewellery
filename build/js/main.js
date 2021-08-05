@@ -25,6 +25,60 @@
   });
 })();
 
+/* Фильтр */
+
+(function () {
+
+  const filter = document.querySelector('.filter');
+  if (!filter) { return; }
+
+  const filterToggle = filter.querySelector('.filter__button--tablet');
+  const buttonFilterClose = filter.querySelector('.filter__button-close');
+
+  const isOpened = filter.classList.contains('filter--open');
+
+  filterToggle.addEventListener('click', () => {
+    if (isOpened) { return; }
+
+    filter.classList.add('filter--open');
+
+  });
+
+  buttonFilterClose.addEventListener('click', () => {
+
+    filter.classList.remove('filter--open');
+
+  });
+
+})();
+
+/* add to card */
+
+(function () {
+
+  const card = document.querySelector('.modal-card');
+  if (!card) { return; }
+
+  const cardToggle = document.querySelector('.card__add');
+  const buttonCardClose = card.querySelector('.modal-card__button-close');
+
+  const isOpened = !card.classList.contains('visually-hidden');
+
+  cardToggle.addEventListener('click', () => {
+    if (isOpened) { return; }
+
+    card.classList.remove('visually-hidden');
+
+  });
+
+  buttonCardClose.addEventListener('click', () => {
+
+    card.classList.add('visually-hidden');
+
+  });
+
+})();
+
 /* Swiper */
 
 (function () {
@@ -33,14 +87,14 @@
   const swiper = new Swiper('.mySwiper', {
     slidesPerView: 4,
     spaceBetween: 30,
-    slidesPerGroup: 3,
+    slidesPerGroup: 4,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
       renderBullet: function (index, className) {
-        return `<span class="${  className  }">${  index + 1  }</span>`;
+        return `<span class="${className}">${index + 1}</span>`;
       },
     },
     navigation: {
@@ -55,6 +109,8 @@
 
 (function () {
   const accordion = document.querySelector('.accordion');
+  if (!accordion) {return;}
+
   const togglerClass = 'accordion__toggler';
   const itemClass = 'accordion__item';
   const itemClosedClass = 'accordion__item--opened';
@@ -164,44 +220,8 @@
   }
 
   function onModalKeydown(evt) {
-    const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
-
-    if (evt.shiftKey && (focusedItemIndex === 0 || focusedItemIndex === -1)) {
-      elementsPopup[elementsPopup.length - 1].focus();
-      evt.preventDefault();
-    }
-
-    if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
-      elementsPopup[0].focus();
-      evt.preventDefault();
-    }
-
     if (evt.code === 'Escape' || evt.code === 'Esc') {
       onModalClose();
     }
   }
-})();
-
-
-(function () {
-  /* eslint-disable no-unused-vars */
-  // eslint-disable-next-line no-undef
-  const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return `<span class="${  className  }">${  index + 1  }</span>`;
-      },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
 })();

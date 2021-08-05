@@ -8,7 +8,6 @@
   <title>jewellery shop</title>
   <link rel="stylesheet" href="./css/normalize.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="preload" href="./fonts/cormorant-garamond-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" as="style" href="./css/style.min.css">
   <link rel="preload" as="script" href="./js/main.js">
 </head>
@@ -29,7 +28,7 @@
             <use href="./img/sprite_auto.svg#logo"></use>
           </svg>
         </a>
-        <form class="header__form-search" action="#" method="get">
+        <form class="header__form-search" action="https://echo.htmlacademy.ru/" method="get">
           <button class="header__form-button" type="submit" aria-label="search">
             <svg width="14" height="14">
               <use href="./img/sprite_auto.svg#lens"></use>
@@ -52,10 +51,10 @@
     <nav class="header__nav header__wrapper">
       <ul class="header__nav-list center">
         <li><a href="#">What's new</a></li>
-        <li><a href="#">Chokers</a></li>
-        <li><a href="#">Necklaces</a></li>
-        <li><a href="#">Rings</a></li>
-        <li><a href="#">Earrings</a></li>
+        <li><a>Chokers</a></li>
+        <li><a>Necklaces</a></li>
+        <li><a>Rings</a></li>
+        <li><a>Earrings</a></li>
       </ul>
       <ul class="header__list-tablet">
         <li><a href="#">About CH</a></li>
@@ -70,10 +69,9 @@
       <h1>All jewellery</h1>
       <p>Discover picks of fation's finest trends in our jewellery catalog</p>
     </section>
-    <div class="catalog__center center">
 
-
-      <section class="catalog__filter filter"> <!-- filter--open -->
+    <div class="catalog__center">
+      <section class="catalog__filter filter">
         <h2 class="visually-hidden">Product filter</h2>
         <form class="filter__form accordion" action="https://echo.htmlacademy.ru/" method="get" target="_blank">
           <fieldset class="accordion__item accordion__item--opened">
@@ -369,9 +367,9 @@
       <section class="footer__mailing">
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form class="footer__form" method="post" action="#">
+        <form class="footer__form" method="post" action="https://echo.htmlacademy.ru/">
           <label for="email">Your E-mail</label>
-          <input id="email" type="email" name="email">
+          <input id="email" type="email" name="email" required="">
           <button type="submit">
             Sign Up
             <svg width="29" height="10">
@@ -437,7 +435,7 @@
     <div class="modal__header"></div>
     <div class="modal__wrapper center">
       <h2>Log In</h2>
-      <form action="#">
+      <form action="https://echo.htmlacademy.ru/">
         <div class="modal__input">
           <label for="email-modal">Your E-mail</label>
           <input id="email-modal" type="email" name="email" autocomplete="email" required="">

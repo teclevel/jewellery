@@ -160,6 +160,13 @@
   }
 }
 
+.header__logo-catalog svg {
+  &:hover,
+  &:focus {
+    color: $black;
+  }
+}
+
 .header--js .header__logo svg {
   @media (max-width: $tablet-width) {
     color: $brown;
@@ -190,7 +197,7 @@
   border: none;
   padding: 5px 5px 0 6px;
 
-  &:hover { 
+  &:hover {
     border: 1px solid $brown;
   }
 
