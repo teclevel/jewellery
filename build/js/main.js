@@ -85,11 +85,50 @@
   /* eslint-disable no-unused-vars */
   // eslint-disable-next-line no-undef
   const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 30,
-    slidesPerGroup: 4,
+    slidesPerGroup: 2,
     loop: true,
     loopFillGroupWithBlank: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
+      768: {
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          renderBullet: function (index, className) {
+            return `<span class="${className}">${index + 1}</span>`;
+          },
+        },
+      },
+    },
+  });
+})();
+
+/* Swiper каталог */
+
+(function () {
+  /* eslint-disable no-unused-vars */
+  // eslint-disable-next-line no-undef
+  const swiper = new Swiper('.mySwiper2', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    slidesPerGroup: 2,
+    slidesPerColumn: 6,
+    // loop: true,
+    // loopFillGroupWithBlank: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -101,15 +140,21 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        slidesPerColumn: 4,
+      },
+    },
   });
 })();
-
 
 /*аккордеон*/
 
 (function () {
   const accordion = document.querySelector('.accordion');
-  if (!accordion) {return;}
+  if (!accordion) { return; }
 
   const togglerClass = 'accordion__toggler';
   const itemClass = 'accordion__item';

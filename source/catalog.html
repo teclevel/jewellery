@@ -13,9 +13,7 @@
 </head>
 
 <body class="page-body">
-
   <header class="header">
-
     <div class="header__wrapper">
       <div class="header__user-menu center">
         <button class="header__menu-button" type="button" aria-label="open/close menu">
@@ -70,6 +68,7 @@
       <p>Discover picks of fation's finest trends in our jewellery catalog</p>
     </section>
 
+
     <div class="catalog__center">
       <section class="catalog__filter filter">
         <h2 class="visually-hidden">Product filter</h2>
@@ -78,7 +77,8 @@
             <legend>Product</legend>
             <ul class="filter__list filter__list-product">
               <li class="filter__item">
-                <input class="visually-hidden" type="checkbox" id="necklaces" value="necklaces" name="necklaces" checked>
+                <input class="visually-hidden" type="checkbox" id="necklaces" value="necklaces" name="necklaces"
+                  checked>
                 <label for="necklaces">Necklaces</label>
               </li>
               <li class="filter__item">
@@ -114,7 +114,8 @@
             <legend>Collection</legend>
             <ul class="filter__list filter__list-collection">
               <li class="filter__item">
-                <input class="visually-hidden" type="checkbox" id="pink-flamingo" value="pink-flamingo" name="pink-flamingo">
+                <input class="visually-hidden" type="checkbox" id="pink-flamingo" value="pink-flamingo"
+                  name="pink-flamingo">
                 <label for="pink-flamingo">Pink flamingo</label>
               </li>
               <li class="filter__item">
@@ -157,9 +158,21 @@
         <button class="filter__button filter__button--tablet" type="button">Filter</button>
       </section>
 
-      <section class="catalog__slider slider ">
-        <div class="slider__wrapper center  mySwiper2">
-          <ul class="slider__list swiper-wrapper"><!-- catalog__slider-list  -->
+      <section class="catalog__slider slider">
+        <div class="slider__wrapper swiper-container mySwiper2">
+          <h2>New In</h2>
+          <p class="slider__container-title"><a href="#">Shop Now</a></p>
+          <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
+            <svg width="29" height="10">
+              <use href="./img/sprite_auto.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <button class="slider__next swiper-button-next" type="button" aria-label="next slides">
+            <svg width="29" height="10">
+              <use href="./img/sprite_auto.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <ul class="slider__list swiper-wrapper">
             <li class="swiper-slide">
               <a href="./product.html">
                 <figure>
@@ -183,7 +196,8 @@
                     <source type="image/webp"
                       srcset="./img/catalog/layered-choker-necklace.webp 1x, ./img/catalog/layered-choker-necklace@2x.webp 2x">
                     <img loading="lazy" src="./img/catalog/layered-choker-necklace.jpg"
-                      srcset="./img/catalog/layered-choker-necklace@2x.jpg" width="270" height="272" alt="Layered сhoker">
+                      srcset="./img/catalog/layered-choker-necklace@2x.jpg" width="270" height="272"
+                      alt="Layered сhoker">
                   </picture>
                   <figcaption><span>Layered сhoker</span><span>$115</span></figcaption>
                 </figure>
@@ -284,8 +298,8 @@
                     <!-- 1x: 270 ; 2x: 540 -->
                     <source type="image/webp"
                       srcset="./img/catalog/boho-earrings.webp 1x, ./img/catalog/boho-earrings@2x.webp 2x">
-                    <img loading="lazy" src="./img/catalog/boho-earrings.jpg" srcset="./img/catalog/boho-earrings@2x.jpg"
-                      width="270" height="272" alt="Boho earrings">
+                    <img loading="lazy" src="./img/catalog/boho-earrings.jpg"
+                      srcset="./img/catalog/boho-earrings@2x.jpg" width="270" height="272" alt="Boho earrings">
                   </picture>
                   <figcaption><span>Boho earrings</span><span>$75</span></figcaption>
                 </figure>
@@ -298,8 +312,8 @@
                     <!-- 1x: 270 ; 2x: 540 -->
                     <source type="image/webp"
                       srcset="./img/catalog/bird-necklace.webp 1x, ./img/catalog/bird-necklace@2x.webp 2x">
-                    <img loading="lazy" src="./img/catalog/bird-necklace.jpg" srcset="./img/catalog/bird-necklace@2x.jpg"
-                      width="270" height="272" alt="Gold bird necklace">
+                    <img loading="lazy" src="./img/catalog/bird-necklace.jpg"
+                      srcset="./img/catalog/bird-necklace@2x.jpg" width="270" height="272" alt="Gold bird necklace">
                   </picture>
                   <figcaption><span>Gold bird necklace</span><span>$135</span></figcaption>
                 </figure>
@@ -379,22 +393,11 @@
               </a>
             </li>
           </ul>
-          <div class="slider__pagination">
-            <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
-              Previous
-            </button>
-            <ul class="slider__list-pages swiper-pagination">
-              <li><button type="button">1</button></li>
-              <li><button type="button">2</button></li>
-              <li><button type="button">3</button></li>
-              <li><button type="button">4</button></li>
-              <li><button type="button">5</button></li>
-              <li><button type="button">6</button></li>
-            </ul>
-            <button class="slider__next swiper-button-next" type="button" aria-label="next slides">
-              Next
-            </button>
-          </div>
+          <ul class="slider__list-pages swiper-pagination">
+            <li><button type="button">1</button></li>
+            <li><button type="button">2</button></li>
+            <li><button type="button">3</button></li>
+          </ul>
         </div>
       </section>
     </div>
