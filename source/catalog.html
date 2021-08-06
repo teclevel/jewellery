@@ -158,20 +158,16 @@
         <button class="filter__button filter__button--tablet" type="button">Filter</button>
       </section>
 
+
+
+
       <section class="catalog__slider slider">
+        <h2>New In</h2>
+        <p class="slider__container-title"><a href="#">Shop Now</a></p>
+
+
+
         <div class="slider__wrapper swiper-container mySwiper2">
-          <h2>New In</h2>
-          <p class="slider__container-title"><a href="#">Shop Now</a></p>
-          <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
-            <svg width="29" height="10">
-              <use href="./img/sprite_auto.svg#arrow-left"></use>
-            </svg>
-          </button>
-          <button class="slider__next swiper-button-next" type="button" aria-label="next slides">
-            <svg width="29" height="10">
-              <use href="./img/sprite_auto.svg#arrow-left"></use>
-            </svg>
-          </button>
           <ul class="slider__list swiper-wrapper">
             <li class="swiper-slide">
               <a href="./product.html">
@@ -392,14 +388,33 @@
                 </figure>
               </a>
             </li>
+
+            
           </ul>
-          <ul class="slider__list-pages swiper-pagination">
-            <li><button type="button">1</button></li>
-            <li><button type="button">2</button></li>
-            <li><button type="button">3</button></li>
-          </ul>
+          <div class="slider__pagination">
+            <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
+              Previous
+            </button>
+            <ul class="slider__list-pages swiper-pagination">
+              <li><button type="button">1</button></li>
+              <li><button type="button">2</button></li>
+              <li><button type="button">3</button></li>
+            </ul>
+            <button class="slider__next swiper-button-next" type="button" aria-label="next slides">
+              Next
+            </button>
+          </div>
         </div>
+
+
+
       </section>
+
+
+
+
+
+
     </div>
 
   </main>

@@ -89,7 +89,6 @@
     spaceBetween: 30,
     slidesPerGroup: 2,
     loop: true,
-    loopFillGroupWithBlank: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -100,10 +99,6 @@
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-      },
       768: {
         pagination: {
           el: '.swiper-pagination',
@@ -112,6 +107,10 @@
             return `<span class="${className}">${index + 1}</span>`;
           },
         },
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
       },
     },
   });
@@ -123,10 +122,11 @@
   /* eslint-disable no-unused-vars */
   // eslint-disable-next-line no-undef
   const swiper = new Swiper('.mySwiper2', {
-    slidesPerView: 2,
+    // slidesPerView: 2,
     spaceBetween: 30,
-    slidesPerGroup: 2,
+    slidesPerView: 2,
     slidesPerColumn: 6,
+    autoHeight: false,
     // loop: true,
     // loopFillGroupWithBlank: true,
     pagination: {
@@ -143,7 +143,6 @@
     breakpoints: {
       768: {
         slidesPerView: 3,
-        slidesPerGroup: 1,
         slidesPerColumn: 4,
       },
     },
