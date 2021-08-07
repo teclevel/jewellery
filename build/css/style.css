@@ -665,11 +665,11 @@ img {
   flex-wrap: wrap;
   padding: 0;
   margin: 0 0 67px;
-  padding: 49px 0 0;
   height: 1466px;
   overflow: hidden; }
   @media (max-width: 1023px) {
     .catalog__list.slider__list {
+      padding: 49px 0 0;
       height: 1210px; } }
   @media (max-width: 767px) {
     .catalog__list.slider__list {
