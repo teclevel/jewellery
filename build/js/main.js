@@ -111,6 +111,13 @@
       1024: {
         slidesPerView: 4,
         slidesPerGroup: 4,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          renderBullet: function (index, className) {
+            return `<span class="${className}">${index + 1}</span>`;
+          },
+        },
       },
     },
   });
@@ -122,13 +129,10 @@
   /* eslint-disable no-unused-vars */
   // eslint-disable-next-line no-undef
   const swiper = new Swiper('.mySwiper2', {
-    // slidesPerView: 2,
     spaceBetween: 30,
     slidesPerView: 2,
     slidesPerColumn: 6,
     autoHeight: false,
-    // loop: true,
-    // loopFillGroupWithBlank: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
