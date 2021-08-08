@@ -63,6 +63,10 @@
 
 .footer__nav li {
   margin: 0 0 21px 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 19px 0;
+  }
 }
 
 .footer__order-list {
@@ -153,6 +157,10 @@
   flex-grow: 1;
   padding: 0 10px;
   margin: 0 10px;
+
+  &:hover {
+    outline: 1px solid $white;
+  }
 
   @media (max-width: $mobile-width) {
     max-width: 32vw;

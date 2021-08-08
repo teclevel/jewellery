@@ -93,34 +93,16 @@
   }
 }
 
+.questions__list li:not(:last-child) {
+  border-bottom: none;
+}
+
 .questions button {
-  // position: absolute;
-  // width: 20px;
-  // height: 15px;
   top: 48px;
   right: 45px;
-  // border: none;
-  // background: none;
-  // background-image: url("..//img/icons/arrow-top.svg");
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // transform: rotate(180deg);
-
-  @media (max-width: $tablet-width) {
-    // width: 23px;
-    // right: 49px;
-    // background-size: cover;
-  }
 
   @media (max-width: $mobile-width) {
     top: 21px;
     right: 22px;
   }
 }
-/*
-
-@media (max-width: $mobile-width) {
-
-}
-
-*/

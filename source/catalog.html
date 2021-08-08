@@ -73,6 +73,7 @@
         <form class="filter__form accordion" action="https://echo.htmlacademy.ru/" method="get" target="_blank">
           <fieldset class="accordion__item accordion__item--opened">
             <legend>Product</legend>
+            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
             <ul class="filter__list filter__list-product">
               <li class="filter__item">
                 <input class="visually-hidden" type="checkbox" id="necklaces" value="necklaces" name="necklaces"
@@ -92,10 +93,10 @@
                 <label for="earrings">Earrings</label>
               </li>
             </ul>
-            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
           </fieldset>
           <fieldset class="accordion__item accordion__item--opened">
             <legend>Material</legend>
+            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
             <ul class="filter__list filter__list-material">
               <li class="filter__item">
                 <input class="visually-hidden" type="checkbox" id="gold" value="gold" name="gold" checked>
@@ -106,10 +107,10 @@
                 <label for="silver">Silver</label>
               </li>
             </ul>
-            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
           </fieldset>
           <fieldset class="accordion__item accordion__item--opened">
             <legend>Collection</legend>
+            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
             <ul class="filter__list filter__list-collection">
               <li class="filter__item">
                 <input class="visually-hidden" type="checkbox" id="pink-flamingo" value="pink-flamingo"
@@ -121,10 +122,10 @@
                 <label for="dreams">Dreams</label>
               </li>
             </ul>
-            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
           </fieldset>
           <fieldset class="accordion__item accordion__item--opened">
             <legend>Price</legend>
+            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
             <div class="filter__list range">
               <div class="range__controls">
                 <div class="range__scale">
@@ -143,7 +144,6 @@
                 </label>
               </div>
             </div>
-            <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
           </fieldset>
           <button class="filter__button filter__button--apply" type="submit">Apply</button>
           <button class="filter__button filter__button--clear" type="reset">Clear All</button>
@@ -474,7 +474,7 @@
         </div>
         <div class="modal__input modal__input--password">
           <label for="password-modal">Password</label>
-          <input id="password-modal" type="password" autocomplete="password" required>
+          <input id="password-modal" type="password" autocomplete="current-password" required>
         </div>
         <button class="modal__note" type="button">Forgot your password?</button>
         <button class="modal__log-in" type="submit">Log in</button>

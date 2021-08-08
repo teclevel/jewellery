@@ -93,6 +93,10 @@
       el: '.swiper-pagination',
       clickable: true,
       type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+        return `<span class="${currentClass}"></span>of
+                <span class="${totalClass}"></span>`;
+      },
     },
     navigation: {
       nextEl: '.swiper-button-next',

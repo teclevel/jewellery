@@ -24,7 +24,6 @@
   overflow: hidden;
   width: 100%;
 
-
   @media (max-width: $tablet-width) {
     padding: 0;
   }
@@ -53,6 +52,7 @@
   border-bottom: 1px solid $brown;
 
   &:hover {
+    color: $grey;
     border-color: $black;
   }
 }
@@ -70,7 +70,8 @@
   top: 67px;
 
   &:hover {
-    color: $grey;
+    color: $black;
+    background-color: $border;
   }
 
   &.swiper-button-disabled {
@@ -80,16 +81,13 @@
   }
 
   @media (max-width: $tablet-width) {
-    top: 69px;
+    padding: 4px 0 0;
+    top: 65px;
   }
 }
 
 .slider__prev {
   left: 0;
-
-  @media (max-width: $tablet-width) {
-    left: 0;
-  }
 
   @media (max-width: $mobile-width) {
     display: none;
@@ -97,7 +95,7 @@
 }
 
 .slider__next {
-  right: -3px;
+  right: 0;
 
   @media (max-width: $tablet-width) {
     right: 0;
@@ -221,5 +219,43 @@
 
   @media (max-width: $mobile-width) {
     justify-content: center;
+  }
+}
+
+.slider .swiper-pagination-fraction span {
+  @media (max-width: $mobile-width) {
+    margin: 0 10px 0 10px;
+  }
+}
+
+.slider .swiper-pagination-bullet {
+  font-size: inherit;
+  line-height: inherit;
+  color: $grey;
+  text-align: center;
+  min-width: 23px;
+  height: 23px;
+  background: none;
+  cursor: pointer;
+  padding: 1px;
+
+  &:hover {
+    background-color: $border;
+    color: $black;
+    border-radius: 5px;
+  }
+}
+
+.slider .swiper-pagination-bullet:not(:last-child) {
+  margin: 0 15px 0 0;
+}
+
+.slider .swiper-pagination-bullet-active {
+  color: inherit;
+  background: none;
+  cursor: auto;
+
+  &:hover {
+    background: none;
   }
 }

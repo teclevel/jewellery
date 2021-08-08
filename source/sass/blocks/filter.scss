@@ -222,6 +222,10 @@
       background-color: $brown;
       display: block;
       padding: 24px 6px;
+
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
 }

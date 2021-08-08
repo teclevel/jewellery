@@ -83,8 +83,8 @@
     border: none;
     background: none;
     grid-area: 1/1/2/2;
-    padding: 0;
-    margin: 0 auto 0 0;
+    padding: 4px 0 0;
+    margin: 0 auto 8px 0;
     height: 25px;
     align-self: center;
   }
@@ -196,9 +196,10 @@
   background: none;
   border: none;
   padding: 5px 5px 0 6px;
+  margin: 0 1px 0 0;
 
   &:hover {
-    border: 1px solid $brown;
+    outline: 1px solid $brown;
   }
 
   @media (max-width: $tablet-width) {
@@ -220,7 +221,7 @@
   padding: 0 0 0 15px;
 
   &:hover {
-    border: 1px solid $brown;
+    outline: 1px solid $brown;
   }
 
   &::placeholder {
@@ -385,10 +386,3 @@
     margin: 30px 0 0;
   }
 }
-/*
-
-&:hover {
-  border: 1px solid $brown;
-  color: $grey;
-}
- */
