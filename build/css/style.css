@@ -1943,21 +1943,13 @@ img {
       padding: 0 43px 0 5px; } }
 
 .product .slider {
-  padding: 90px 0 125px; }
+  padding: 90px 20px 125px; }
   @media (max-width: 1023px) {
     .product .slider {
       padding: 17px 45px 73px; } }
   @media (max-width: 767px) {
     .product .slider {
-      padding: 17px 0 64px; } }
-
-@media (max-width: 767px) {
-  .product .slider__list {
-    padding: 27px 0 14px; } }
-
-@media (max-width: 767px) {
-  .product__slider h2 {
-    margin: 39px 0 21px; } }
+      padding: 28px 0 64px; } }
 
 .card {
   font-family: "Poppins", "Arial", sans-serif;
@@ -1972,7 +1964,7 @@ img {
       grid-template-columns: repeat(2, 319px);
       grid-template-rows: repeat(2, -webkit-min-content);
       grid-template-rows: repeat(2, min-content);
-      padding: 50px 0 0;
+      padding: 30px 0 0;
       -moz-column-gap: 40px;
            column-gap: 40px;
       row-gap: 14px;
@@ -1982,7 +1974,7 @@ img {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2, -webkit-min-content);
       grid-template-rows: repeat(2, min-content);
-      padding: 50px 0 0;
+      padding: 0;
       width: 290px; } }
 
 .card a {
