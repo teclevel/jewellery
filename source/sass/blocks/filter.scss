@@ -141,11 +141,16 @@
   }
 }
 
-.filter__item input:hover + label,
 .filter__item input:focus + label {
+  outline: 1px solid $grey;
+
   &::before {
-    border-color: $black;
+    border-color: $grey;
   }
+}
+
+.filter__item input:hover + label {
+  color: $grey;
 }
 
 .filter__item label {
@@ -160,7 +165,7 @@
     content: "";
     width: 15px;
     height: 15px;
-    top: 0;
+    top: 1px;
     left: 0;
     background-color: $white;
     border: 1px solid $brown;
@@ -191,10 +196,18 @@
   &--apply {
     background-color: $brown;
     margin: 35px 0 24px;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
   &--clear {
     border: 1px solid $brown;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
   &--tablet {

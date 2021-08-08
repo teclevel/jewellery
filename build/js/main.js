@@ -129,7 +129,7 @@
   /* eslint-disable no-unused-vars */
   // eslint-disable-next-line no-undef
   const swiper = new Swiper('.mySwiper2', {
-    spaceBetween: 30,
+    spaceBetween: 25,
     slidesPerView: 2,
     slidesPerColumn: 6,
     autoHeight: false,
@@ -146,6 +146,7 @@
     },
     breakpoints: {
       768: {
+        spaceBetween: 30,
         slidesPerView: 3,
         slidesPerColumn: 4,
       },
