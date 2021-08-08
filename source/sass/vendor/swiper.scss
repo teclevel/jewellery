@@ -8,9 +8,11 @@
   /* Fix of Webkit flickering */
   z-index: 1;
 }
+
 .swiper-container-vertical > .swiper-wrapper {
   flex-direction: column;
 }
+
 .swiper-wrapper {
   position: relative;
   width: 100%;
@@ -20,27 +22,33 @@
   transition-property: transform;
   box-sizing: content-box;
 }
+
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
-  transform: translate3d(0px, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
+
 .swiper-container-multirow > .swiper-wrapper {
   flex-wrap: wrap;
 }
+
 .swiper-container-multirow-column > .swiper-wrapper {
   flex-wrap: wrap;
   flex-direction: column;
 }
+
 .swiper-container-free-mode > .swiper-wrapper {
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
+
 .swiper-container-pointer-events {
   touch-action: pan-y;
   &.swiper-container-vertical {
     touch-action: pan-x;
   }
 }
+
 .swiper-slide {
   flex-shrink: 0;
   max-width: 100%;
@@ -48,9 +56,11 @@
   position: relative;
   transition-property: transform;
 }
+
 .swiper-slide-invisible-blank {
   visibility: hidden;
 }
+
 /* Auto Height */
 .swiper-container-autoheight {
   &,
@@ -64,26 +74,29 @@
   }
 }
 
-
 /* CSS Mode */
 .swiper-container-css-mode {
   > .swiper-wrapper {
     overflow: auto;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
+
     &::-webkit-scrollbar {
       display: none;
     }
   }
+
   > .swiper-wrapper > .swiper-slide {
     scroll-snap-align: start start;
   }
 }
+
 .swiper-container-horizontal.swiper-container-css-mode {
   > .swiper-wrapper {
     scroll-snap-type: x mandatory;
   }
 }
+
 .swiper-container-vertical.swiper-container-css-mode {
   > .swiper-wrapper {
     scroll-snap-type: y mandatory;
