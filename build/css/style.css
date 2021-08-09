@@ -1277,46 +1277,46 @@ img {
       max-width: 290px;
       margin: 0 auto; } }
 
-.follow-us__item:nth-child(1) {
+.follow-us__item--item1 {
   grid-area: 1 / 1 / 2 / 2; }
   @media (max-width: 767px) {
-    .follow-us__item:nth-child(1) {
+    .follow-us__item--item1 {
       grid-area: 1 / 1 / 2 / 2; } }
 
-.follow-us__item:nth-child(2) {
+.follow-us__item--item2 {
   grid-area: 1 / 2 / 3 / 3; }
   @media (max-width: 767px) {
-    .follow-us__item:nth-child(2) {
+    .follow-us__item--item2 {
       grid-area: 1 / 2 / 3 / 3; } }
 
-.follow-us__item:nth-child(3) {
+.follow-us__item--item3 {
   grid-area: 1 / 3 / 2 / 4; }
   @media (max-width: 767px) {
-    .follow-us__item:nth-child(3) {
+    .follow-us__item--item3 {
       display: none; } }
 
-.follow-us__item:nth-child(4) {
+.follow-us__item--item4 {
   grid-area: 1 / 4 / 2 / 5; }
   @media (max-width: 767px) {
-    .follow-us__item:nth-child(4) {
+    .follow-us__item--item4 {
       display: none; } }
 
-.follow-us__item:nth-child(5) {
+.follow-us__item--item5 {
   grid-area: 2 / 1 / 3 / 2; }
   @media (max-width: 767px) {
-    .follow-us__item:nth-child(5) {
+    .follow-us__item--item5 {
       grid-area: 2 / 1 / 3 / 2; } }
 
-.follow-us__item:nth-child(6) {
+.follow-us__item--item6 {
   grid-area: 2 / 3 / 3 / 4; }
   @media (max-width: 767px) {
-    .follow-us__item:nth-child(6) {
+    .follow-us__item--item6 {
       grid-area: 3 / 1 / 4 / 2; } }
 
-.follow-us__item:nth-child(7) {
+.follow-us__item--item7 {
   grid-area: 2 / 4 / 3 / 5; }
   @media (max-width: 767px) {
-    .follow-us__item:nth-child(7) {
+    .follow-us__item--item7 {
       grid-area: 3 / 2 / 4 / 3; } }
 
 .follow-us__list figure {
@@ -1334,18 +1334,18 @@ img {
       min-height: 100%; } }
 
 @media (max-width: 1023px) {
-  .follow-us__item:nth-child(2) img {
+  .follow-us__item--item2 img {
     width: 133px;
     height: 240px; } }
 
 @media (max-width: 767px) {
-  .follow-us__item:nth-child(2) img {
+  .follow-us__item--item2 img {
     height: 247px; } }
 
 @media (max-width: 1023px) {
-  .follow-us__item:nth-child(5) img,
-  .follow-us__item:nth-child(6) img,
-  .follow-us__item:nth-child(7) img {
+  .follow-us__item--item5 img,
+  .follow-us__item--item6 img,
+  .follow-us__item--item7 img {
     width: 133px;
     height: 87px; } }
 
