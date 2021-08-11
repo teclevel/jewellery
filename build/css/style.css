@@ -163,9 +163,6 @@ img {
   max-width: 1210px;
   margin: 0 auto;
   padding: 0 20px; }
-  @media (max-width: 1024px) {
-    .center {
-      padding: 0 20px; } }
   @media (max-width: 1023px) {
     .center {
       padding: 0 45px; } }
@@ -605,6 +602,7 @@ img {
        column-gap: 50px; }
   @media (max-width: 1023px) {
     .catalog__center {
+      max-width: 768px;
       display: block;
       padding: 50px 45px 0; } }
   @media (max-width: 767px) {
@@ -618,16 +616,16 @@ img {
   width: 100%; }
   @media (max-width: 1023px) {
     .catalog .slider {
-      padding: 0 0 74px; } }
+      padding: 0 0 70px; } }
   @media (max-width: 767px) {
     .catalog .slider {
       max-width: 377px;
       margin: auto;
       padding: 0 0 64px; } }
 
-.catalog .slider__wrapper {
+.catalog__wrapper.slider__wrapper {
   padding: 0;
-  width: 100%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
 
@@ -645,7 +643,7 @@ img {
       height: 1210px; } }
   @media (max-width: 767px) {
     .catalog__list.slider__list {
-      height: 1439px;
+      min-height: 1439px;
       margin: 0;
       padding: 38px 0 42px; } }
 
@@ -683,22 +681,20 @@ img {
       background-position: 50%; } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 192dpi), (max-width: 1023px) and (min-resolution: 2dppx) {
     .catalog__intro {
-      background-image: url("../img/backgrounds/catalog-tablet.jpg@2x.jpg"); } }
+      background-image: url("../img/backgrounds/catalog-tablet@2x.jpg"); } }
 
 .catalog__slider {
   width: 100%;
   margin: 0; }
 
-@media (max-width: 1023px) {
-  .catalog__list.slider__list img {
-    width: 206px;
-    height: 208px;
-    min-width: 100%; } }
-
-@media (max-width: 767px) {
-  .catalog__list.slider__list img {
-    width: 130px;
-    height: 136px; } }
+.catalog__list.slider__list img {
+  width: 206px;
+  height: 208px;
+  min-width: 100%;
+  height: auto; }
+  @media (max-width: 767px) {
+    .catalog__list.slider__list img {
+      min-height: 136px; } }
 
 .slider {
   font-family: "Poppins", "Arial", sans-serif;
@@ -711,12 +707,10 @@ img {
   @media (max-width: 1023px) {
     .slider {
       padding: 42px 45px;
-      width: 768px;
       margin: 0 auto; } }
   @media (max-width: 767px) {
     .slider {
-      padding: 32px 0 37px;
-      width: 290px; } }
+      padding: 32px 15px 37px; } }
 
 .slider__wrapper {
   position: relative;
@@ -724,6 +718,7 @@ img {
   width: 100%; }
   @media (max-width: 1023px) {
     .slider__wrapper {
+      max-width: 570px;
       padding: 0; } }
 
 .slider h2 {
@@ -813,47 +808,37 @@ img {
     .slider__list {
       padding: 27px 0 33px; } }
 
-.slider .swiper-slide {
+.slider__item {
   margin: 0 30px 0 0; }
 
-.slider__list figure {
+.slider__item figure {
   margin: 0; }
-  @media (max-width: 767px) {
-    .slider__list figure {
-      max-width: 130px; } }
 
-.slider__list img {
+.slider__item img {
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 270px;
-  max-width: 100%;
-  height: auto;
-  display: block; }
-  @media (max-width: 1023px) {
-    .slider__list img {
-      width: 324px;
-      height: 340px; } }
-  @media (max-width: 767px) {
-    .slider__list img {
-      width: 130px;
-      height: 136px; } }
+  max-width: 100%; }
+  @media (max-width: 1200px) {
+    .slider__item img {
+      height: auto; } }
 
-.slider__list figcaption {
+.slider__item figcaption {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 20px 5px 1px; }
   @media (max-width: 767px) {
-    .slider__list figcaption {
+    .slider__item figcaption {
       padding: 15px 0 0; } }
 
-.slider__list span:last-child {
+.slider__item span:last-child {
   font-weight: 700;
   font-size: 14px;
   line-height: 18px; }
 
-.slider__list span:first-child {
+.slider__item span:first-child {
   margin: 0 0 5px; }
 
 .slider__list-pages {
@@ -898,9 +883,6 @@ img {
     background-color: #f6f5f4;
     color: #1d1613;
     border-radius: 5px; }
-
-.slider .swiper-pagination-bullet:not(:last-child) {
-  margin: 0 15px 0 0; }
 
 .slider .swiper-pagination-bullet-active {
   color: inherit;
@@ -1957,7 +1939,7 @@ img {
       padding: 17px 45px 73px; } }
   @media (max-width: 767px) {
     .product .slider {
-      padding: 28px 0 64px; } }
+      padding: 28px 15px 64px; } }
 
 .card {
   font-family: "Poppins", "Arial", sans-serif;
