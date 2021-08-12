@@ -689,7 +689,6 @@ img {
 
 .catalog__list.slider__list img {
   width: 206px;
-  height: 208px;
   min-width: 100%;
   height: auto; }
   @media (max-width: 767px) {
