@@ -14,7 +14,9 @@
 </head>
 
 <body class="page-body">
+
   <header class="header">
+
     <div class="header__wrapper">
       <div class="header__user-menu center">
         <button class="header__menu-button" type="button" aria-label="open/close menu">
@@ -22,7 +24,7 @@
             <use href="./img/sprite_auto.svg#menu"></use>
           </svg>
         </button>
-        <a href="./main.html" class="header__logo header__logo-catalog">
+        <a class="header__logo">
           <svg width="66" height="66">
             <use href="./img/sprite_auto.svg#logo"></use>
           </svg>
@@ -63,99 +65,15 @@
       </ul>
     </nav>
   </header>
-  <main class="main product">
-    <h1 class="visually-hidden">Product card</h1>
-    <section class="card center">
-      <h2 class="visually-hidden">Review</h2>
-      <section class="card__preview">
-        <h3 class="visually-hidden">Product preview</h3>
-        <ul class="card__list-preview">
-          <li>
-            <a href="#">
-              <picture>
-                <!-- 1x: 100 ; 2x: 200 -->
-                <source type="image/webp"
-                  srcset="./img/review-product/gold-necklace-for-women.webp 1x, ./img/review-product/gold-necklace-for-women@2x.webp 2x">
-                <img loading="lazy" src="./img/review-product/gold-necklace-for-women.jpg"
-                  srcset="./img/review-product/gold-necklace-for-women@2x.jpg" width="100" height="125"
-                  alt="Gold necklace for women">
-              </picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <picture>
-                <!-- 1x: 100 ; 2x: 200 -->
-                <source type="image/webp"
-                  srcset="./img/review-product/pretty-gold-necklace.webp 1x, ./img/review-product/pretty-gold-necklace@2x.webp 2x">
-                <img loading="lazy" src="./img/review-product/pretty-gold-necklace.jpg"
-                  srcset="./img/review-product/pretty-gold-necklace@2x.jpg" width="100" height="125"
-                  alt="Pretty gold necklace">
-              </picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <picture>
-                <!-- 1x: 100 ; 2x: 200 -->
-                <source type="image/webp"
-                  srcset="./img/review-product/womens-necklace-set.webp 1x, ./img/review-product/womens-necklace-set@2x.webp 2x">
-                <img loading="lazy" src="./img/review-product/womens-necklace-set.jpg"
-                  srcset="./img/review-product/womens-necklace-set@2x.jpg" width="100" height="125"
-                  alt="Women's necklace set">
-              </picture>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="card__review">
-        <h3 class="visually-hidden">Product review</h3>
-        <a href="#">
-          <figure>
-            <picture>
-              <!-- 1x: 470 ; 2x: 940 -->
-              <source type="image/webp"
-                srcset="./img/review-product/necklace-detail.webp 1x, ./img/review-product/necklace-detail@2x.webp 2x">
-              <img loading="lazy" src="./img/review-product/necklace-detail.jpg"
-                srcset="./img/review-product/necklace-detail@2x.jpg" width="470" height="435" alt="Necklace detail">
-            </picture>
-            <figcaption>1 of 4</figcaption>
-          </figure>
-        </a>
-      </section>
-      <section class="card__description">
-        <h3>Gold Necklace</h3>
-        <p>$ 115</p>
-        <ul class="card__product-menu">
-          <li><a class="card__link-menu card__link-menu--current" href="#">Desctiption</a></li>
-          <li><a class="card__link-menu" href="#">Additional info</a></li>
-        </ul>
-        <table class="card__table">
-          <tr>
-            <th>Metal type</th>
-            <th>Gold 585</th>
-          </tr>
-          <tr>
-            <th>Stone</th>
-            <th>Turquoise</th>
-          </tr>
-          <tr>
-            <th>Size</th>
-            <th>18" /20"</th>
-          </tr>
-        </table>
-        <button class="card__add" type="button">Add to card</button>
-        <ul class="card__list-conditions">
-          <li>14 Day Returns</li>
-          <li>2-Year Warranty</li>
-          <li>Free Shipping</li>
-        </ul>
-      </section>
+  <main class="main">
+    <section class="intro">
+      <h1>Perfection</h1>
+      <p>made to be yours</p>
     </section>
-    <section class="product__slider slider ">
-      <div class="slider__wrapper swiper-container mySwiper  ">
-        <h2>You May Also Like</h2>
-        <p class="slider__container-title"><a href="./catalog.html">Shop Now</a></p>
+    <section class="slider">
+      <div class="slider__wrapper swiper-container mySwiper">
+        <h2>New In</h2>
+        <p class="slider__container-title"><a href="#">Shop Now</a></p>
         <button class="slider__prev swiper-button-prev" type="button" aria-label="previous slides">
           <svg width="29" height="10">
             <use href="./img/sprite_auto.svg#arrow-left"></use>
@@ -168,7 +86,7 @@
         </button>
         <ul class="slider__list swiper-wrapper">
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -183,7 +101,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -197,7 +115,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -211,7 +129,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -225,7 +143,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -240,7 +158,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -255,7 +173,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -270,7 +188,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -285,7 +203,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -299,7 +217,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -313,7 +231,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -328,7 +246,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -342,7 +260,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -357,7 +275,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -372,7 +290,7 @@
             </a>
           </li>
           <li class="slider__item swiper-slide">
-            <a href="#">
+            <a href="./product.html">
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
@@ -393,6 +311,173 @@
         </ul>
       </div>
     </section>
+    <section class="blog">
+      <h2>Blog</h2>
+      <p><a href="#">Read All</a></p>
+      <ul class="blog__list center">
+        <li class="blog__item blog__item1">
+          <figure>
+            <div class="blog__picture">
+              <picture>
+                <!-- 1x: 285 ; 2x: 570 -->
+                <source type="image/webp"
+                  srcset="./img/index-content/jess-harper-sunday.webp 1x, ./img/index-content/jess-harper-sunday@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/jess-harper-sunday.jpg"
+                  srcset="./img/index-content/jess-harper-sunday@2x.jpg" width="285" height="300"
+                  alt="jess harper sunday">
+              </picture>
+            </div>
+            <figcaption>
+              <time datetime="2019-09-30">September 30, 2019</time>
+              <p>How to care for your jewellery</p>
+              <a href="#">Read Article</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="blog__item blog__item2">
+          <figure>
+            <div class="blog__picture">
+              <picture>
+                <!-- 1x: 285 ; 2x: 570 -->
+                <source type="image/webp"
+                  srcset="./img/index-content/alex-holyoake.webp 1x, ./img/index-content/alex-holyoake@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/alex-holyoake.jpg"
+                  srcset="./img/index-content/alex-holyoake@2x.jpg" width="285" height="300" alt="alex-holyoake">
+              </picture>
+            </div>
+            <figcaption>
+              <time datetime="2019-09-23">September 23, 2019</time>
+              <p>Power of crystals</p>
+              <a href="#">Read Article</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="blog__item blog__item3">
+          <figure>
+            <div class="blog__picture">
+              <picture>
+                <!-- 1x: 285 ; 2x: 570 -->
+                <source type="image/webp"
+                  srcset="./img/index-content/alve-odonnell.webp 1x, ./img/index-content/alve-odonnell@2x.webp 2x">
+                <img loading="lazy" src="./img/index-content/alve-odonnell.jpg"
+                  srcset="./img/index-content/alve-odonnell@2x.jpg" width="570" height="630" alt="alve odonnell">
+              </picture>
+            </div>
+            <figcaption>
+              <time datetime="2019-09-16">September 16, 2019</time>
+              <p>AW 19 trends</p>
+              <a href="#">Read Article</a>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <section class="questions">
+      <h2>Frequently asked questions</h2>
+      <ul class="questions__list accordion center">
+        <li class="accordion__item accordion__item--opened">
+          <h3>What materials are the&nbsp;jewellery made of?</h3>
+          <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+            semiprecious stones and crystals.</p>
+          <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
+        </li>
+        <li class="accordion__item accordion__item--opened">
+          <h3>Which countries do&nbsp;you&nbsp;deliver to?</h3>
+          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
+            semiprecious stones and crystals.</p>
+          <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
+        </li>
+        <li class="accordion__item accordion__item--opened">
+          <h3>What are the payment&nbsp;methods?</h3>
+          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
+            semiprecious stones and crystals.</p>
+          <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
+        </li>
+        <li class="accordion__item accordion__item--opened">
+          <h3>Can i return the jewellery&nbsp;if it didn't fit me?</h3>
+          <p>Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
+            semiprecious stones and crystals.</p>
+          <button class="accordion__toggler" type="button" aria-label="expend/collapse menu"></button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="follow-us center">
+      <h2><span>@</span>Chjewellery</h2>
+      <p><a href="#">Follow us</a></p>
+      <ul class="follow-us__list">
+        <li class="follow-us__item follow-us__item--item1">
+          <figure>
+            <picture>
+              <!-- 1x: 230 ; 2x: 460 -->
+              <source type="image/webp" srcset="./img/index-content/7.webp 1x, ./img/index-content/7@2x.webp 2x">
+              <img loading="lazy" src="./img/index-content/7.jpg" srcset="./img/index-content/7@2x.jpg" width="230"
+                height="230" alt="square earrings on the edge of the laptop">
+            </picture>
+          </figure>
+        </li>
+        <li class="follow-us__item follow-us__item--item2">
+          <figure>
+            <picture>
+              <!-- 1x: 399 ; 2x: 798 -->
+              <source type="image/webp" srcset="./img/index-content/2.webp 1x, ./img/index-content/2@2x.webp 2x">
+              <img loading="lazy" src="./img/2.jpg" srcset="./img/index-content/2@2x.jpg" width="399" height="412"
+                alt="woman shows earrings on herself">
+            </picture>
+          </figure>
+        </li>
+        <li class="follow-us__item follow-us__item--item3">
+          <figure>
+            <picture>
+              <!-- 1x: 230 ; 2x: 460 -->
+              <source type="image/webp" srcset="./img/index-content/3.webp 1x, ./img/index-content/3@2x.webp 2x">
+              <img loading="lazy" src="./img/index-content/3.jpg" srcset="./img/index-content/3@2x.jpg" width="230"
+                height="230" alt="jewelry on hands">
+            </picture>
+          </figure>
+        </li>
+        <li class="follow-us__item follow-us__item--item4">
+          <figure>
+            <picture>
+              <!-- 1x: 230 ; 2x: 460 -->
+              <source type="image/webp" srcset="./img/index-content/5.webp 1x, ./img/index-content/5@2x.webp 2x">
+              <img loading="lazy" src="./img/5.jpg" srcset="./img/index-content/5@2x.jpg" width="230" height="230"
+                alt="gold hoop earrings">
+            </picture>
+          </figure>
+        </li>
+        <li class="follow-us__item follow-us__item--item5">
+          <figure>
+            <picture>
+              <!-- 1x: 230 ; 2x: 460 -->
+              <source type="image/webp" srcset="./img/index-content/1.webp 1x, ./img/index-content/1@2x.webp 2x">
+              <img loading="lazy" src="./img/index-content/1.jpg" srcset="./img/index-content/1@2x.jpg" width="230"
+                height="150" alt="gold-rimmed jewelry">
+            </picture>
+          </figure>
+        </li>
+        <li class="follow-us__item follow-us__item--item6">
+          <figure>
+            <picture>
+              <!-- 1x: 230 ; 2x: 460 -->
+              <source type="image/webp" srcset="./img/index-content/4.webp 1x, ./img/index-content/4@2x.webp 2x">
+              <img loading="lazy" src="./img/index-content/4.jpg" srcset="./img/index-content/4@2x.jpg" width="230"
+                height="150" alt="ring, chain, earrings on the card">
+            </picture>
+          </figure>
+        </li>
+        <li class="follow-us__item follow-us__item--item7">
+          <figure>
+            <picture>
+              <!-- 1x: 230 ; 2x: 460 -->
+              <source type="image/webp" srcset="./img/index-content/6.webp 1x, ./img/index-content/6@2x.webp 2x">
+              <img loading="lazy" src="./img/index-content/6.jpg" srcset="./img/index-content/6@2x.jpg" width="230"
+                height="150" alt="woman shows rings">
+            </picture>
+          </figure>
+        </li>
+      </ul>
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper center">
@@ -401,7 +486,7 @@
         <p>News and updates from CH. No spam, we promise.</p>
         <form class="footer__form" method="post" action="https://echo.htmlacademy.ru/">
           <label for="email">Your E-mail</label>
-          <input id="email" type="email" name="email required">
+          <input id="email" type="email" name="email" required>
           <button type="submit">
             Sign Up
             <svg width="29" height="10">
@@ -460,7 +545,9 @@
         </ul>
       </section>
     </div>
+
   </footer>
+
   <section class="modal modal--js visually-hidden">
     <div class="modal__header"></div>
     <div class="modal__wrapper center">
@@ -468,7 +555,7 @@
       <form action="https://echo.htmlacademy.ru/">
         <div class="modal__input">
           <label for="email-modal">Your E-mail</label>
-          <input id="email-modal" type="email" name="email" autocomplete="email" required>
+          <input id="email-modal" type="email" name="email" autocomplete="username" required autofocus>
         </div>
         <div class="modal__input modal__input--password">
           <label for="password-modal">Password</label>
@@ -484,56 +571,8 @@
       <button class="modal__button-close" type="button" aria-label="close modal"></button>
     </div>
   </section>
-  <section class="modal modal--js modal-card visually-hidden ">
-    <div>
-      <h2>The item was added to your cart</h2>
-      <div class="modal-card__center modal-card__direction">
-        <div class="modal-card__wrapper modal-card__direction">
-          <div class="modal-card__img">
-            <a href="#">
-              <picture>
-                <!-- 1x: 84 ; 2x: 168 -->
-                <source type="image/webp"
-                  srcset="./img/review-product/necklace-detail.webp 1x, ./img/review-product/necklace-detail@2x.webp 2x">
-                <img loading="lazy" src="./img/review-product/necklace-detail.jpg"
-                  srcset="./img/review-product/necklace-detail@2x.jpg" width="84" height="79" alt="Necklace detail">
-              </picture>
-            </a>
-          </div>
-          <div class="modal-card__description">
-            <p>Gold Necklace</p>
-            <p>$ 115</p>
-          </div>
-        </div>
-        <div class="modal-card__addition">
-          <button class="modal-card__button-plus" type="button" aria-label="Add item">
-            <svg width="14" height="14">
-              <use href="./img/sprite_auto.svg#plus"></use>
-            </svg>
-          </button>
-          <p>1</p>
-          <button class="modal-card__button-minus" type="button" aria-label="Remove item">
-            <svg width="14" height="14">
-              <use href="./img/sprite_auto.svg#minus"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="modal-card__center">
-        <div class="modal-card__info modal-card__direction">
-          <p>You have <span>1 </span>item in the cart</p>
-          <p>Cart subtotal: <span>$ 115</span></p>
-        </div>
-        <div class="modal-card__buttons modal-card__direction">
-          <button class="modal-card__button modal-card__button--continue" type="button">Continue shopping</button>
-          <button class="modal-card__button modal-card__button--checkout" type="button">Checkout</button>
-        </div>
-      </div>
-    </div>
-    <button class="modal-card__button-close modal__button-close" type="button" aria-label="close modal"></button>
-  </section>
+
+
   <script src="./js/vendor.js"></script>
   <script src="./js/main.js"></script>
 </body>
