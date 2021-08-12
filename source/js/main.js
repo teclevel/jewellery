@@ -254,6 +254,7 @@
     if (marginSize) {
       html.style.marginRight = `${marginSize}px`;
     }
+
     elementsPopup[0].focus();
   }
 
@@ -275,6 +276,18 @@
   }
 
   function onModalKeydown(evt) {
+    const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
+
+    if (evt.shiftKey && evt.key === 'Tab' && focusedItemIndex === 0) {
+      elementsPopup[elementsPopup.length - 1].focus();
+      evt.preventDefault();
+    }
+
+    if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
+      elementsPopup[0].focus();
+      evt.preventDefault();
+    }
+
     if (evt.code === 'Escape' || evt.code === 'Esc') {
       onModalClose();
     }
