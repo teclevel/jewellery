@@ -1937,6 +1937,11 @@ img {
     .filter--open .range__price-controls {
       padding: 0 43px 0 5px; } }
 
+.range__price-controls input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield; }
+
 .product .slider {
   padding: 90px 20px 125px; }
   @media (max-width: 1023px) {
@@ -2260,10 +2265,14 @@ img {
 .modal-card__button-minus {
   border: none;
   background: none;
-  color: #9b9997; }
+  color: #9b9997;
+  padding: 4px 8px 2px; }
   .modal-card__button-plus:hover,
   .modal-card__button-minus:hover {
     color: #1d1613; }
+  .modal-card__button-plus:focus,
+  .modal-card__button-minus:focus {
+    background-color: #f6f5f4; }
 
 .modal-card__info {
   font-size: 14px;

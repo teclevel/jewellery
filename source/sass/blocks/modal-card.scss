@@ -99,9 +99,14 @@
   border: none;
   background: none;
   color: $grey;
+  padding: 4px 8px 2px;
 
   &:hover {
     color: $black;
+  }
+
+  &:focus {
+    background-color: $border;
   }
 }
 

@@ -1,84 +1,3 @@
-/* Меню на мобильной версии */
-
-(function () {
-
-  const pageHeader = document.querySelector('.header');
-  const headerToggle = document.querySelector('.header__menu-button');
-
-
-  if (pageHeader) {
-    pageHeader.classList.add('header--js');
-  }
-
-  headerToggle.addEventListener('click', () => {
-
-    const isOpened = pageHeader.classList.contains('header--js-open');
-    const isClosed = pageHeader.classList.contains('header--js');
-
-    if (isOpened && !isClosed) {
-      pageHeader.classList.add('header--js');
-      pageHeader.classList.remove('header--js-open');
-    } else {
-      pageHeader.classList.remove('header--js');
-      pageHeader.classList.add('header--js-open');
-    }
-  });
-})();
-
-/* Фильтр */
-
-(function () {
-
-  const filter = document.querySelector('.filter');
-  if (!filter) { return; }
-
-  const filterToggle = filter.querySelector('.filter__button--tablet');
-  const buttonFilterClose = filter.querySelector('.filter__button-close');
-
-  const isOpened = filter.classList.contains('filter--open');
-
-  filterToggle.addEventListener('click', () => {
-    if (isOpened) { return; }
-
-    filter.classList.add('filter--open');
-
-  });
-
-  buttonFilterClose.addEventListener('click', () => {
-
-    filter.classList.remove('filter--open');
-
-  });
-
-})();
-
-/* add to card */
-
-(function () {
-
-  const card = document.querySelector('.modal-card');
-  if (!card) { return; }
-
-  const cardToggle = document.querySelector('.card__add');
-  const buttonCardClose = card.querySelector('.modal-card__button-close');
-
-  const isOpened = !card.classList.contains('visually-hidden');
-
-  cardToggle.addEventListener('click', () => {
-    if (isOpened) { return; }
-
-    card.classList.remove('visually-hidden');
-
-  });
-
-  buttonCardClose.addEventListener('click', () => {
-
-    card.classList.add('visually-hidden');
-
-  });
-
-})();
-
 /* Swiper */
 
 (function () {
@@ -129,6 +48,7 @@
   });
 })();
 
+
 /* Swiper каталог */
 
 (function () {
@@ -159,6 +79,7 @@
     },
   });
 })();
+
 
 /*аккордеон*/
 
@@ -197,27 +118,155 @@
 })();
 
 
-/* Popup */
+/* Меню на мобильной версии */
 
 (function () {
-  const overlay = document.createElement('div');
-  overlay.classList.add('overlay');
-  overlay.style.position = 'fixed';
-  overlay.style.top = '0';
-  overlay.style.left = '0';
-  overlay.style.width = '100%';
-  overlay.style.height = '100%';
-  overlay.style.zIndex = '20';
-  overlay.style.backgroundColor = 'black';
-  overlay.style.opacity = '.5';
 
-  function showOverlay() {
-    document.body.append(overlay);
+  const pageHeader = document.querySelector('.header');
+  const headerToggle = document.querySelector('.header__menu-button');
+
+
+  if (pageHeader) {
+    pageHeader.classList.add('header--js');
   }
 
-  function closeOverlay() {
-    overlay.remove();
+  headerToggle.addEventListener('click', () => {
+
+    const isOpened = pageHeader.classList.contains('header--js-open');
+    const isClosed = pageHeader.classList.contains('header--js');
+
+    if (isOpened && !isClosed) {
+      pageHeader.classList.add('header--js');
+      pageHeader.classList.remove('header--js-open');
+    } else {
+      pageHeader.classList.remove('header--js');
+      pageHeader.classList.add('header--js-open');
+    }
+  });
+})();
+
+/* Фильтр */
+
+(function () {
+
+  const filter = document.querySelector('.filter');
+  if (!filter) { return; }
+
+  const filterToggle = filter.querySelector('.filter__button--tablet');
+  const buttonFilterClose = filter.querySelector('.filter__button-close');
+
+  const isOpened = filter.classList.contains('filter--open');
+
+  filterToggle.addEventListener('click', () => {
+    if (isOpened) { return; }
+
+    filter.classList.add('filter--open');
+    document.querySelector('body').style.overflow = 'hidden';
+
+  });
+
+  buttonFilterClose.addEventListener('click', () => {
+
+    filter.classList.remove('filter--open');
+    document.querySelector('body').style.overflow = '';
+
+  });
+
+})();
+
+
+/* overlay */
+
+const overlay = document.createElement('div');
+overlay.classList.add('overlay');
+overlay.style.position = 'fixed';
+overlay.style.top = '0';
+overlay.style.left = '0';
+overlay.style.width = '100%';
+overlay.style.height = '100%';
+overlay.style.zIndex = '20';
+overlay.style.backgroundColor = 'black';
+overlay.style.opacity = '.5';
+
+function showOverlay() {
+  document.body.append(overlay);
+}
+
+function closeOverlay() {
+  overlay.remove();
+}
+
+
+/* popup card */
+
+(function () {
+
+  const card = document.querySelector('.modal-card');
+  if (!card) { return; }
+
+  const cardToggle = document.querySelector('.card__add');
+  const buttonCardClose = card.querySelector('.modal-card__button-close');
+  const elementsPopup = Array.from(card.querySelectorAll('a, button'));
+
+  cardToggle.addEventListener('click', onModalOpen);
+  buttonCardClose.addEventListener('click', onModalClose);
+  buttonCardClose.addEventListener('keydown', onModalButtonClose);
+
+  function onModalOpen(evt) {
+    evt.preventDefault();
+
+    if (card) {
+      card.classList.remove('visually-hidden');
+    }
+    document.querySelector('body').style.overflow = 'hidden';
+    showOverlay();
+
+    if (overlay) {
+      overlay.addEventListener('click', onModalClose);
+    }
+
+    document.addEventListener('keydown', onModalKeydown);
+    elementsPopup[0].focus();
   }
+
+  function onModalClose() {
+    if (card) {
+      card.classList.add('visually-hidden');
+    }
+    document.querySelector('body').style.overflow = '';
+    closeOverlay();
+    document.removeEventListener('keydown', onModalKeydown);
+  }
+
+  function onModalButtonClose(evt) {
+    if (evt.code === 'Enter' || evt.code === 'Space') {
+      onModalClose();
+    }
+  }
+
+  function onModalKeydown(evt) {
+    const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
+
+    if (evt.shiftKey && focusedItemIndex === 0) {
+      elementsPopup[elementsPopup.length - 1].focus();
+      evt.preventDefault();
+    }
+
+    if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
+      elementsPopup[0].focus();
+      evt.preventDefault();
+    }
+
+    if (evt.code === 'Escape' || evt.code === 'Esc') {
+      onModalClose();
+    }
+  }
+})();
+
+
+/* Popup login */
+
+(function () {
 
   const popup = document.querySelector('.modal');
   const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
@@ -231,10 +280,8 @@
     element.addEventListener('click', onModalOpen);
   });
 
-
   buttonClose.addEventListener('click', onModalClose);
   buttonClose.addEventListener('keydown', onModalButtonClose);
-
 
   function onModalOpen(evt) {
     evt.preventDefault();
@@ -258,13 +305,8 @@
     elementsPopup[0].focus();
   }
 
-  function onModalButtonClose(evt) {
-    if (evt.code === 'Enter' || evt.code === 'Space') {
-      onModalClose();
-    }
-  }
-
   function onModalClose() {
+
     if (popup) {
       popup.classList.add('visually-hidden');
     }
@@ -274,6 +316,13 @@
     document.removeEventListener('keydown', onModalKeydown);
     html.style.marginRight = '';
   }
+
+  function onModalButtonClose(evt) {
+    if (evt.code === 'Enter' || evt.code === 'Space') {
+      onModalClose();
+    }
+  }
+
 
   function onModalKeydown(evt) {
     const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
