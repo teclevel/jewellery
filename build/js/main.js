@@ -49,7 +49,7 @@
 })();
 
 
-/* Swiper каталог */
+/* Swiper catalog */
 
 (function () {
   /* eslint-disable no-unused-vars */
@@ -81,7 +81,7 @@
 })();
 
 
-/*аккордеон*/
+/*accordion*/
 
 (function () {
   const accordion = document.querySelector('.accordion');
@@ -118,7 +118,7 @@
 })();
 
 
-/* Меню на мобильной версии */
+/* Menu mobile */
 
 (function () {
 
@@ -145,7 +145,7 @@
   });
 })();
 
-/* Фильтр */
+/* Filter */
 
 (function () {
 
