@@ -177,23 +177,35 @@
 
 /* overlay */
 
-const overlay = document.createElement('div');
-overlay.classList.add('overlay');
-overlay.style.position = 'fixed';
-overlay.style.top = '0';
-overlay.style.left = '0';
-overlay.style.width = '100%';
-overlay.style.height = '100%';
-overlay.style.zIndex = '20';
-overlay.style.backgroundColor = 'black';
-overlay.style.opacity = '.5';
+function toggleOverlay(state, cb) {
+  const html = document.querySelector('html');
+  const marginSize = window.innerWidth - html.clientWidth;
 
-function showOverlay() {
-  document.body.append(overlay);
-}
+  if (state) {
+    html.style.marginRight = `${marginSize}px`;
 
-function closeOverlay() {
-  overlay.remove();
+    document.querySelector('body').style.overflow = 'hidden';
+
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.zIndex = '20';
+    overlay.style.backgroundColor = 'black';
+    overlay.style.opacity = '.5';
+    document.body.append(overlay);
+    overlay.addEventListener('click', cb);
+  } else {
+    html.style.marginRight = '';
+
+    document.querySelector('body').style.overflow = '';
+
+    const overlay = document.querySelector('.overlay');
+    overlay.remove();
+  }
 }
 
 
@@ -206,7 +218,7 @@ function closeOverlay() {
 
   const cardToggle = document.querySelector('.card__add');
   const buttonCardClose = card.querySelector('.modal-card__button-close');
-  const elementsPopup = Array.from(card.querySelectorAll('a, button'));
+  const elementsPopup = Array.from(card.querySelectorAll('a, button, input'));
 
   cardToggle.addEventListener('click', onModalOpen);
   buttonCardClose.addEventListener('click', onModalClose);
@@ -218,12 +230,7 @@ function closeOverlay() {
     if (card) {
       card.classList.remove('visually-hidden');
     }
-    document.querySelector('body').style.overflow = 'hidden';
-    showOverlay();
-
-    if (overlay) {
-      overlay.addEventListener('click', onModalClose);
-    }
+    toggleOverlay(open, onModalClose);
 
     document.addEventListener('keydown', onModalKeydown);
     elementsPopup[0].focus();
@@ -233,9 +240,7 @@ function closeOverlay() {
     if (card) {
       card.classList.add('visually-hidden');
     }
-    document.querySelector('body').style.overflow = '';
-    closeOverlay();
-    document.removeEventListener('keydown', onModalKeydown);
+    toggleOverlay();
   }
 
   function onModalButtonClose(evt) {
@@ -247,7 +252,7 @@ function closeOverlay() {
   function onModalKeydown(evt) {
     const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
 
-    if (evt.shiftKey && focusedItemIndex === 0) {
+    if (evt.shiftKey && evt.key === 'Tab' && focusedItemIndex === 0) {
       elementsPopup[elementsPopup.length - 1].focus();
       evt.preventDefault();
     }
@@ -273,8 +278,6 @@ function closeOverlay() {
 
   const buttonClose = popup.querySelector('.modal__button-close');
   const buttonsOpenPopup = document.querySelectorAll('.header__login');
-  const html = document.querySelector('html');
-  const marginSize = window.innerWidth - html.clientWidth;
 
   buttonsOpenPopup.forEach((element) => {
     element.addEventListener('click', onModalOpen);
@@ -290,17 +293,9 @@ function closeOverlay() {
     }
 
     document.querySelector('body').style.overflow = 'hidden';
-    showOverlay();
-
-    if (overlay) {
-      overlay.addEventListener('click', onModalClose);
-    }
+    toggleOverlay(open, onModalClose);
 
     document.addEventListener('keydown', onModalKeydown);
-
-    if (marginSize) {
-      html.style.marginRight = `${marginSize}px`;
-    }
 
     elementsPopup[0].focus();
   }
@@ -312,9 +307,8 @@ function closeOverlay() {
     }
 
     document.querySelector('body').style.overflow = '';
-    closeOverlay();
+    toggleOverlay();
     document.removeEventListener('keydown', onModalKeydown);
-    html.style.marginRight = '';
   }
 
   function onModalButtonClose(evt) {
