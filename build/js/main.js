@@ -84,6 +84,7 @@
 /*accordion*/
 
 (function () {
+
   const accordion = document.querySelector('.accordion');
   if (!accordion) { return; }
 
@@ -175,257 +176,98 @@
 })();
 
 
-/* overlay */
+/* Popup */
 
-// function toggleOverlay(state, cb) {
-//   const html = document.querySelector('html');
-//   const marginSize = window.innerWidth - html.clientWidth;
+(function () {
 
-//   if (state) {
-//     html.style.marginRight = `${marginSize}px`;
+  createPopup('modal', 'header__login', 'modal__button-close');
+  createPopup('modal-card', 'card__add', 'modal__button-close');
 
-//     document.querySelector('body').style.overflow = 'hidden';
+  function createPopup(classPopup, btnOpenPopup, btnClosePopup) {
 
-//     const overlay = document.createElement('div');
-//     overlay.classList.add('overlay');
-//     overlay.style.position = 'fixed';
-//     overlay.style.top = '0';
-//     overlay.style.left = '0';
-//     overlay.style.width = '100%';
-//     overlay.style.height = '100%';
-//     overlay.style.zIndex = '20';
-//     overlay.style.backgroundColor = 'black';
-//     overlay.style.opacity = '.5';
-//     document.body.append(overlay);
-//     overlay.addEventListener('click', cb);
-//   } else {
-//     html.style.marginRight = '';
+    const popup = document.querySelector(`.${classPopup}`);
+    if (!popup) { return; }
 
-//     document.querySelector('body').style.overflow = '';
+    const popupSwitch = document.querySelectorAll(`.${btnOpenPopup}`);
+    const popupSwitchOff = popup.querySelector(`.${btnClosePopup}`);
+    const elementsPopup = Array.from(popup.querySelectorAll('a, button, input'));
 
-//     const overlay = document.querySelector('.overlay');
-//     overlay.remove();
-//   }
-// }
+    popupSwitch.forEach((element) => {
+      element.addEventListener('click', onModalOpen);
+    });
 
+    popupSwitchOff.addEventListener('click', onModalClose);
+    popupSwitchOff.addEventListener('keydown', onModalButtonClose);
 
-/* popup card */
-
-// (function () {
-
-//   const card = document.querySelector('.modal-card');
-//   if (!card) { return; }
-
-//   const cardToggle = document.querySelector('.card__add');
-//   const buttonCardClose = card.querySelector('.modal-card__button-close');
-//   const elementsPopup = Array.from(card.querySelectorAll('a, button, input'));
-
-//   cardToggle.addEventListener('click', onModalOpen);
-//   buttonCardClose.addEventListener('click', onModalClose);
-//   buttonCardClose.addEventListener('keydown', onModalButtonClose);
-
-//   function onModalOpen(evt) {
-//     evt.preventDefault();
-
-//     if (card) {
-//       card.classList.remove('visually-hidden');
-//     }
-//     toggleOverlay(open, onModalClose);
-
-//     document.addEventListener('keydown', onModalKeydown);
-//     elementsPopup[0].focus();
-//   }
-
-//   function onModalClose() {
-//     if (card) {
-//       card.classList.add('visually-hidden');
-//     }
-//     toggleOverlay();
-//   }
-
-//   function onModalButtonClose(evt) {
-//     if (evt.code === 'Enter' || evt.code === 'Space') {
-//       onModalClose();
-//     }
-//   }
-
-//   function onModalKeydown(evt) {
-//     const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
-
-//     if (evt.shiftKey && evt.key === 'Tab' && focusedItemIndex === 0) {
-//       elementsPopup[elementsPopup.length - 1].focus();
-//       evt.preventDefault();
-//     }
-
-//     if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
-//       elementsPopup[0].focus();
-//       evt.preventDefault();
-//     }
-
-//     if (evt.code === 'Escape' || evt.code === 'Esc') {
-//       onModalClose();
-//     }
-//   }
-// })();
-
-
-/* Popup login */
-
-// (function () {
-
-//   const popup = document.querySelector('.modal');
-//   const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
-
-//   const buttonClose = popup.querySelector('.modal__button-close');
-//   const buttonsOpenPopup = document.querySelectorAll('.header__login');
-
-//   buttonsOpenPopup.forEach((element) => {
-//     element.addEventListener('click', onModalOpen);
-//   });
-
-//   buttonClose.addEventListener('click', onModalClose);
-//   buttonClose.addEventListener('keydown', onModalButtonClose);
-
-//   function onModalOpen(evt) {
-//     evt.preventDefault();
-//     if (popup) {
-//       popup.classList.remove('visually-hidden');
-//     }
-
-//     document.querySelector('body').style.overflow = 'hidden';
-//     toggleOverlay(open, onModalClose);
-
-//     document.addEventListener('keydown', onModalKeydown);
-
-//     elementsPopup[0].focus();
-//   }
-
-//   function onModalClose() {
-
-//     if (popup) {
-//       popup.classList.add('visually-hidden');
-//     }
-
-//     document.querySelector('body').style.overflow = '';
-//     toggleOverlay();
-//     document.removeEventListener('keydown', onModalKeydown);
-//   }
-
-//   function onModalButtonClose(evt) {
-//     if (evt.code === 'Enter' || evt.code === 'Space') {
-//       onModalClose();
-//     }
-//   }
-
-
-//   function onModalKeydown(evt) {
-//     const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
-
-//     if (evt.shiftKey && evt.key === 'Tab' && focusedItemIndex === 0) {
-//       elementsPopup[elementsPopup.length - 1].focus();
-//       evt.preventDefault();
-//     }
-
-//     if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
-//       elementsPopup[0].focus();
-//       evt.preventDefault();
-//     }
-
-//     if (evt.code === 'Escape' || evt.code === 'Esc') {
-//       onModalClose();
-//     }
-//   }
-// })();
-
-/* пишем ф-цию поппап */
-
-
-function createPopup(classPopup, btnOpenPopup, btnClosePopup) {
-
-  const popup = document.querySelector(`.${classPopup}`);
-  if (!popup) { return; }
-
-  const popupSwitch = document.querySelectorAll(`.${btnOpenPopup}`);
-  const popupSwitchOff = popup.querySelector(`.${btnClosePopup}`);
-  const elementsPopup = Array.from(popup.querySelectorAll('a, button, input'));
-
-  popupSwitch.forEach((element) => {
-    element.addEventListener('click', onModalOpen);
-  });
-
-  popupSwitchOff.addEventListener('click', onModalClose);
-  popupSwitchOff.addEventListener('keydown', onModalButtonClose);
-
-  function onModalOpen(evt) {
-    evt.preventDefault();
-
-    popup.classList.remove('visually-hidden');
-    toggleOverlay(open, onModalClose);
-
-    document.addEventListener('keydown', onModalKeydown);
-    elementsPopup[0].focus();
-  }
-
-  function onModalClose() {
-    popup.classList.add('visually-hidden');
-    toggleOverlay();
-  }
-
-  function onModalButtonClose(evt) {
-    if (evt.code === 'Enter' || evt.code === 'Space') {
-      onModalClose();
-    }
-  }
-
-  function onModalKeydown(evt) {
-    const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
-
-    if (evt.shiftKey && evt.key === 'Tab' && focusedItemIndex === 0) {
-      elementsPopup[elementsPopup.length - 1].focus();
+    function onModalOpen(evt) {
       evt.preventDefault();
-    }
 
-    if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
+      popup.classList.remove('visually-hidden');
+      toggleOverlay(open, onModalClose);
+
+      document.addEventListener('keydown', onModalKeydown);
       elementsPopup[0].focus();
-      evt.preventDefault();
     }
 
-    if (evt.code === 'Escape' || evt.code === 'Esc') {
-      onModalClose();
+    function onModalClose() {
+      popup.classList.add('visually-hidden');
+      toggleOverlay();
+    }
+
+    function onModalButtonClose(evt) {
+      if (evt.code === 'Enter' || evt.code === 'Space') {
+        onModalClose();
+      }
+    }
+
+    function onModalKeydown(evt) {
+      const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
+
+      if (evt.shiftKey && evt.key === 'Tab' && focusedItemIndex === 0) {
+        elementsPopup[elementsPopup.length - 1].focus();
+        evt.preventDefault();
+      }
+
+      if (!evt.shiftKey && focusedItemIndex === elementsPopup.length - 1) {
+        elementsPopup[0].focus();
+        evt.preventDefault();
+      }
+
+      if (evt.code === 'Escape' || evt.code === 'Esc') {
+        onModalClose();
+      }
+    }
+
+    function toggleOverlay(state, cb) {
+      const html = document.querySelector('html');
+      const marginSize = window.innerWidth - html.clientWidth;
+
+      if (state) {
+        html.style.marginRight = `${marginSize}px`;
+
+        document.querySelector('body').style.overflow = 'hidden';
+
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.zIndex = '20';
+        overlay.style.backgroundColor = 'black';
+        overlay.style.opacity = '.5';
+        document.body.append(overlay);
+        overlay.addEventListener('click', cb);
+      } else {
+        html.style.marginRight = '';
+
+        document.querySelector('body').style.overflow = '';
+
+        const overlay = document.querySelector('.overlay');
+        overlay.remove();
+      }
     }
   }
 
-  function toggleOverlay(state, cb) {
-    const html = document.querySelector('html');
-    const marginSize = window.innerWidth - html.clientWidth;
-
-    if (state) {
-      html.style.marginRight = `${marginSize}px`;
-
-      document.querySelector('body').style.overflow = 'hidden';
-
-      const overlay = document.createElement('div');
-      overlay.classList.add('overlay');
-      overlay.style.position = 'fixed';
-      overlay.style.top = '0';
-      overlay.style.left = '0';
-      overlay.style.width = '100%';
-      overlay.style.height = '100%';
-      overlay.style.zIndex = '20';
-      overlay.style.backgroundColor = 'black';
-      overlay.style.opacity = '.5';
-      document.body.append(overlay);
-      overlay.addEventListener('click', cb);
-    } else {
-      html.style.marginRight = '';
-
-      document.querySelector('body').style.overflow = '';
-
-      const overlay = document.querySelector('.overlay');
-      overlay.remove();
-    }
-  }
-}
-
-createPopup('modal-card', 'card__add', 'modal__button-close');
-createPopup('modal', 'header__login', 'modal__button-close');
+})();
