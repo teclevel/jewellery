@@ -353,7 +353,6 @@ function createPopup(classPopup, btnOpenPopup, btnClosePopup) {
     element.addEventListener('click', onModalOpen);
   });
 
-  popupSwitch.addEventListener('click', onModalOpen);
   popupSwitchOff.addEventListener('click', onModalClose);
   popupSwitchOff.addEventListener('keydown', onModalButtonClose);
 
@@ -428,5 +427,5 @@ function createPopup(classPopup, btnOpenPopup, btnClosePopup) {
   }
 }
 
-createPopup('modal-card', 'card__add', 'modal-card__button-close');
+createPopup('modal-card', 'card__add', 'modal__button-close');
 createPopup('modal', 'header__login', 'modal__button-close');
