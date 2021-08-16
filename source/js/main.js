@@ -84,39 +84,38 @@
 /*accordion*/
 
 (function () {
-  function (accordionClass){
-    const accordion = document.querySelector(`.${accordionClass}`);
-    if (!accordion) { return; }
 
-    const togglerClass = 'accordion__toggler';
-    const itemClass = 'accordion__item';
-    const itemClosedClass = 'accordion__item--opened';
+  const accordion = document.querySelector('.accordion');
+  if (!accordion) { return; }
 
-    function closeAccordionItems() {
-      accordion
-        .querySelectorAll(`.${itemClass}`)
-        .forEach((element) => {
-          if (element) {
-            element.classList.remove(itemClosedClass);
-          }
-        });
-    }
+  const togglerClass = 'accordion__toggler';
+  const itemClass = 'accordion__item';
+  const itemClosedClass = 'accordion__item--opened';
 
-    closeAccordionItems();
-
-    accordion.addEventListener('click', (event) => {
-      const toggler = event.target.closest(`.${togglerClass}`);
-
-      if (!toggler) { return; }
-
-      const item = toggler.closest(`.${itemClass}`);
-      const isOpened = item.classList.contains(itemClosedClass);
-
-      isOpened
-        ? item.classList.remove(itemClosedClass)
-        : item.classList.add(itemClosedClass);
-    });
+  function closeAccordionItems() {
+    accordion
+      .querySelectorAll(`.${itemClass}`)
+      .forEach((element) => {
+        if (element) {
+          element.classList.remove(itemClosedClass);
+        }
+      });
   }
+
+  closeAccordionItems();
+
+  accordion.addEventListener('click', (event) => {
+    const toggler = event.target.closest(`.${togglerClass}`);
+
+    if (!toggler) { return; }
+
+    const item = toggler.closest(`.${itemClass}`);
+    const isOpened = item.classList.contains(itemClosedClass);
+
+    isOpened
+      ? item.classList.remove(itemClosedClass)
+      : item.classList.add(itemClosedClass);
+  });
 })();
 
 
