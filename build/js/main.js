@@ -183,13 +183,13 @@
   createPopup('modal', 'header__login', 'modal__button-close');
   createPopup('modal-card', 'card__add', 'modal__button-close');
 
-  function createPopup(classPopup, btnOpenPopup, btnClosePopup) {
+  function createPopup(classPopup, openPopupButton, closePopupButton) {
 
     const popup = document.querySelector(`.${classPopup}`);
     if (!popup) { return; }
 
-    const popupSwitch = document.querySelectorAll(`.${btnOpenPopup}`);
-    const popupSwitchOff = popup.querySelector(`.${btnClosePopup}`);
+    const popupSwitch = document.querySelectorAll(`.${openPopupButton}`);
+    const popupSwitchOff = popup.querySelector(`.${closePopupButton}`);
     const elementsPopup = Array.from(popup.querySelectorAll('a, button, input'));
 
     popupSwitch.forEach((element) => {
