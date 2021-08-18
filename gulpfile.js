@@ -21,11 +21,11 @@ gulp.task('css', () => gulp.src('source/sass/style.scss')
   .pipe(sourcemap.init())
   .pipe(sass())
   .pipe(postcss([autoprefixer()]))
-  .pipe(gulp.dest('build/css'))
+  .pipe(gulp.dest('docs/css'))
   .pipe(csso())
   .pipe(rename('style.min.css'))
   .pipe(sourcemap.write('.'))
-  .pipe(gulp.dest('build/css'))
+  .pipe(gulp.dest('docs/css'))
   .pipe(server.stream()));
 
 gulp.task('normalize', () => gulp.src('source/sass/vendor/normalize.scss')
@@ -33,15 +33,15 @@ gulp.task('normalize', () => gulp.src('source/sass/vendor/normalize.scss')
   .pipe(csso())
   .pipe(rename('normalize.min.css'))
   .pipe(sourcemap.write('.'))
-  .pipe(gulp.dest('build/css'))
+  .pipe(gulp.dest('docs/css'))
   .pipe(server.stream()));
 
 gulp.task('js', () => gulp.src('source/js/*.js')
-  .pipe(gulp.dest('build/js')));
+  .pipe(gulp.dest('docs/js')));
 
 gulp.task('server', () => {
   server.init({
-    server: 'build/',
+    server: 'docs/',
     notify: false,
     open: true,
     cors: true,
@@ -66,22 +66,22 @@ gulp.task('images', () => gulp.src('source/img/**/*.{png,jpg,svg}')
     imagemin.svgo(),
   ]))
 
-  .pipe(gulp.dest('build/img')));
+  .pipe(gulp.dest('docs/img')));
 
 gulp.task('webp', () => gulp.src('source/img/**/*.{png,jpg}')
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest('build/img')));
+  .pipe(gulp.dest('docs/img')));
 
 gulp.task('sprite', () => gulp.src('source/img/icons/*.svg')
   .pipe(svgstore({inlineSvg: true}))
   .pipe(rename('sprite_auto.svg'))
-  .pipe(gulp.dest('build/img')));
+  .pipe(gulp.dest('docs/img')));
 
 gulp.task('html', () => gulp.src('source/*.html')
   .pipe(posthtml([
     include(),
   ]))
-  .pipe(gulp.dest('build')));
+  .pipe(gulp.dest('docs')));
 
 gulp.task('copy', () => gulp.src([
   'source/fonts/**/*.{woff,woff2}',
@@ -90,9 +90,9 @@ gulp.task('copy', () => gulp.src([
 ], {
   base: 'source',
 })
-  .pipe(gulp.dest('build')));
+  .pipe(gulp.dest('docs')));
 
-gulp.task('clean', () => del('build'));
+gulp.task('clean', () => del('docs'));
 
 gulp.task('build', gulp.series('clean', 'copy', 'css', 'normalize', 'sprite', 'html', 'images', 'webp'));
 gulp.task('start', gulp.series('build', 'server'));
