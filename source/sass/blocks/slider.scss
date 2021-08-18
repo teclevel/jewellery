@@ -8,8 +8,8 @@
   padding: 90px 20px 92px;
 
   @media (max-width: $tablet-width) {
+    max-width: 768px;
     padding: 42px 45px;
-    margin: 0 auto;
   }
 
   @media (max-width: $mobile-width) {
@@ -21,11 +21,6 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-
-  @media (max-width: $tablet-width) {
-    max-width: 570px;
-    padding: 0;
-  }
 }
 
 .slider h2 {
@@ -154,6 +149,16 @@
   @media (max-width: $desktop-width) {
     height: auto;
   }
+
+  @media (max-width: $tablet-width) {
+    width: 324px;
+    height: 340px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: auto;
+  }
+
 }
 
 .slider__item figcaption {
